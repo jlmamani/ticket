@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 .table-dragger-handle
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
     font-weight: normal;
     font-style: normal;
 
@@ -23,7 +23,7 @@
 }
 .table-dragger-handle:before
 {
-    content: '';
+    content: '';
 }
 
 .sindu_dragger
@@ -46,7 +46,7 @@
 
 .sindu_dragger table
 {
-    background: #f3f7f9;
+    background: #eee;
 }
 
 .sindu_dragger li
@@ -106,7 +106,7 @@
 
 .gu-mirror table
 {
-    background: #e4eaec;
+    background: #e0e0e0;
 }
 
 .gu-mirror li table,

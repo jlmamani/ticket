@@ -26,6 +26,28 @@ $pagination-gap-hover-border:               $brand-primary !default;
 // Component: Pagination
 // ========================================================================
 
+// .pagination {
+  
+//   > .nav-link.active, .nav-link.active:hover {
+//     color: $pagination-active-color;
+//     background-color: $pagination-active-bg;
+//     border-color: $pagination-active-border;
+//   }
+
+//   > .disabled {
+//     > span,
+//     > span:hover,
+//     > span:focus,
+//     > .page-link,
+//     > .page-link:hover,
+//     > .page-link:focus {
+//       color: $pagination-disabled-color;
+//       background-color: $pagination-disabled-bg;
+//       border-color: $pagination-disabled-border;
+//     }
+//   }
+// }
+
 .page-item {
   &.disabled > span {
     @include plain-hover-focus {
@@ -35,7 +57,6 @@ $pagination-gap-hover-border:               $brand-primary !default;
     }
   }
 }
-
 // Modifier: `pagination-gap`
 // -------------------------
 
@@ -47,8 +68,10 @@ $pagination-gap-hover-border:               $brand-primary !default;
       }
     }
 
-    &.active .page-link {
-      background-color: $pagination-active-bg;
+    &.active {
+      .page-link {
+        background-color: $pagination-active-bg;
+      }
     }
   }
 
@@ -57,5 +80,15 @@ $pagination-gap-hover-border:               $brand-primary !default;
       background-color: transparent;
       border-color: $pagination-gap-hover-border;
     }
+  }
+}
+
+
+// Modifier: `pagination-no-border`
+// -------------------------
+
+.pagination-no-border {
+ .page-link {
+    border: none;
   }
 }

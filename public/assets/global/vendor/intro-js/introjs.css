@@ -106,7 +106,7 @@ tr.introjs-showElement > th
 
     color: white;
     border-radius: 50%;
-    background: #62a8ea;
+    background: #1e88e5;
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
             box-shadow: 0 2px 5px rgba(0, 0, 0, .4); 
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
@@ -268,7 +268,7 @@ tr.introjs-showElement > th
     color: #fff !important;
     border: none;
     border-radius: 100%;
-    background: #f96868 !important;
+    background: #e53935 !important;
     -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
             box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
     text-shadow: none;
@@ -287,7 +287,7 @@ tr.introjs-showElement > th
 .introjs-skipbutton:active,
 .introjs-skipbutton:focus
 {
-    background: #f96868;
+    background: #e53935;
 }
 
 .introjs-prevbutton,
@@ -306,7 +306,7 @@ tr.introjs-showElement > th
     color: #fff;
     border: 1px solid transparent;
     border-radius: 1000px;
-    background-color: #62a8ea;
+    background-color: #1e88e5;
 
     -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -326,7 +326,7 @@ tr.introjs-showElement > th
 {
     cursor: not-allowed; 
 
-    color: #a3afb7 !important;
+    color: #9e9e9e !important;
     border: 1px solid;
     background: transparent !important;
 }

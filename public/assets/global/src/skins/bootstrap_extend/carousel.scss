@@ -12,17 +12,28 @@
 // ========================================================================
 
 $carousel-caption-title-color:            $inverse !default;
-
-
 $carousel-indicators-list-bg-color:       rgba(255, 255, 255, 0.3) !default;
-
 
 // Component: Carousel
 // ========================================================================
 
 .carousel-indicators {
+
   li {
     background-color: $carousel-indicators-list-bg-color;
+    border: none;
+  }
+}
+
+
+// Animate Modifier
+// ========================================================================
+
+// Modifier: `carousel-indicators-scaleup`
+// -------------------------
+
+.carousel-indicators-scaleup {
+  li {
     border: none;
   }
 }
@@ -35,6 +46,7 @@ $carousel-indicators-list-bg-color:       rgba(255, 255, 255, 0.3) !default;
     background-color: transparent;
   }
 }
+
 
 // Modifier: `carousel-indicators-fall`
 // -------------------------
@@ -50,3 +62,5 @@ $carousel-indicators-list-bg-color:       rgba(255, 255, 255, 0.3) !default;
     background-color: transparent;
   }
 }
+
+

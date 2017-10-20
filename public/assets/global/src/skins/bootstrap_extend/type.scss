@@ -1,22 +1,15 @@
 
 // Variables
 // ========================================================================
-$blockquote-color:                 $gray-darker !default;
+$blockquote-color:                 $gray-darker;
 
-$blockquote-success-border:        $brand-success !default;
-$blockquote-info-border:           $brand-info !default;
-$blockquote-warning-border:        $brand-warning !default;
-$blockquote-danger-border:         $brand-danger !default;
+$blockquote-success-border:        $brand-success;
+$blockquote-info-border:           $brand-info;
+$blockquote-warning-border:        $brand-warning;
+$blockquote-danger-border:         $brand-danger;
 
 // Component: Typography
 // ========================================================================
-
-// Headings
-// -------------------------
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  text-shadow: $headings-text-shadow;
-}
 
 // Emphasis & misc
 // -------------------------
@@ -38,19 +31,25 @@ mark,
   }
 }
 
-
 // Component: Blockquote
 // ========================================================================
 
-//@mixin blockquote-variant($border){
-//  background-color: rgba($border, (10/100));
- // border-color: $border;
-//}
-
-.blockquote {
+blockquote {
   color: $blockquote-color;
   border-left: 2px solid $blockquote-border-color;
+}
 
+.blockquote-reverse {
+  border-right-width: 2px;
+}
+
+// @mixin blockquote-variant($border){
+//   // font-size: $font-size-base;
+//   background-color: rgba($border, (10/100));
+//   border-color: $border;
+// } 
+
+.blockquote {
   &-success {
     @include blockquote-variant($blockquote-success-border);
   }
@@ -64,3 +63,34 @@ mark,
     @include blockquote-variant($blockquote-danger-border);
   }
 }
+
+
+// Component: Horizontal description lists (from--v3)
+// ========================================================================
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+// .dl-horizontal {
+//   margin: 0 0 22px;
+
+//   dd {
+//     @extend clearfix(all); // Clear the floated `dt` if an empty `dd` is present
+//   }
+
+//   @include media-breakpoint-up(md) {
+//     dt {
+//       float: left;
+//       width: ($dl-horizontal-offset - 20px);
+//       clear: left;
+//       text-align: right;
+//       overflow: hidden;
+//     }
+
+//     dd {
+//       margin-left: $dl-horizontal-offset;
+//     }
+//   }
+// }
+
+
+

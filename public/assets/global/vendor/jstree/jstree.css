@@ -447,13 +447,13 @@
 
 .jstree-default .jstree-hovered
 {
-    color: #89bceb;
+    color: #3f51b5;
     border-radius: 2px; 
-    background: #f3f7f9;
+    background: #eee;
 }
 .jstree-default .jstree-hovered .jstree-themeicon-custom
 {
-    color: #76838f;
+    color: #757575;
 }
 
 .jstree-default .jstree-context
@@ -466,9 +466,9 @@
 
 .jstree-default .jstree-clicked
 {
-    color: #76838f;
+    color: #757575;
     border-radius: 2px; 
-    background: #f3f7f9;
+    background: #eee;
 }
 
 .jstree-default .jstree-no-icons .jstree-anchor > .jstree-themeicon
@@ -478,7 +478,7 @@
 
 .jstree-default .jstree-disabled
 {
-    color: #ccd5db; 
+    color: #bdbdbd; 
     background: transparent;
 }
 

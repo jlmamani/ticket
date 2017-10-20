@@ -5,23 +5,16 @@
 
 // Variables
 // ========================================================================
-
 $card-actions-link-color:        $gray !default;
 $card-actions-link-hover-color:  $gray-light !default;
 
 $card-posts-horizontal-border:   $border-color-base !default;
 
-// $card-margin-bottom:             2.143rem !default;
-$card-margin-bottom:             pxToRem(30px) !default;
-
-// Component: Card
-// ========================================================================
 .card-header,
 .card-footer {
   border: none;
   box-shadow: none;
 }
-
 
 // Modifier: `card-bordered`
 // -------------------------
@@ -70,6 +63,7 @@ $card-margin-bottom:             pxToRem(30px) !default;
   }
 }
 
+
 // Card Watermark
 // ========================================================================
 
@@ -82,7 +76,6 @@ $card-margin-bottom:             pxToRem(30px) !default;
     color: white;
   }
 }
-
 
 // Card divider
 // ========================================================================
@@ -97,10 +90,9 @@ $card-margin-bottom:             pxToRem(30px) !default;
 // ========================================================================
 
 .card-actions {
-
+ 
   a {
     color: $card-actions-link-color;
-
     &.active, &:hover, &:focus {
       color: $card-actions-link-hover-color;
     }
@@ -108,7 +100,6 @@ $card-margin-bottom:             pxToRem(30px) !default;
 }
 
 .card-actions-sidebar {
-
   a {
     border-right: 1px solid $card-posts-horizontal-border;
 
@@ -116,4 +107,12 @@ $card-margin-bottom:             pxToRem(30px) !default;
       border-top: 1px solid $card-posts-horizontal-border;
     }
   }
+}
+
+
+// Background variations
+// ========================================================================
+
+.card-default {
+  @include card-variant($brand-default, $brand-default);
 }

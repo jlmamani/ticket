@@ -12,6 +12,7 @@
     Site.run();
   });
 
+
   window.getExampleTreeview = function() {
     return [{
       text: 'Parent 1',
@@ -119,6 +120,7 @@
     });
   })();
 
+
   // Example TreeView Expandible
   // ---------------------------
   (function() {
@@ -171,7 +173,6 @@
 
     $('#exampleEvents').treeview(options);
   })();
-
   // Example jstree use JSON format
   // ------------------------
   (function() {
@@ -179,20 +180,20 @@
       'core': {
         'data': [{
           'text': 'Simple root node',
-          "icon": "wb-folder"
+          "icon": "md-folder"
         }, {
           'text': 'Root node 2',
-          "icon": "wb-folder",
+          "icon": "md-folder",
           'state': {
             'opened': false,
             'selected': true
           },
           'children': [{
             'text': 'Child 1',
-            "icon": "wb-folder"
+            "icon": "md-folder"
           }, {
             'text': 'Child 2',
-            "icon": "wb-folder"
+            "icon": "md-folder"
           }]
         }]
       }
@@ -219,25 +220,25 @@
       'core': {
         'data': [{
           'text': 'Simple root node',
-          "icon": "wb-folder"
+          "icon": "md-folder"
         }, {
           'text': 'Root node 2',
-          "icon": "wb-folder",
+          "icon": "md-folder",
           'state': {
             'opened': true,
             'selected': true
           },
           'children': [{
             'text': 'Child 1',
-            "icon": "wb-folder"
+            "icon": "md-folder"
           }, {
             'text': 'Child 2',
-            "icon": "wb-folder"
+            "icon": "md-folder"
           }]
         }]
       },
       'plugins': ['checkbox']
-    })
+    });
   })();
 
   // Example jstree use Contextmenu Plugin
@@ -248,48 +249,48 @@
         "check_callback": true,
         'data': [{
           'text': 'Simple root node',
-          "icon": "wb-folder"
+          "icon": "md-folder"
         }, {
           'text': 'Root node 2',
-          "icon": "wb-folder",
+          "icon": "md-folder",
           'state': {
             'opened': true,
             'selected': true
           },
           'children': [{
             'text': 'Child 1',
-            "icon": "wb-folder"
+            "icon": "md-folder"
           }, {
             'text': 'Child 2',
-            "icon": "wb-folder"
+            "icon": "md-folder"
           }]
         }]
       },
       'plugins': ['contextmenu']
-    })
+    });
   })();
 
   // Example jstree use Search Plugin
-  // --------------------------------
+  // ------------------------------------
   (function() {
     $('#jstreeExample_7').jstree({
       'core': {
         'data': [{
           'text': 'Simple root node',
-          "icon": "wb-folder"
+          "icon": "md-folder"
         }, {
           'text': 'Root node 2',
-          "icon": "wb-folder",
+          "icon": "md-folder",
           'state': {
             'opened': true,
             'selected': true
           },
           'children': [{
             'text': 'Child 1',
-            "icon": "wb-folder"
+            "icon": "md-folder"
           }, {
             'text': 'Child 2',
-            "icon": "wb-folder"
+            "icon": "md-folder"
           }]
         }]
       },
@@ -309,27 +310,27 @@
   })();
 
   // Example jstree use Drag & drop Plugin
-  // -------------------------------------
+  // ------------------------------------
   (function() {
     $('#jstreeExample_8').jstree({
       'core': {
         "check_callback": true,
         'data': [{
           'text': 'Simple root node',
-          "icon": "wb-folder"
+          "icon": "md-folder"
         }, {
           'text': 'Root node 2',
-          "icon": "wb-folder",
+          "icon": "md-folder",
           'state': {
             'opened': true,
             'selected': true
           },
           'children': [{
             'text': 'Child 1',
-            "icon": "wb-folder"
+            "icon": "md-folder"
           }, {
             'text': 'Child 2',
-            "icon": "wb-folder"
+            "icon": "md-folder"
           }]
         }]
       },

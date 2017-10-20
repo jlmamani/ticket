@@ -345,9 +345,9 @@
 
     padding: 1px 3px;
 
-    color: #76838f;
+    color: #757575;
     border-radius: 4px; 
-    background: #e4eaec;
+    background: #e0e0e0;
     text-shadow: none;
 }
 
@@ -362,7 +362,7 @@
 
     color: #fff;
     border-radius: 4px; 
-    background: #62a8ea;
+    background: #1e88e5;
     text-shadow: none;
 }
 
@@ -384,15 +384,15 @@
     content: '';
 
     border: 3px solid transparent;
-    border-top-color: #62a8ea;
+    border-top-color: #1e88e5;
 }
 
 .irs-grid-pol
 {
-    background: #e4eaec;
+    background: #e0e0e0;
 }
 
 .irs-grid-text
 {
-    color: #76838f;
+    color: #757575;
 }

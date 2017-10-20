@@ -1,4 +1,4 @@
-@mixin badge-styles-variant($color, $hover-color) {
+@mixin badge-styles-variant($color, $hover-color){
   &[href] {
     &:hover,
     &:focus {

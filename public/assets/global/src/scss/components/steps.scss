@@ -53,7 +53,7 @@ $step-disabled-color:              $gray-light !default;
 
 $step-font-size:                   inherit !default;
 $step-title-font-size:             20px !default;
-$step-icon-font-size:              $step-title-font-size !default;
+$step-icon-font-size:              27px !default;
 $step-number-font-size:            24px !default;
 $step-number-size:                 40px !default;
 
@@ -61,34 +61,34 @@ $step-lg-padding-horizontal:       20px !default;
 $step-lg-padding-vertical:         20px !default;
 $step-lg-font-size:                16px !default;
 $step-lg-title-font-size:          22px !default;
-$step-lg-icon-font-size:           $step-lg-title-font-size !default;
+$step-lg-icon-font-size:           32px !default;
 $step-lg-number-font-size:         28px !default;
 $step-lg-number-size:              46px !default;
 
 $step-sm-font-size:                12px !default;
 $step-sm-title-font-size:          18px !default;
-$step-sm-icon-font-size:           $step-sm-title-font-size !default;
+$step-sm-icon-font-size:           24px !default;
 $step-sm-number-font-size:         24px !default;
 $step-sm-number-size:              30px !default;
 
 $step-xs-font-size:                10px !default;
 $step-xs-title-font-size:          16px !default;
-$step-xs-icon-font-size:           $step-xs-title-font-size !default;
+$step-xs-icon-font-size:           22px !default;
 $step-xs-number-font-size:         20px !default;
 $step-xs-number-size:              24px !default;
 
 // Component: steps
 // ========================================================================
 .steps {
-  // &.row {
+    margin: 0 0 $steps-margin-bottom;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+    
     // @if $enable-flex {
       display: flex;
       flex-wrap: wrap;
     // } @else {
-    //   display: block;
+      // display: block;
     // }
-  // }
-  margin: 0 0 $steps-margin-bottom;
 }
 
 .step {

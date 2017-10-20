@@ -6,21 +6,37 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
 
 .hljs {
   display: block;
-  overflow-x: auto;
   padding: .5em;
-  background: white;
+  overflow-x: auto;
   color: black;
+  background: white;
 }
 
-.hljs-string, .hljs-variable, .hljs-template-variable, .hljs-symbol, .hljs-bullet, .hljs-section, .hljs-addition, .hljs-attribute, .hljs-link {
+.hljs-string,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-section,
+.hljs-addition,
+.hljs-attribute,
+.hljs-link {
   color: #888;
 }
 
-.hljs-comment, .hljs-quote, .hljs-meta, .hljs-deletion {
+.hljs-comment,
+.hljs-quote,
+.hljs-meta,
+.hljs-deletion {
   color: #ccc;
 }
 
-.hljs-keyword, .hljs-selector-tag, .hljs-section, .hljs-name, .hljs-type, .hljs-strong {
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-name,
+.hljs-type,
+.hljs-strong {
   font-weight: bold;
 }
 

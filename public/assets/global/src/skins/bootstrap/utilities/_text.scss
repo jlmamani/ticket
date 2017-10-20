@@ -1,3 +1,7 @@
+//
+// Text
+//
+
 // Contextual colors
 
 @include text-emphasis-variant('.text-muted', $text-muted);
@@ -11,7 +15,6 @@
 @include text-emphasis-variant('.text-warning', $brand-warning);
 
 @include text-emphasis-variant('.text-danger', $brand-danger);
-
 
 // Font color
 

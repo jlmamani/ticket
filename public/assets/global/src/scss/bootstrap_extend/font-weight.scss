@@ -7,7 +7,7 @@
     font-weight: $font-weight-medium;
   }
 
-  // normalize.scss
+  // normalize.less
   // --------------------------------------------------
 
   b,
@@ -20,7 +20,7 @@
   }
 
 
-  // type.scss
+  // type.less
   // --------------------------------------------------
 
   h1, h2, h3, h4, h5, h6,
@@ -40,7 +40,7 @@
   }
 
 
-  // code.scss
+  // code.less
   // --------------------------------------------------
 
   kbd {
@@ -50,7 +50,7 @@
   }
 
 
-  // forms.scss
+  // forms.less
   // --------------------------------------------------
 
   label {
@@ -70,7 +70,7 @@
   }
 
 
-  // buttons.scss
+  // buttons.less
   // --------------------------------------------------
 
   .btn-link {
@@ -78,17 +78,17 @@
   }
 
 
-  // dropdowns.scss
+  // dropdowns.less
   // --------------------------------------------------
 
   .dropdown-menu {
     > li > a {
-      font-weight: $font-weight-light;
+      font-weight: $font-weight-normal;
     }
   }
 
 
-  // input-groups.scss
+  // input-groups.less
   // --------------------------------------------------
 
   .input-group-addon {
@@ -96,7 +96,7 @@
   }
 
 
-  // badges.scss
+  // badges.less
   // --------------------------------------------------
 
   .badge {
@@ -104,7 +104,7 @@
   }
 
 
-  // popovers.scss
+  // popovers.less
   // --------------------------------------------------
 
   .popover {
@@ -112,7 +112,7 @@
   }
 
 
-  // tooltip.scss
+  // tooltip.less
   // --------------------------------------------------
 
   .tooltip {

@@ -6,9 +6,9 @@
 
 // Variables
 // =======================================================================
-
 $primary-lists: (
   "primary": (
+    "50": $color-primary-50,
     "100": $color-primary-100,
     "200": $color-primary-200,
     "300": $color-primary-300,
@@ -16,17 +16,16 @@ $primary-lists: (
     "500": $color-primary-500,
     "600": $color-primary-600,
     "700": $color-primary-700,
-    "800": $color-primary-800
+    "800": $color-primary-800,
+    "900": $color-primary-900,
   )
 );
 
 // Component: Color
 // ========================================================================
-
 @mixin labelColorGenerator($label, $map, $type) {
   $type-class: null;
   $type-property: null;
-
   @if ($type == "color") {
     $type-class: "";
     $type-property: "color";

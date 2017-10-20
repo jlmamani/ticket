@@ -17,7 +17,11 @@
 
 // Variables
 // ========================================================================
+$nav-tabs-link-padding                      : $nav-padding-vertical pxToRem(20px) !default;
+$nav-tabs-vertical-link-padding             : $nav-padding-vertical pxToRem(20px) !default;
+
 $nav-tabs-color                             : $text-color !default;
+$nav-tabs-active-color                      : $inverse !default;
 $nav-tabs-active-bg                         : $brand-primary !default;
 $nav-tabs-active-border                     : $brand-primary !default;
 
@@ -65,9 +69,9 @@ $nav-quick-border-color                     : $border-color-base !default;
 // ========================================================================
 
 .nav-link {
-  position: relative;
-  display: block;
-  padding: pxToRem(10px) pxToRem(15px); 
+  position: relative;  // from---v3
+  display: block;      //from---v3
+  padding: pxToRem(10px) pxToRem(15px);  //from---v3
 
   overflow:hidden;
 
@@ -76,7 +80,7 @@ $nav-quick-border-color                     : $border-color-base !default;
   }
 
   &:focus,
-  &:hover {
+  &:hover {                   // from---v3
     background-color: $nav-link-hover-bg;
   }
 
@@ -102,6 +106,8 @@ $nav-quick-border-color                     : $border-color-base !default;
   // }
 }
 
+
+
 // Component: `nav-quick`
 // ========================================================================
 .nav-quick {
@@ -123,6 +129,7 @@ $nav-quick-border-color                     : $border-color-base !default;
   }
 
   .nav-link {
+    display: block;
     padding: $nav-quick-vertical-padding 0;
     color: $nav-tabs-color;
 
@@ -130,6 +137,11 @@ $nav-quick-border-color                     : $border-color-base !default;
       display: block;
       margin-bottom: 0.2rem;
       font-size: $nav-quick-icon-font-size;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: $nav-quick-hover-bg;
     }
   }
 
@@ -173,7 +185,12 @@ $nav-quick-border-color                     : $border-color-base !default;
 // Component: `nav-tabs`
 // ========================================================================
 .nav-tabs {
+  .nav-item + .nav-item {
+    margin-left: 2px;
+  }
+
   .nav-link {
+    padding: $nav-tabs-link-padding;
     color: $nav-tabs-color;
 
     transition: .25s;
@@ -186,11 +203,24 @@ $nav-quick-border-color                     : $border-color-base !default;
     // @include hover-focus {
     //   background-color: $nav-link-hover-bg;
     // }
+
+    // &.active {
+    //   &,
+    //   &:hover,
+    //   &:focus {
+    //     color: $nav-tabs-active-color;
+    //     background-color: $nav-tabs-active-bg;
+    //     border-color: transparent;
+    //     border-bottom-color: $nav-tabs-active-border;
+    //   }
+    // }
   }
 
   .nav-link.active,
   .nav-item.open .nav-link {
     @include plain-hover-focus {
+      color: $nav-tabs-active-color;
+      background-color: $nav-tabs-active-bg;
       border-color: transparent;
       border-bottom-color: $nav-tabs-active-border;
     }
@@ -201,7 +231,6 @@ $nav-quick-border-color                     : $border-color-base !default;
 
     @include border-bottom-radius(0);
   }
-
 }
 
 .nav-pills {
@@ -267,6 +296,16 @@ $nav-quick-border-color                     : $border-color-base !default;
     &:hover {
       border-color: transparent;
     }
+  
+    // &.active {
+    //   &,
+    //   &:hover,
+    //   &:focus {
+    //     color: $nav-tabs-solid-color;
+    //     background-color: $nav-tabs-solid-bg;
+    //     border-color: transparent;
+    //   }
+    // }
   }
 
   .nav-link.active,
@@ -316,6 +355,16 @@ $nav-quick-border-color                     : $border-color-base !default;
     &:hover {
       border-bottom-color: $nav-tabs-line-hover-border;
     }
+
+    // &.active {
+    //   &,
+    //   &:hover,
+    //   &:focus {
+    //     color: $nav-tabs-line-active-color;
+    //     background-color: transparent;
+    //     border-bottom: 2px solid $nav-tabs-line-active-border;
+    //   }
+    // }
   }
 
   .nav-link.active,
@@ -337,10 +386,19 @@ $nav-quick-border-color                     : $border-color-base !default;
 
   // Open dropdowns
   .nav-item.open > .nav-link {
-
     @include plain-hover-focus {
       border-bottom-color: $nav-tabs-active-border;
     }
+  }
+
+  > .nav-tabs-autoline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: $nav-tabs-active-bg;
+    transition-property: left, width;
   }
 
   &.nav-tabs-bottom {
@@ -351,6 +409,15 @@ $nav-quick-border-color                     : $border-color-base !default;
         border-top-color: $nav-tabs-line-hover-border;
         border-bottom-color: transparent;
       }
+
+      // &.active {
+      //   &,
+      //   &:hover,
+      //   &:focus {
+      //     border-top: 2px solid $nav-tabs-line-active-border;
+      //     border-bottom: none;
+      //   }
+      // }
     }
 
     .nav-link.active,
@@ -366,8 +433,14 @@ $nav-quick-border-color                     : $border-color-base !default;
         border-top-color: $nav-tabs-active-border;
       }
     }
+
+    > .nav-tabs-autoline {
+      top: 0;
+      bottom: auto;
+    }
   }
 }
+
 // CLASS [tab-line-top]
 // ========================================================================
 .tabs-line-top{
@@ -395,7 +468,6 @@ $nav-quick-border-color                     : $border-color-base !default;
   }
 }
 
-
 // Modifier: `nav-tabs-vertical`
 // ========================================================================
 
@@ -416,12 +488,13 @@ $nav-quick-border-color                     : $border-color-base !default;
     }
 
     .nav-link {
+      padding: $nav-tabs-vertical-link-padding;
       border-radius: $border-radius-large 0 0 $border-radius-large;
 
       &:hover {
         border-bottom-color: transparent;
         border-right-color: $nav-tabs-border-color;
-      }
+      }      
 
       &.active {
         &,
@@ -444,12 +517,13 @@ $nav-quick-border-color                     : $border-color-base !default;
     }
 
     .nav-link {
+      margin-left: 0;
       border-radius: 0 $border-radius-large $border-radius-large 0;
 
       &:hover {
         border-right-color: transparent;
         border-left-color: $nav-tabs-border-color;
-      }
+      }      
 
       &.active {
         &,
@@ -468,7 +542,7 @@ $nav-quick-border-color                     : $border-color-base !default;
       &:hover {
         border-color: transparent;
       }
-
+    
 
       &.active {
         &,
@@ -496,7 +570,7 @@ $nav-quick-border-color                     : $border-color-base !default;
       &:hover {
         border-right-color: $nav-tabs-line-hover-border;
       }
-
+    
       &.active {
         &,
         &:hover,
@@ -505,6 +579,14 @@ $nav-quick-border-color                     : $border-color-base !default;
           border-bottom: none;
         }
       }
+    }
+
+    > .nav-tabs-autoline {
+      left: auto;
+      right: 0;
+      width: 2px;
+      height: 0;
+      transition-property: top, height;
     }
   }
 
@@ -516,7 +598,7 @@ $nav-quick-border-color                     : $border-color-base !default;
         border-color: transparent;
         border-left-color: $nav-tabs-line-hover-border;
       }
-
+    
       &.active {
         &,
         &:hover,
@@ -525,6 +607,11 @@ $nav-quick-border-color                     : $border-color-base !default;
           border-left: 2px solid $nav-tabs-line-active-border;
         }
       }
+    }
+
+    > .nav-tabs-autoline {
+      left: 0;
+      right: auto;
     }
   }
 
@@ -583,4 +670,3 @@ $nav-quick-border-color                     : $border-color-base !default;
 .nav-tabs-sm {
   @include nav-tabs-size($nav-tabs-sm-font-size, $nav-tabs-sm-line-height, $nav-tabs-sm-padding);
 }
-

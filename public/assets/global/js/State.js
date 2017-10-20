@@ -164,7 +164,7 @@
     }, {
       key: 'set',
       value: function set(state, value) {
-        var isDeep = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+        var isDeep = arguments.length <= 2 || arguments[2] === undefined ? false : arguments[2];
 
         if (typeof state === 'string' && typeof value !== 'undefined' && typeof this._states[state] !== 'function') {
           this._states[state] = value;

@@ -1,7 +1,7 @@
 @import 'vars';
 
 $slidePanel-bg:              $inverse;
-$slidePanel-box-shadow:      -10px 0 20px 0 rgba(66, 66, 66, 0.2);
+$slidePanel-box-shadow:      -5px 0 20px 0 rgba(66, 66, 66, 0.2);
 $slidePanel-width:           700px;
 $slidePanel-height:          500px;
 $slidePanel-md-width-offset: 230px;
@@ -32,6 +32,7 @@ $slidePanel-z-index:    $zindex-overlay + 10;
     // height: calc($height);
 
     @include media-breakpoint-down(lg) {
+      $width: 100% - #{$slidePanel-md-width-offset};
       width: calc(100% - #{$slidePanel-md-width-offset});
     }
 

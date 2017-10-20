@@ -22,7 +22,6 @@
 
 // Variables
 // ========================================================================
-
 $avatar-online-color:    $brand-success !default;
 $avatar-off-color:       $brand-dark !default;
 $avatar-busy-color:      $brand-warning !default;
@@ -36,6 +35,10 @@ $avatar-status-border:   $inverse !default;
 .avatar {
   i {
     border: 2px solid $avatar-status-border;
+  }
+
+  img {
+    border: 0 none;
   }
 }
 
@@ -66,3 +69,5 @@ $avatar-status-border:   $inverse !default;
     background-color: $avatar-away-color;
   }
 }
+
+

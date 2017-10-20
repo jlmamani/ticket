@@ -184,7 +184,7 @@
 .jsgrid-insert-row > td,
 .jsgrid-edit-row > td
 {
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
 }
 
 .jsgrid-header-row > th
@@ -215,18 +215,18 @@
 
 .jsgrid-grid-header
 {
-    background: #e4eaec;
+    background: #e0e0e0;
 }
 
 .jsgrid-header-scrollbar
 {
-    scrollbar-arrow-color: #f3f7f9;
-    scrollbar-base-color: #f3f7f9;
-    scrollbar-3dlight-color: #f3f7f9;
-    scrollbar-highlight-color: #f3f7f9;
-    scrollbar-track-color: #f3f7f9;
-    scrollbar-shadow-color: #f3f7f9;
-    scrollbar-dark-shadow-color: #f3f7f9;
+    scrollbar-arrow-color: #eee;
+    scrollbar-base-color: #eee;
+    scrollbar-3dlight-color: #eee;
+    scrollbar-highlight-color: #eee;
+    scrollbar-track-color: #eee;
+    scrollbar-shadow-color: #eee;
+    scrollbar-dark-shadow-color: #eee;
 }
 
 .jsgrid-header-scrollbar::-webkit-scrollbar
@@ -236,7 +236,7 @@
 
 .jsgrid-header-scrollbar::-webkit-scrollbar-track
 {
-    background: #f3f7f9;
+    background: #eee;
 }
 
 .jsgrid-header-sortable:hover
@@ -248,12 +248,12 @@
 
 .jsgrid-header-row .jsgrid-header-sort
 {
-    background: #e8f1f8;
+    background: #c5cae9;
 }
 
 .jsgrid-header-sort:before
 {
-    font-family: 'Web Icons'; 
+    font-family: 'Material-Design-Iconic-Font'; 
     font-weight: normal;
     font-style: normal;
 
@@ -275,12 +275,12 @@
 
 .jsgrid-header-sort-asc:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-header-sort-desc:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-grid-body
@@ -330,18 +330,18 @@
 
 .jsgrid-insert-row > td
 {
-    background: #e7faf2;
+    background: #c8e6c9;
 }
 
 .jsgrid-edit-row > td
 {
-    background: #fffae7;
+    background: #fff9c4;
 }
 
 .jsgrid-selected-row > td
 {
-    border-color: #e8f1f8; 
-    background: #e8f1f8;
+    border-color: #c5cae9; 
+    background: #c5cae9;
 }
 
 .jsgrid-nodata-row td
@@ -375,7 +375,7 @@
 
 .jsgrid .jsgrid-button
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -384,8 +384,6 @@
 
     display: inline-block;
 
-    width: 16px;
-    height: 22px;
     padding: 0;
 
     cursor: pointer;
@@ -410,52 +408,52 @@
 
 .jsgrid-cancel-button:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-clear-filter-button:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-delete-button:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-edit-button:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-cancel-edit-button:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-insert-mode-button:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-insert-button:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-search-mode-button:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-search-button:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-update-button:before
 {
-    content: '';
+    content: '';
 }
 
 .jsgrid-load-shader
@@ -474,7 +472,7 @@
 
     text-align: center; 
 
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
     background: #fff;
 }
 

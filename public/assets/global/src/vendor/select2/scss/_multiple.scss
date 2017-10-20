@@ -38,7 +38,7 @@
 
 //color tag
 //=============================================================================
-.select2-primary .select2-container--default .select2-selection--multiple .select2-selection__choice,
+.select2-primary .select2-container .select2-selection--multiple .select2-selection__choice,
 .select2-results__otption .select2-results__otption--highlighted {
   color: $color-white;
   background: $brand-primary;
@@ -48,7 +48,7 @@
   }
 }
 
-.select2-success .select2-container--default .select2-selection--multiple .select2-selection__choice {
+.select2-success .select2-container .select2-selection--multiple .select2-selection__choice {
   background: $brand-success;
   color: $color-white;
   border-color: $brand-success;
@@ -57,7 +57,7 @@
   }
 }
 
-.select2-info .select2-container--default .select2-selection--multiple .select2-selection__choice {
+.select2-info .select2-container .select2-selection--multiple .select2-selection__choice {
   background: $brand-info;
   color: $color-white;
   border-color: $brand-info;
@@ -66,7 +66,7 @@
   }
 }
 
-.select2-warning .select2-container--default .select2-selection--multiple .select2-selection__choice {
+.select2-warning .select2-container .select2-selection--multiple .select2-selection__choice {
   background: $brand-warning;
   color: $color-white;
   border-color: $brand-warning;
@@ -75,7 +75,7 @@
   }
 }
 
-.select2-danger .select2-container--default .select2-selection--multiple .select2-selection__choice {
+.select2-danger .select2-container .select2-selection--multiple .select2-selection__choice {
   background: $brand-danger;
   color: $color-white;
   border-color: $brand-danger;

@@ -7,6 +7,8 @@
   background-color: $input-bg;
   border: $input-btn-border-width solid $input-border-color;
 
+  @include box-shadow($input-box-shadow);
+
   // Customize the `:focus` state to imitate native WebKit styles.
   @include form-control-focus();
 
@@ -37,18 +39,31 @@ select.form-control {
     background-color: $input-bg;
   }
 }
+
+// Form validation states
 // Form validation states
 .has-success {
   @include form-control-validation($brand-success);
 
+  .form-control-success {
+    background-image: $form-icon-success;
+  }
 }
 
 .has-warning {
   @include form-control-validation($brand-warning);
 
+  .form-control-warning {
+    background-image: $form-icon-warning;
+  }
 }
 
 .has-danger {
   @include form-control-validation($brand-danger);
+
+  .form-control-danger {
+    background-image: $form-icon-danger;
+  }
 }
+
 

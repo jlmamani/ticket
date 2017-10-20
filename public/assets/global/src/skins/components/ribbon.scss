@@ -25,7 +25,6 @@
 $ribbon-inner-color:         $inverse !default;
 $ribbon-inner-bg:            $brand-dark !default;
 
-
 $ribbon-clip-inner-border:   $brand-dark-active !default;
 
 $ribbon-primary-inner-bg:    $brand-primary !default;
@@ -156,11 +155,14 @@ $ribbon-danger-clip-border:  $brand-danger-active !default;
 // Component: Ribbon
 // ========================================================================
 
-.ribbon-inner {
-  color: $ribbon-inner-color;
-  background-color: $ribbon-inner-bg;
+.ribbon {
+  background-color: transparent;
+  
+  &-inner {
+    color: $ribbon-inner-color;
+    background-color: $ribbon-inner-bg;
+  }
 }
-
 
 // Modifier: `ribbon-reverse`
 // ========================================================================
@@ -170,6 +172,7 @@ $ribbon-danger-clip-border:  $brand-danger-active !default;
 
     &:before {
       border: 15px solid $ribbon-inner-bg;
+      border-right: 10px solid transparent;
     }
   }
 
@@ -177,6 +180,7 @@ $ribbon-danger-clip-border:  $brand-danger-active !default;
     .ribbon-inner {
       &:before {
         border-right: 15px solid $ribbon-inner-bg;
+        border-bottom: 10px solid transparent;
       }
     }
   }
@@ -185,6 +189,7 @@ $ribbon-danger-clip-border:  $brand-danger-active !default;
     .ribbon-inner {
       &:before {
         border-right: 15px solid $ribbon-inner-bg;
+        border-left: 10px solid transparent;
       }
     }
   }
@@ -193,11 +198,13 @@ $ribbon-danger-clip-border:  $brand-danger-active !default;
     .ribbon-inner {
       &:before {
         border-right-color: $ribbon-inner-bg;
+        border-bottom-color: transparent;
         border-left: 15px solid $ribbon-inner-bg;
       }
     }
   }
 }
+
 
 // Modifier: `ribbon-corner`
 // ========================================================================
@@ -205,25 +212,27 @@ $ribbon-danger-clip-border:  $brand-danger-active !default;
 .ribbon-corner {
 
   .ribbon-inner {
+    background-color: transparent;
+
     &:before {
+      border: 30px solid transparent;
       border-top-color: $ribbon-inner-bg;
       border-left-color: $ribbon-inner-bg;
     }
   }
   &.ribbon-reverse {
-
     .ribbon-inner {
 
       &:before {
         border-right-color: $ribbon-inner-bg;
+        border-left-color: transparent;
       }
     }
   }
   &.ribbon-bottom {
-
     .ribbon-inner {
-
       &:before {
+        border-top-color: transparent;
         border-bottom-color: $ribbon-inner-bg;
       }
     }
@@ -236,28 +245,26 @@ $ribbon-danger-clip-border:  $brand-danger-active !default;
 .ribbon-clip {
 
   .ribbon-inner {
-    
     &:after {
+      border: 7px solid transparent;
       border-top-color: $ribbon-clip-inner-border;
       border-right-color: $ribbon-clip-inner-border;
     }
   }
 
   &.ribbon-reverse {
-
     .ribbon-inner {
-
       &:after {
+        border-right-color: transparent;
         border-left-color: $ribbon-clip-inner-border;
       }
     }
   }
 
   &.ribbon-bottom {
-
     .ribbon-inner {
-      
       &:after {
+        border-top-color: transparent;
         border-bottom-color: $ribbon-clip-inner-border;
       }
     }
@@ -291,3 +298,4 @@ $ribbon-danger-clip-border:  $brand-danger-active !default;
   @include ribbon-variant($ribbon-danger-inner-bg);
   @include ribbon-clip-variant($ribbon-danger-clip-border);
 }
+

@@ -1,7 +1,7 @@
 .example {
   position: relative;
   padding: 10px;
-  border: 1px solid #e4eaec;
+  border: 1px solid #eee;
 }
 
 .example .scrollable-horizontal .scrollable-content {

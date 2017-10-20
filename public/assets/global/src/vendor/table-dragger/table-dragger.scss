@@ -1,12 +1,12 @@
 @import "vars";
 
 .table-dragger-handle {
-  font-family: '#{$wb-font-family}';
+  font-family: '#{$zmdi-font-name}';
   @include make-icon();
   margin-left: 0.3em;
 
   &:before {
-    content: '#{$wb-var-move}';
+    content: '#{$zmdi-var-arrows}';
   }
 }
 

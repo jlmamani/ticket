@@ -43,3 +43,9 @@
     }
   }
 }
+
+//fix issue#250 in remark-v4 ---20161014kevin_y
+#site-navbar-search {
+  z-index: 1;
+}
+//end fix issue#250

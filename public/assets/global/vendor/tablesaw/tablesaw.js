@@ -1,9 +1,9 @@
-/*! Tablesaw - v3.0.0 - 2017-02-14
+/*! Tablesaw - v3.0.0-beta.3 - 2016-10-10
 * https://github.com/filamentgroup/tablesaw
-* Copyright (c) 2017 Filament Group; Licensed MIT */
-/*! Shoestring - v2.0.0 - 2017-02-14
+* Copyright (c) 2016 Filament Group; Licensed MIT */
+/*! Shoestring - v1.0.5 - 2016-09-20
 * http://github.com/filamentgroup/shoestring/
-* Copyright (c) 2017 Scott Jehl, Filament Group, Inc; Licensed MIT & GPLv2 */ 
+* Copyright (c) 2016 Scott Jehl, Filament Group, Inc; Licensed MIT & GPLv2 */ 
 (function( factory ) {
 	if( typeof define === 'function' && define.amd ) {
 			// AMD. Register as an anonymous module.
@@ -219,13 +219,25 @@
 			}
 		};
 
+	// Quick IE8 shiv
+	if( !win.addEventListener ){
+		win.addEventListener = function( evt, cb ){
+			return win.attachEvent( "on" + evt, cb );
+		};
+	}
+
 	// If DOM is already ready at exec time, depends on the browser.
 	// From: https://github.com/mobify/mobifyjs/blob/526841be5509e28fc949038021799e4223479f8d/src/capture.js#L128
 	if (doc.attachEvent ? doc.readyState === "complete" : doc.readyState !== "loading") {
 		runReady();
-	} else {
-		doc.addEventListener( "DOMContentLoaded", runReady, false );
-		doc.addEventListener( "readystatechange", runReady, false );
+	}	else {
+		if( !doc.addEventListener ){
+			doc.attachEvent( "DOMContentLoaded", runReady );
+			doc.attachEvent( "onreadystatechange", runReady );
+		} else {
+			doc.addEventListener( "DOMContentLoaded", runReady, false );
+			doc.addEventListener( "readystatechange", runReady, false );
+		}
 		win.addEventListener( "load", runReady, false );
 	}
 
@@ -544,8 +556,139 @@
 
 
   shoestring.cssExceptions = {
-		'float': [ 'cssFloat' ]
+		'float': [ 'cssFloat', 'styleFloat' ] // styleFloat is IE8
 	};
+
+
+
+	/**
+	 * A polyfill to support computed styles in IE < 9
+	 *
+	 * NOTE this is taken directly from https://github.com/jonathantneal/polyfill
+	 */
+	(function () {
+		function getComputedStylePixel(element, property, fontSize) {
+			element.document; // Internet Explorer sometimes struggles to read currentStyle until the element's document is accessed.
+
+			var
+			value = element.currentStyle[property].match(/([\d\.]+)(%|cm|em|in|mm|pc|pt|)/) || [0, 0, ''],
+			size = value[1],
+			suffix = value[2],
+			rootSize;
+
+			fontSize = !fontSize ? fontSize : /%|em/.test(suffix) && element.parentElement ? getComputedStylePixel(element.parentElement, 'fontSize', null) : 16;
+			rootSize = property === 'fontSize' ? fontSize : /width/i.test(property) ? element.clientWidth : element.clientHeight;
+
+			return suffix === '%' ? size / 100 * rootSize :
+				suffix === 'cm' ? size * 0.3937 * 96 :
+				suffix === 'em' ? size * fontSize :
+				suffix === 'in' ? size * 96 :
+				suffix === 'mm' ? size * 0.3937 * 96 / 10 :
+				suffix === 'pc' ? size * 12 * 96 / 72 :
+				suffix === 'pt' ? size * 96 / 72 :
+				size;
+		}
+
+		function setShortStyleProperty(style, property) {
+			var
+			borderSuffix = property === 'border' ? 'Width' : '',
+			t = property + 'Top' + borderSuffix,
+			r = property + 'Right' + borderSuffix,
+			b = property + 'Bottom' + borderSuffix,
+			l = property + 'Left' + borderSuffix;
+
+			style[property] = (style[t] === style[r] && style[t] === style[b] && style[t] === style[l] ? [ style[t] ] :
+												 style[t] === style[b] && style[l] === style[r] ? [ style[t], style[r] ] :
+												 style[l] === style[r] ? [ style[t], style[r], style[b] ] :
+												 [ style[t], style[r], style[b], style[l] ]).join(' ');
+		}
+
+		// <CSSStyleDeclaration>
+		function CSSStyleDeclaration(element) {
+			var
+			style = this,
+			currentStyle = element.currentStyle,
+			fontSize = getComputedStylePixel(element, 'fontSize'),
+			unCamelCase = function (match) {
+				return '-' + match.toLowerCase();
+			},
+			property;
+
+			for (property in currentStyle) {
+				Array.prototype.push.call(style, property === 'styleFloat' ? 'float' : property.replace(/[A-Z]/, unCamelCase));
+
+				if (property === 'width') {
+					style[property] = element.offsetWidth + 'px';
+				} else if (property === 'height') {
+					style[property] = element.offsetHeight + 'px';
+				} else if (property === 'styleFloat') {
+					style.float = currentStyle[property];
+				} else if (/margin.|padding.|border.+W/.test(property) && style[property] !== 'auto') {
+					style[property] = Math.round(getComputedStylePixel(element, property, fontSize)) + 'px';
+				} else if (/^outline/.test(property)) {
+					// errors on checking outline
+					try {
+						style[property] = currentStyle[property];
+					} catch (error) {
+						style.outlineColor = currentStyle.color;
+						style.outlineStyle = style.outlineStyle || 'none';
+						style.outlineWidth = style.outlineWidth || '0px';
+						style.outline = [style.outlineColor, style.outlineWidth, style.outlineStyle].join(' ');
+					}
+				} else {
+					style[property] = currentStyle[property];
+				}
+			}
+
+			setShortStyleProperty(style, 'margin');
+			setShortStyleProperty(style, 'padding');
+			setShortStyleProperty(style, 'border');
+
+			style.fontSize = Math.round(fontSize) + 'px';
+		}
+
+		CSSStyleDeclaration.prototype = {
+			constructor: CSSStyleDeclaration,
+			// <CSSStyleDeclaration>.getPropertyPriority
+			getPropertyPriority: function () {
+				throw new Error('NotSupportedError: DOM Exception 9');
+			},
+			// <CSSStyleDeclaration>.getPropertyValue
+			getPropertyValue: function (property) {
+				return this[property.replace(/-\w/g, function (match) {
+					return match[1].toUpperCase();
+				})];
+			},
+			// <CSSStyleDeclaration>.item
+			item: function (index) {
+				return this[index];
+			},
+			// <CSSStyleDeclaration>.removeProperty
+			removeProperty: function () {
+				throw new Error('NoModificationAllowedError: DOM Exception 7');
+			},
+			// <CSSStyleDeclaration>.setProperty
+			setProperty: function () {
+				throw new Error('NoModificationAllowedError: DOM Exception 7');
+			},
+			// <CSSStyleDeclaration>.getPropertyCSSValue
+			getPropertyCSSValue: function () {
+				throw new Error('NotSupportedError: DOM Exception 9');
+			}
+		};
+
+		if( !win.getComputedStyle ) {
+			// <win>.getComputedStyle
+			// NOTE win is not defined in all browsers
+			win.getComputedStyle = function (element) {
+				return new CSSStyleDeclaration(element);
+			};
+
+			if ( win.Window ) {
+				win.Window.prototype.getComputedStyle = win.getComputedStyle;
+			}
+		}
+	})();
 
 
 
@@ -560,6 +703,7 @@
 		}
 
 		function _getStyle( element, property ) {
+			// polyfilled in getComputedStyle module
 			return win.getComputedStyle( element, null ).getPropertyValue( property );
 		}
 
@@ -1420,6 +1564,24 @@
 		}
 	}
 
+	// In IE8 the events trigger in a reverse order (LIFO). This code
+	// unbinds and rebinds all callbacks on an element in the a FIFO order.
+	function reorderEvents( node, eventName ) {
+		if( node.addEventListener || !node.shoestringData || !node.shoestringData.events ) {
+			// add event listner obviates the need for all the callback order juggling
+			return;
+		}
+
+		var otherEvents = node.shoestringData.events[ eventName ] || [];
+		for( var j = otherEvents.length - 1; j >= 0; j-- ) {
+			// DOM Events only, Custom events maintain their own order internally.
+			if( !otherEvents[ j ].isCustomEvent ) {
+				node.detachEvent( "on" + eventName, otherEvents[ j ].callback );
+				node.attachEvent( "on" + eventName, otherEvents[ j ].callback );
+			}
+		}
+	}
+
 	/**
 	 * Bind a callback to an event for the currrent set of elements.
 	 *
@@ -1436,7 +1598,8 @@
 			data = null;
 		}
 
-		var evts = evt.split( " " );
+		var evts = evt.split( " " ),
+			docEl = doc.documentElement;
 
 		// NOTE the `triggeredElement` is purely for custom events from IE
 		function encasedCallback( e, namespace, triggeredElement ){
@@ -1489,6 +1652,26 @@
 			return result;
 		}
 
+		// This is exclusively for custom events on browsers without addEventListener (IE8)
+		function propChange( originalEvent, boundElement, namespace ) {
+			var lastEventInfo = doc.documentElement[ originalEvent.propertyName ],
+				triggeredElement = lastEventInfo.el;
+
+			var boundCheckElement = boundElement;
+
+			if( boundElement === doc && triggeredElement !== doc ) {
+				boundCheckElement = doc.documentElement;
+			}
+
+			if( triggeredElement !== undefined &&
+				shoestring( triggeredElement ).closest( boundCheckElement ).length ) {
+
+				originalEvent._namespace = lastEventInfo._namespace;
+				originalEvent._args = lastEventInfo._args;
+				encasedCallback.call( boundElement, originalEvent, namespace, triggeredElement );
+			}
+		}
+
 		return this.each(function(){
 			var domEventCallback,
 				customEventCallback,
@@ -1514,7 +1697,45 @@
 
 				initEventCache( this, evt );
 
-				this.addEventListener( evt, domEventCallback, false );
+				if( "addEventListener" in this ){
+					this.addEventListener( evt, domEventCallback, false );
+				} else if( this.attachEvent ){
+					if( this[ "on" + evt ] !== undefined ) {
+						this.attachEvent( "on" + evt, domEventCallback );
+					} else {
+						customEventCallback = (function() {
+							var eventName = evt;
+							return function( e ) {
+								if( e.propertyName === eventName ) {
+									propChange( e, oEl, namespace );
+								}
+							};
+						})();
+
+						// only assign one onpropertychange per element
+						if( this.shoestringData.events[ evt ].length === 0 ) {
+							customEventLoop = (function() {
+								var eventName = evt;
+								return function( e ) {
+									if( !oEl.shoestringData || !oEl.shoestringData.events ) {
+										return;
+									}
+									var events = oEl.shoestringData.events[ eventName ];
+									if( !events ) {
+										return;
+									}
+
+									// TODO stopImmediatePropagation
+									for( var j = 0, k = events.length; j < k; j++ ) {
+										events[ j ].callback( e );
+									}
+								};
+							})();
+
+							docEl.attachEvent( "onpropertychange", customEventLoop );
+						}
+					}
+				}
 
 				addToEventCache( this, evt, {
 					callfunc: customEventCallback || domEventCallback,
@@ -1523,6 +1744,11 @@
 					originalCallback: originalCallback,
 					namespace: namespace
 				});
+
+				// Don’t reorder custom events, only DOM Events.
+				if( !customEventCallback ) {
+					reorderEvents( oEl, evt );
+				}
 			}
 		});
 	};
@@ -1579,7 +1805,17 @@
 		for( j = 0, jl = bound.length; j < jl; j++ ) {
 			if( !namespace || namespace === bound[ j ].namespace ) {
 				if( callback === undefined || callback === bound[ j ].originalCallback ) {
-					this.removeEventListener( evt, bound[ j ].callback, false );
+					if( "removeEventListener" in win ){
+						this.removeEventListener( evt, bound[ j ].callback, false );
+					} else if( this.detachEvent ){
+						// dom event
+						this.detachEvent( "on" + evt, bound[ j ].callback );
+
+						// only unbind custom events if its the last one on the element
+						if( bound.length === 1 && this.shoestringData.loop && this.shoestringData.loop[ evt ] ) {
+							doc.documentElement.detachEvent( "onpropertychange", this.shoestringData.loop[ evt ] );
+						}
+					}
 					matched.push( j );
 				}
 			}
@@ -1646,6 +1882,7 @@
 			el = this[ 0 ],
 			ret;
 
+		// TODO needs IE8 support
 		// See this.fireEvent( 'on' + evts[ i ], document.createEventObject() ); instead of click() etc in trigger.
 		if( doc.createEvent && el.shoestringData && el.shoestringData.events && el.shoestringData.events[ e ] ){
 			var bindings = el.shoestringData.events[ e ];
@@ -1698,6 +1935,21 @@
 					event._namespace = namespace;
 
 					this.dispatchEvent( event );
+				} else if ( doc.createEventObject ) {
+					if( ( "" + this[ evt ] ).indexOf( "function" ) > -1 ) {
+						this.ssEventTrigger = {
+							_namespace: namespace,
+							_args: args
+						};
+
+						this[ evt ]();
+					} else {
+						doc.documentElement[ evt ] = {
+							"el": this,
+							_namespace: namespace,
+							_args: args
+						};
+					}
 				}
 			}
 		});
@@ -1737,24 +1989,34 @@
 		factory(shoestring);
 	}
 }(function ($) {
-	"use strict";
+	var Tablesaw, win = typeof window !== "undefined" ? window : this;
 
-	var win = typeof window !== "undefined" ? window : this;
+/*
+* tablesaw: A set of plugins for responsive tables
+* Stack and Column Toggle tables
+* Copyright (c) 2013 Filament Group, Inc.
+* MIT License
+*/
 
-var Tablesaw = {
-	i18n: {
-		modes: [ 'Stack', 'Swipe', 'Toggle' ],
-		columns: 'Col<span class=\"a11y-sm\">umn</span>s',
-		columnBtnText: 'Columns',
-		columnsDialogError: 'No eligible columns.',
-		sort: 'Sort'
-	},
-	// cut the mustard
-	mustard: ( 'head' in document ) && // IE9+, Firefox 4+, Safari 5.1+, Mobile Safari 4.1+, Opera 11.5+, Android 2.3+
-		( !window.blackberry || window.WebKitPoint ) && // only WebKit Blackberry (OS 6+)
-		!window.operamini
-};
-
+if( typeof Tablesaw === "undefined" ) {
+	Tablesaw = {
+		i18n: {
+			modes: [ 'Stack', 'Swipe', 'Toggle' ],
+			columns: 'Col<span class=\"a11y-sm\">umn</span>s',
+			columnBtnText: 'Columns',
+			columnsDialogError: 'No eligible columns.',
+			sort: 'Sort'
+		},
+		// cut the mustard
+		mustard: ( 'querySelector' in document ) &&
+			( 'head' in document ) &&
+			( !window.blackberry || window.WebKitPoint ) &&
+			!window.operamini
+	};
+}
+if( !Tablesaw.config ) {
+	Tablesaw.config = {};
+}
 if( Tablesaw.mustard ) {
 	$( document.documentElement ).addClass( 'tablesaw-enhanced' );
 }
@@ -1793,95 +2055,53 @@ if( Tablesaw.mustard ) {
 
 		this.createToolbar();
 
-		// TODO this is used inside stack table init for some reason? what does it do?
-		this._initCells();
+		var colstart = this._initCells();
 
-		this.$table.trigger( events.create, [ this ] );
-	};
-
-	Table.prototype._getPrimaryHeaders = function() {
-		return this.$table.find( "thead" ).children().filter( "tr" ).eq( 0 ).find( "th" );
-	};
-
-	Table.prototype._findHeadersForCell = function( cell ) {
-		var $headers = this._getPrimaryHeaders();
-		var results = [];
-
-		for( var rowNumber = 1; rowNumber < this.headerMapping.length; rowNumber++ ) {
-			for( var colNumber = 0; colNumber < this.headerMapping[ rowNumber ].length; colNumber++ ) {
-				if( this.headerMapping[ rowNumber ][ colNumber ] === cell ) {
-					results.push( $headers[ colNumber ] );
-				}
-			}
-		}
-		return results;
+		this.$table.trigger( events.create, [ this, colstart ] );
 	};
 
 	Table.prototype._initCells = function() {
-		var colstart = 0;
-		var $rows = this.$table.find( "tr" );
-		var columnLookup = [];
+		var colstart,
+			thrs = this.table.querySelectorAll( "thead tr" ),
+			self = this;
 
-		$rows.each(function( rowNumber ) {
-			columnLookup[ rowNumber ] = [];
-		});
-
-		$rows.each(function( rowNumber ) {
+		$( thrs ).each( function(){
 			var coltally = 0;
-			var $t = $( this );
-			var children = $t.children();
-			// var isInHeader = $t.closest( "thead" ).length;
 
-			children.each(function() {
-				var colspan = parseInt( this.getAttribute( "colspan" ), 10 );
-				var rowspan = parseInt( this.getAttribute( "rowspan" ), 10 );
+			var children = $( this ).children();
+			var columnlookup = [];
+			children.each( function(){
+				var span = parseInt( this.getAttribute( "colspan" ), 10 );
 
-				// set in a previous rowspan
-				while( columnLookup[ rowNumber ][ coltally ] ) {
-					coltally++;
-				}
-
-				columnLookup[ rowNumber ][ coltally ] = this;
+				columnlookup[coltally] = this;
 				colstart = coltally + 1;
 
-				// TODO both colspan and rowspan
-				if( colspan ) {
-					for( var k = 0; k < colspan - 1; k++ ){
+				if( span ){
+					for( var k = 0; k < span - 1; k++ ){
 						coltally++;
-						columnLookup[ rowNumber ][ coltally ] = this;
+						columnlookup[coltally] = this;
 					}
 				}
-				if( rowspan ) {
-					for( var j = 1; j < rowspan; j++ ){
-						columnLookup[ rowNumber + j ][ coltally ] = this;
-					}
-				}
-
+				this.cells = [];
 				coltally++;
+			});
+			// Note that this assumes that children() returns its results in document order. jQuery doesn't
+			// promise that in the docs, but it's a pretty safe assumption.
+			self.$table.find("tr").not( thrs[0]).each( function() {
+				var cellcoltally = 0;
+				$(this).children().each(function () {
+					var span = parseInt( this.getAttribute( "colspan" ), 10 );
+					columnlookup[cellcoltally].cells.push(this);
+					if (span) {
+						cellcoltally += span;
+					} else {
+						cellcoltally++;
+					}
+				});
 			});
 		});
 
-		for( var colNumber = 0; colNumber < columnLookup[ 0 ].length; colNumber++ ) {
-			var headerCol = columnLookup[ 0 ][ colNumber ];
-			var rowNumber = 0;
-			var rowCell;
-
-			if( !headerCol.cells ) {
-				headerCol.cells = [];
-			}
-
-			while( rowNumber < columnLookup.length ) {
-				rowCell = columnLookup[ rowNumber ][ colNumber ];
-
-				if( headerCol !== rowCell ) {
-					headerCol.cells.push( rowCell );
-				}
-
-				rowNumber++;
-			}
-		}
-
-		this.headerMapping = columnLookup;
+		return colstart;
 	};
 
 	Table.prototype.refresh = function() {
@@ -1945,7 +2165,7 @@ if( Tablesaw.mustard ) {
 
 }());
 
-(function(){
+;(function(){
 
 	var classes = {
 		stackTable: 'tablesaw-stack',
@@ -1962,46 +2182,57 @@ if( Tablesaw.mustard ) {
 		hideempty: 'data-tablesaw-hide-empty'
 	};
 
-	var Stack = function( element, tablesaw ) {
+	var Stack = function( element ) {
 
-		this.tablesaw = tablesaw;
 		this.$table = $( element );
 
 		this.labelless = this.$table.is( '[' + attrs.labelless + ']' );
 		this.hideempty = this.$table.is( '[' + attrs.hideempty + ']' );
 
+		if( !this.labelless ) {
+			// allHeaders references headers, plus all THs in the thead, which may include several rows, or not
+			this.allHeaders = this.$table.find( "th" );
+		}
+
 		this.$table.data( data.obj, this );
 	};
 
-	// Stack.prototype.init = function( colstart ) {
-	Stack.prototype.init = function() {
+	Stack.prototype.init = function( colstart ) {
 		this.$table.addClass( classes.stackTable );
 
 		if( this.labelless ) {
 			return;
 		}
 
-		var self = this;
+		// get headers in reverse order so that top-level headers are appended last
+		var reverseHeaders = $( this.allHeaders );
+		var hideempty = this.hideempty;
 
-		this.$table.find( "th, td" ).filter(function() {
-			return !$( this ).closest( "thead" ).length;
-		}).filter(function() {
-			return !$( this ).closest( "tr" ).is( "[" + attrs.labelless + "]" ) &&
-				( !self.hideempty || !!$( this ).html() );
-		}).each(function() {
-			var html = [];
-			var $cell = $( this );
+		// create the hide/show toggles
+		reverseHeaders.each(function(){
+			var $t = $( this ),
+				$cells = $( this.cells ).filter(function() {
+					return !$( this ).parent().is( "[" + attrs.labelless + "]" ) && ( !hideempty || !$( this ).is( ":empty" ) );
+				}),
+				hierarchyClass = $cells.not( this ).filter( "thead th" ).length && " tablesaw-cell-label-top",
+				// TODO reduce coupling with sortable
+				$sortableButton = $t.find( ".tablesaw-sortable-btn" ),
+				html = $sortableButton.length ? $sortableButton.html() : $t.html();
 
-			// headers
-			$( self.tablesaw._findHeadersForCell( this ) ).each(function() {
-				var $t = $( this );
-				// TODO decouple from sortable better
-				var $sortableButton = $t.find( ".tablesaw-sortable-btn" );
-				html.push( $sortableButton.length ? $sortableButton.html() : $t.html() );
-			});
+			if( html !== "" ){
+				if( hierarchyClass ){
+					var iteration = parseInt( $( this ).attr( "colspan" ), 10 ),
+						filter = "";
 
-			$cell.wrapInner( "<span class='" + classes.cellContentLabels + "'></span>" );
-			$cell.prepend( "<b class='" + classes.cellLabels + "'>" + html.join( ", " ) + "</b>"  );
+					if( iteration ){
+						filter = "td:nth-child("+ iteration +"n + " + ( colstart ) +")";
+					}
+					$cells.filter( filter ).prepend( "<b class='" + classes.cellLabels + hierarchyClass + "'>" + html + "</b>"  );
+				} else {
+					$cells.wrapInner( "<span class='" + classes.cellContentLabels + "'></span>" );
+					$cells.prepend( "<b class='" + classes.cellLabels + "'>" + html + "</b>"  );
+				}
+			}
 		});
 	};
 
@@ -2014,27 +2245,31 @@ if( Tablesaw.mustard ) {
 	};
 
 	// on tablecreate, init
-	$( document ).on( "tablesawcreate", function( e, tablesaw ){
+	$( document ).on( "tablesawcreate", function( e, tablesaw, colstart ){
 		if( tablesaw.mode === 'stack' ){
-			var table = new Stack( tablesaw.table, tablesaw );
-			table.init();
+			var table = new Stack( tablesaw.table );
+			table.init( colstart );
 		}
-	});
+
+	} );
 
 	$( document ).on( "tablesawdestroy", function( e, tablesaw ){
+
 		if( tablesaw.mode === 'stack' ){
 			$( tablesaw.table ).data( data.obj ).destroy();
 		}
-	});
+
+	} );
 
 }());
-(function() {
+;(function() {
 	var pluginName = "tablesawbtn",
 		methods = {
 			_create: function(){
 				return $( this ).each(function() {
 					$( this )
-						.trigger( "beforecreate." + pluginName )[ pluginName ]( "_init" )
+						.trigger( "beforecreate." + pluginName )
+						[ pluginName ]( "_init" )
 						.trigger( "create." + pluginName );
 				});
 			},
@@ -2044,7 +2279,8 @@ if( Tablesaw.mustard ) {
 
 				if( sel ) {
 					$( this )
-						.addClass( "btn-select" )[ pluginName ]( "_select", sel );
+						.addClass( "btn-select" )
+						[ pluginName ]( "_select", sel );
 				}
 				return oEl;
 			},
@@ -2094,18 +2330,19 @@ if( Tablesaw.mustard ) {
 	$.fn[ pluginName ] = function( arrg, a, b, c ) {
 		return this.each(function() {
 
-			// if it's a method
-			if( arrg && typeof( arrg ) === "string" ){
-				return $.fn[ pluginName ].prototype[ arrg ].call( this, a, b, c );
-			}
+		// if it's a method
+		if( arrg && typeof( arrg ) === "string" ){
+			return $.fn[ pluginName ].prototype[ arrg ].call( this, a, b, c );
+		}
 
-			// don't re-init
-			if( $( this ).data( pluginName + "active" ) ){
-				return $( this );
-			}
+		// don't re-init
+		if( $( this ).data( pluginName + "active" ) ){
+			return $( this );
+		}
 
-			$( this ).data( pluginName + "active", true );
+		// otherwise, init
 
+		$( this ).data( pluginName + "active", true );
 			$.fn[ pluginName ].prototype._create.call( this );
 		});
 	};
@@ -2114,7 +2351,7 @@ if( Tablesaw.mustard ) {
 	$.extend( $.fn[ pluginName ].prototype, methods );
 
 }());
-(function(){
+;(function(){
 
 	var ColumnToggle = function( element ) {
 
@@ -2225,7 +2462,7 @@ if( Tablesaw.mustard ) {
 
 			window.clearTimeout( closeTimeout );
 			closeTimeout = window.setTimeout(function() {
-				$( document ).on( 'click.' + tableId, closePopup );
+				$( document ).one( 'click.' + tableId, closePopup );
 			}, 15 );
 		}
 
@@ -2393,7 +2630,7 @@ if( Tablesaw.mustard ) {
 							newSortValue = heads.index( head[0] );
 
 						clearOthers( head.siblings() );
-						if( head.is( "." + classes.descend ) || !head.is( "." + classes.ascend ) ){
+						if( head.is( "." + classes.descend ) ){
 							el[ pluginName ]( "sortBy" , v , true);
 							newSortValue += '_asc';
 						} else {
@@ -2427,7 +2664,7 @@ if( Tablesaw.mustard ) {
 							var isDefaultCol = $t.is( "[" + attrs.defaultCol + "]" );
 							var isDescending = $t.is( "." + classes.descend );
 
-							var hasNumericAttribute = $t.is( '[' + attrs.numericCol + ']' );
+							var hasNumericAttribute = $t.is( '[data-sortable-numeric]' );
 							var numericCount = 0;
 							// Check only the first four rows to see if the column is numbers.
 							var numericCountMax = 5;
@@ -2438,7 +2675,7 @@ if( Tablesaw.mustard ) {
 							});
 							var isNumeric = numericCount === numericCountMax;
 							if( !hasNumericAttribute ) {
-								$t.attr( attrs.numericCol, isNumeric ? "" : "false" );
+								$t.attr( "data-sortable-numeric", isNumeric ? "" : "false" );
 							}
 
 							html.push( '<option' + ( isDefaultCol && !isDescending ? ' selected' : '' ) + ' value="' + j + '_asc">' + $t.text() + ' ' + ( isNumeric ? '&#x2191;' : '(A-Z)' ) + '</option>' );
@@ -2530,7 +2767,7 @@ if( Tablesaw.mustard ) {
 				cells = getCells( rows );
 				var customFn = $( col ).data( 'tablesaw-sort' );
 				fn = ( customFn && typeof customFn === "function" ? customFn( ascending ) : false ) ||
-					getSortFxn( ascending, $( col ).is( '[' + attrs.numericCol + ']' ) && !$( col ).is( '[' + attrs.numericCol + '="false"]' ) );
+					getSortFxn( ascending, $( col ).is( '[data-sortable-numeric]' ) && !$( col ).is( '[data-sortable-numeric="false"]' ) );
 
 				sorted = cells.sort( fn );
 				rows = applyToRows( sorted , rows );
@@ -2595,13 +2832,26 @@ if( Tablesaw.mustard ) {
 
 }());
 
-(function(){
+;(function(){
 
-	function getSwipeConfig() {
-		return $.extend({
+	$.extend( Tablesaw.config, {
+		swipe: {
 			horizontalThreshold: 15,
 			verticalThreshold: 30
-		}, typeof TablesawConfig !== "undefined" ? TablesawConfig.swipe : {} );
+		}
+	});
+
+	function sumStyles( $el, props ) {
+		var total = 0;
+		for( var j = 0, k = props.length; j < k; j++ ) {
+			total += parseInt( $el.css( props[ j ] ) || 0, 10 );
+		}
+		return total;
+	}
+
+	function outerWidth( el ) {
+		var $el = $( el );
+		return $el.width() + sumStyles( $el, [ "border-left-width", "border-right-width" ] );
 	}
 
 	var classes = {
@@ -2615,17 +2865,16 @@ if( Tablesaw.mustard ) {
 		disableTouchEvents: "data-tablesaw-no-touch"
 	};
 
-	function createSwipeTable( tbl, $table ){
+	function createSwipeTable( $table ){
 
-		var $btns = $( "<div class='tablesaw-advance'></div>" );
-		var $prevBtn = $( "<a href='#' class='tablesaw-nav-btn btn btn-micro left' title='Previous Column'></a>" ).appendTo( $btns );
-		var $nextBtn = $( "<a href='#' class='tablesaw-nav-btn btn btn-micro right' title='Next Column'></a>" ).appendTo( $btns );
-
-		var $headerCells = tbl._getPrimaryHeaders();
-		var $headerCellsNoPersist = $headerCells.not( '[data-tablesaw-priority="persist"]' );
-		var headerWidths = [];
-		var $head = $( document.head || 'head' );
-		var tableId = $table.attr( 'id' );
+		var $btns = $( "<div class='tablesaw-advance'></div>" ),
+			$prevBtn = $( "<a href='#' class='tablesaw-nav-btn btn btn-micro left' title='Previous Column'></a>" ).appendTo( $btns ),
+			$nextBtn = $( "<a href='#' class='tablesaw-nav-btn btn btn-micro right' title='Next Column'></a>" ).appendTo( $btns ),
+			$headerCells = $table.find( "thead th" ),
+			$headerCellsNoPersist = $headerCells.not( '[data-tablesaw-priority="persist"]' ),
+			headerWidths = [],
+			$head = $( document.head || 'head' ),
+			tableId = $table.attr( 'id' );
 
 		if( !$headerCells.length ) {
 			throw new Error( "tablesaw swipe: no header cells found. Are you using <th> inside of <thead>?" );
@@ -2635,7 +2884,7 @@ if( Tablesaw.mustard ) {
 
 		// Calculate initial widths
 		$headerCells.each(function() {
-			var width = this.offsetWidth;
+			var width = outerWidth( this );
 			headerWidths.push( width );
 		});
 
@@ -2678,12 +2927,12 @@ if( Tablesaw.mustard ) {
 				hash = [],
 				newHash;
 
-			// save persistent column widths (as long as they take up less than 75% of table width)
 			$headerCells.each(function( index ) {
 				var width;
 				if( isPersistent( this ) ) {
-					width = this.offsetWidth;
+					width = outerWidth( this );
 
+					// Only save width on non-greedy columns (take up less than 75% of table width)
 					if( width < tableWidth * 0.75 ) {
 						hash.push( index + '-' + width );
 						styles.push( prefix + ' .tablesaw-cell-persist:nth-child(' + ( index + 1 ) + ') { width: ' + width + 'px; }' );
@@ -2692,14 +2941,15 @@ if( Tablesaw.mustard ) {
 			});
 			newHash = hash.join( '_' );
 
-			if( styles.length ) {
-				$table.addClass( classes.persistWidths );
-				var $style = $( '#' + tableId + '-persist' );
-				// If style element not yet added OR if the widths have changed
-				if( !$style.length || $style.data( 'tablesaw-hash' ) !== newHash ) {
-					// Remove existing
-					$style.remove();
+			$table.addClass( classes.persistWidths );
 
+			var $style = $( '#' + tableId + '-persist' );
+			// If style element not yet added OR if the widths have changed
+			if( !$style.length || $style.data( 'tablesaw-hash' ) !== newHash ) {
+				// Remove existing
+				$style.remove();
+
+				if( styles.length ) {
 					$( '<style>' + styles.join( "\n" ) + '</style>' )
 						.attr( 'id', tableId + '-persist' )
 						.data( 'tablesaw-hash', newHash )
@@ -2826,7 +3076,7 @@ if( Tablesaw.mustard ) {
 		}
 
 		if( !$table.is( "[" + attrs.disableTouchEvents + "]" ) ) {
-
+			
 			$table
 				.on( "touchstart.swipetoggle", function( e ){
 					var originX = getCoord( e, 'pageX' ),
@@ -2840,13 +3090,13 @@ if( Tablesaw.mustard ) {
 						.on( "touchmove", function( e ){
 							x = getCoord( e, 'pageX' );
 							y = getCoord( e, 'pageY' );
-							var cfg = getSwipeConfig();
+							var cfg = Tablesaw.config.swipe;
 							if( Math.abs( x - originX ) > cfg.horizontalThreshold && Math.abs( y - originY ) < cfg.verticalThreshold ) {
 								e.preventDefault();
 							}
 						})
 						.on( "touchend.swipetoggle", function(){
-							var cfg = getSwipeConfig();
+							var cfg = Tablesaw.config.swipe;
 							if( Math.abs( y - originY ) < cfg.verticalThreshold ) {
 								if( x - originX < -1 * cfg.horizontalThreshold ){
 									advance( true );
@@ -2892,7 +3142,7 @@ if( Tablesaw.mustard ) {
 				// manual refresh
 				headerWidths = [];
 				$headerCells.each(function() {
-					var width = this.offsetWidth;
+					var width = outerWidth( this );
 					headerWidths.push( width );
 				});
 
@@ -2908,7 +3158,7 @@ if( Tablesaw.mustard ) {
 	// on tablecreate, init
 	$( document ).on( "tablesawcreate", function( e, tablesaw ){
 		if( tablesaw.mode === 'swipe' ){
-			createSwipeTable( tablesaw, tablesaw.$table );
+			createSwipeTable( tablesaw.$table );
 		}
 
 	} );

@@ -3,6 +3,7 @@
   background-color: $site-navbar-header-bg;
 
   .navbar-header {
+    background-color: transparent;
     color: $site-navbar-header-color;
 
     .navbar-toggler {
@@ -10,8 +11,8 @@
     }
 
     .hamburger {
-      &::before,
-      &::after,
+      &:before,
+      &:after,
       .hamburger-bar {
         background-color: $site-navbar-header-color;
       }
@@ -25,6 +26,7 @@
   .navbar-container {
     background-color: $inverse;
   }
+
   &.navbar-inverse {
     .navbar-container {
       background-color: transparent;

@@ -30,18 +30,21 @@ $icon-inverse:       $inverse !default;
 // Component: Icon
 // ========================================================================
 
-// Modifier: `icon-border`
-// ========================================================================
-.icon-border {
-  border: solid .08em $icon-border-color;
-}
-// Modifier: `icon-stack`
-// ========================================================================
+.icon {
+  // Modifier: `icon-border`
+  // ========================================================================
 
-.icon-stack {
+  &.icon-border {
+    border: solid .08em $icon-border-color;
+  }
 
-  &-inverse {
-    color: $icon-inverse;
+  // Modifier: `icon-stack`
+  // ========================================================================
+
+  &.icon-stack {
+    &-inverse {
+      color: $icon-inverse;
+    }
   }
 }
 
@@ -61,3 +64,8 @@ $icon-inverse:       $inverse !default;
 .icon-color-alt {
   @include icon-color-variant($icon-alt-color, $icon-alt-hover-color, $icon-alt-active-color);
 }
+
+
+
+
+

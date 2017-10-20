@@ -104,7 +104,6 @@ $.fn[pluginName].noConflict = () => {
   return actionBtn._jQueryInterface;
 };
 
-
 class ActionBtn extends Plugin {
   getName() {
     return pluginName;

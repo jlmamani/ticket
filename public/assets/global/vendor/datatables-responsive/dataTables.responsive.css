@@ -30,7 +30,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before
     color: #fff;
     border: 2px solid #fff;
     border-radius: 16px;
-    background-color: #62a8ea;
+    background-color: #3f51b5;
 }
 table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child.dataTables_empty:before,
 table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child.dataTables_empty:before
@@ -43,7 +43,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
 {
     content: '-';
 
-    background-color: #f96868;
+    background-color: #f44336;
 }
 
 table.dataTable.dtr-inline.collapsed > tbody > tr.child td:before
@@ -102,7 +102,7 @@ table.dataTable.dtr-column > tbody > tr > th.control:before
     color: #fff;
     border: 2px solid #fff;
     border-radius: 16px;
-    background-color: #62a8ea;
+    background-color: #3f51b5;
 }
 
 table.dataTable.dtr-column > tbody > tr.parent td.control:before,
@@ -110,7 +110,7 @@ table.dataTable.dtr-column > tbody > tr.parent th.control:before
 {
     content: '-';
 
-    background-color: #f96868;
+    background-color: #f44336;
 }
 
 table.dataTable > tbody > tr.child
@@ -134,7 +134,7 @@ table.dataTable > tbody > tr.child ul li
 {
     padding: .5em 0; 
 
-    border-bottom: 1px solid #e4eaec;
+    border-bottom: 1px solid #e0e0e0;
 }
 table.dataTable > tbody > tr.child ul li:first-child
 {

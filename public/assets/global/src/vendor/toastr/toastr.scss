@@ -34,6 +34,10 @@ $toastr-z-index: zindex('modal', 0);
 $toastr-border-color: rgba(0, 0, 0, .1);
 $toastr-border-radius: $border-radius;
 
+// shadow
+$toastr-shadow: 0 1px 2px 0 rgba(0,0,0,.16), 0 1px 4px 0 rgba(0,0,0,.12);  // @box-shadow-1;
+$toastr-hover-shadow: 0 2px 4px 0 rgba(0,0,0,.16), 0 2px 8px 0 rgba(0,0,0,.12);
+
 // Styles
 .toast-title {
   font-weight: $font-weight-bold;
@@ -161,13 +165,18 @@ button.toast-close-button {
     background-repeat: no-repeat;
     color: $gray;
     opacity: $default-container-opacity;
-  }
-
-  > .toast-shadow {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.23);
+    box-shadow: $toastr-shadow;
 
     &:hover {
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.23);
+      box-shadow: $toastr-hover-shadow;
+    }
+  }
+
+  > .toast-flat {
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
     }
   }
 
@@ -184,7 +193,7 @@ button.toast-close-button {
       padding-left: 50px;
 
       &:before {
-        font-family: $wb-font-family;
+        font-family: $zmdi-font-name;
         font-style: normal;
         font-weight: $font-weight-normal;
         text-rendering: auto;
@@ -205,7 +214,7 @@ button.toast-close-button {
 
     &:not(.toast-just-text) {
       &:before {
-        content: $wb-var-check;
+        content: $zmdi-var-check;
       }
     }
   }
@@ -215,7 +224,7 @@ button.toast-close-button {
 
     &:not(.toast-just-text) {
       &:before {
-        content: $wb-var-info-circle;
+        content: $zmdi-var-info;
       }
     }
   }
@@ -225,7 +234,7 @@ button.toast-close-button {
 
     &:not(.toast-just-text) {
       &:before {
-        content: $wb-var-warning;
+        content: $zmdi-var-alert-triangle;
       }
     }
   }
@@ -235,7 +244,7 @@ button.toast-close-button {
 
     &:not(.toast-just-text) {
       &:before {
-        content: $wb-var-alert-circle;
+        content: $zmdi-var-alert-circle;
       }
     }
   }
@@ -289,7 +298,7 @@ button.toast-close-button {
 /*Responsive Design*/
 
 @media all and (max-width: 240px) {
-  [aria-live="polite"]  {
+  [aria-live="polite"] {
 
     > div {
       width: 11em;

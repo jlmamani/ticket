@@ -2,11 +2,9 @@
 // -------------------------
 
 .hamburger {
-
   &:before,
   .hamburger-bar,
   &:after {
-
     background: $text-color;
 
     .navbar-default & {
@@ -17,3 +15,4 @@
     }
   }
 }
+

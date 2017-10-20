@@ -6,43 +6,64 @@ Style with support for rainbow parens
 
 .hljs {
   display: block;
-  overflow-x: auto;
   padding: .5em;
-  background: #474949;
+  overflow-x: auto;
   color: #d1d9e1;
+  background: #474949;
 }
 
 
-.hljs-comment, .hljs-quote {
-  color: #969896;
+.hljs-comment,
+.hljs-quote {
   font-style: italic;
+  color: #969896;
 }
 
-.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-type, .hljs-addition {
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-type,
+.hljs-addition {
   color: #c9c;
 }
 
-.hljs-number, .hljs-selector-attr, .hljs-selector-pseudo {
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
   color: #f99157;
 }
 
-.hljs-string, .hljs-doctag, .hljs-regexp {
+.hljs-string,
+.hljs-doctag,
+.hljs-regexp {
   color: #8abeb7;
 }
 
-.hljs-title, .hljs-name, .hljs-section, .hljs-built_in {
+.hljs-title,
+.hljs-name,
+.hljs-section,
+.hljs-built_in {
   color: #b5bd68;
 }
 
-.hljs-variable, .hljs-template-variable, .hljs-selector-id, .hljs-class .hljs-title {
+.hljs-variable,
+.hljs-template-variable,
+.hljs-selector-id,
+.hljs-class .hljs-title {
   color: #fc6;
 }
 
-.hljs-section, .hljs-name, .hljs-strong {
+.hljs-section,
+.hljs-name,
+.hljs-strong {
   font-weight: bold;
 }
 
-.hljs-symbol, .hljs-bullet, .hljs-subst, .hljs-meta, .hljs-link {
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-link {
   color: #f99157;
 }
 
@@ -54,7 +75,8 @@ Style with support for rainbow parens
   background: #eee8d5;
 }
 
-.hljs-attr, .hljs-attribute {
+.hljs-attr,
+.hljs-attribute {
   color: #81a2be;
 }
 

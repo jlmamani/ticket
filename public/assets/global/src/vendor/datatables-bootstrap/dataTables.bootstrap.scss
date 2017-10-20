@@ -195,18 +195,18 @@ table.dataTable thead .sorting_desc:after {
   top: 8px;
   right: 4px;
   display: block;
-  font-family: $wb-font-family;
+  font-family: $zmdi-font-name;
   opacity: 0.5;
 }
 table.dataTable thead .sorting:after {
   opacity: 0.2;
-  content: $wb-var-sort-vertical;
+  content: $zmdi-var-unfold-more;
 }
 table.dataTable thead .sorting_asc:after {
-  content: $wb-var-triangle-up;
+  content: $zmdi-var-caret-up;
 }
 table.dataTable thead .sorting_desc:after {
-  content: $wb-var-triangle-down;
+  content: $zmdi-var-caret-down;
 }
 div.dataTables_scrollBody table.dataTable thead .sorting:after,
 div.dataTables_scrollBody table.dataTable thead .sorting_asc:after,

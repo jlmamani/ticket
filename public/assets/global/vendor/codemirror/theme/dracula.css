@@ -9,8 +9,8 @@
 
 
 .cm-s-dracula.CodeMirror, .cm-s-dracula .CodeMirror-gutters {
-  background-color: #282a36 !important;
   color: #f8f8f2 !important;
+  background-color: #282a36 !important;
   border: none;
 }
 .cm-s-dracula .CodeMirror-gutters {
@@ -50,7 +50,10 @@
   color: white;
 }
 .cm-s-dracula span.cm-def {
-  color: #50fa7b;
+  color: #ffb86c;
+}
+.cm-s-dracula span.cm-keyword {
+  color: #ff79c6;
 }
 .cm-s-dracula span.cm-operator {
   color: #ff79c6;
@@ -80,13 +83,13 @@
   color: #50fa7b;
 }
 .cm-s-dracula span.cm-variable-3 {
-  color: #ffb86c;
+  color: #50fa7b;
 }
 
 .cm-s-dracula .CodeMirror-activeline-background {
   background: rgba(255,255,255,.1);
 }
 .cm-s-dracula .CodeMirror-matchingbracket {
-  text-decoration: underline;
   color: white !important;
+  text-decoration: underline;
 }

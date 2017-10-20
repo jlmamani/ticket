@@ -49,7 +49,7 @@
 }
 .clockpicker-popover .text-primary
 {
-    color: #62a8ea;
+    color: #3f51b5;
 }
 
 .clockpicker .input-group-addon
@@ -92,7 +92,7 @@
 
     text-align: center; 
 
-    color: #76838f;
+    color: #757575;
     background-color: #fff;
 }
 
@@ -128,7 +128,7 @@
         -ms-user-select: none;
             user-select: none; 
 
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
     border-radius: 50%;
     background-color: #fff;
 
@@ -170,7 +170,7 @@
 .clockpicker-tick.active,
 .clockpicker-tick:hover
 {
-    background-color: #bcd8f1;
+    background-color: #7986cb;
     background-color: rgba(0, 149, 221, .25);
 }
 
@@ -188,7 +188,7 @@
 
 .clockpicker-button:hover
 {
-    background-color: #f3f7f9; 
+    background-color: #eee; 
     background-image: none;
 }
 
@@ -241,24 +241,24 @@
 .clockpicker-canvas-fg
 {
     stroke: none;
-    fill: #62a8ea;
+    fill: #3f51b5;
 }
 
 .clockpicker-canvas-bg
 {
     stroke: none;
-    fill: #bcd8f1;
+    fill: #7986cb;
 }
 
 .clockpicker-canvas-bg-trans
 {
-    fill: #bcd8f1;
+    fill: #7986cb;
     fill: rgba(0, 149, 221, .25);
 }
 
 .clockpicker-canvas line
 {
-    stroke: #62a8ea;
+    stroke: #3f51b5;
     stroke-width: 1;
     stroke-linecap: round;
 }

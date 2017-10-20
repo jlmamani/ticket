@@ -8,34 +8,57 @@ Ported by Fabrício Tavares de Oliveira
 
 .hljs {
   display: block;
-  overflow-x: auto;
   padding: .5em;
+  overflow-x: auto;
   background: #fff;
 }
 
-.hljs, .hljs-subst {
+.hljs,
+.hljs-subst {
   color: #000;
 }
 
-.hljs-string, .hljs-meta, .hljs-symbol, .hljs-template-tag, .hljs-template-variable, .hljs-addition {
+.hljs-string,
+.hljs-meta,
+.hljs-symbol,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-addition {
   color: #756bb1;
 }
 
-.hljs-comment, .hljs-quote {
+.hljs-comment,
+.hljs-quote {
   color: #636363;
 }
 
-.hljs-number, .hljs-regexp, .hljs-literal, .hljs-bullet, .hljs-link {
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-bullet,
+.hljs-link {
   color: #31a354;
 }
 
-.hljs-deletion, .hljs-variable {
+.hljs-deletion,
+.hljs-variable {
   color: #88f;
 }
 
 
 
-.hljs-keyword, .hljs-selector-tag, .hljs-title, .hljs-section, .hljs-built_in, .hljs-doctag, .hljs-type, .hljs-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class, .hljs-strong {
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-section,
+.hljs-built_in,
+.hljs-doctag,
+.hljs-type,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-strong {
   color: #3182bd;
 }
 

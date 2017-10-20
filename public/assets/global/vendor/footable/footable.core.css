@@ -10,7 +10,7 @@
 }
 .footable span.fooicon
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
 }
 .footable.breakpoint > tbody > tr > td
 {
@@ -18,7 +18,7 @@
 }
 .footable.breakpoint > tbody > tr > td > span.footable-toggle:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint > tbody > tr:hover:not(.footable-row-detail)
 {
@@ -30,7 +30,7 @@
 }
 .footable.breakpoint > tbody > tr > td > span.footable-toggle
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
     font-size: 14px; 
     font-weight: normal;
     font-style: normal;
@@ -47,67 +47,67 @@
 }
 .footable.breakpoint > tbody > tr > td > span.footable-toggle:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-circle > tbody > tr > td > span.fooicon-minus:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-circle > tbody > tr > td > span.fooicon-minus:before:hover
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 .footable.breakpoint.toggle-circle > tbody > tr > td > span.fooicon-plus:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-arrow > tbody > tr > td > span.fooicon-minus:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-arrow > tbody > tr > td > span.fooicon-minus:before:hover
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 .footable.breakpoint.toggle-arrow > tbody > tr > td > span.fooicon-plus:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-arrow-small > tbody > tr > td > span.fooicon-minus:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-arrow-small > tbody > tr > td > span.fooicon-minus:before:hover
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 .footable.breakpoint.toggle-arrow-small > tbody > tr > td > span.fooicon-plus:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-arrow-circle > tbody > tr > td > span.fooicon-minus:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-arrow-circle > tbody > tr > td > span.fooicon-minus:before:hover
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 .footable.breakpoint.toggle-arrow-circle > tbody > tr > td > span.fooicon-plus:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-arrow-tiny > tbody > tr > td > span.fooicon-minus:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-arrow-tiny > tbody > tr > td > span.fooicon-minus:before:hover
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 .footable.breakpoint.toggle-arrow-tiny > tbody > tr > td > span.fooicon-plus:before
 {
-    content: '';
+    content: '';
 }
 .footable.breakpoint.toggle-medium > tbody > tr > td > span.footable-toggle
 {
@@ -133,19 +133,19 @@
 }
 .footable > thead > tr > th.footable-asc > span.fooicon-sort-asc:before
 {
-    content: '';
+    content: '';
 
     opacity: .5;
 }
 .footable > thead > tr > th.footable-desc > span.fooicon-sort-desc:before
 {
-    content: '';
+    content: '';
 
     opacity: .5;
 }
 .footable > thead > tr > th > span.fooicon-sort
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
     font-weight: normal;
     font-style: normal;
     font-variant: normal;
@@ -161,7 +161,7 @@
 }
 .footable > thead > tr > th > span.fooicon-sort:before
 {
-    content: '';
+    content: '';
 
     opacity: .2;
 }
@@ -223,27 +223,27 @@
 }
 .footable > thead > tr.footable-filtering > th ul.dropdown-menu > li > a:hover
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 .footable > thead > tr.footable-filtering > th span.fooicon-search:before
 {
-    content: '';
+    content: '';
 }
 .footable > thead > tr.footable-filtering > th span.fooicon-remove:before
 {
-    content: '';
+    content: '';
 }
 .footable > tbody > tr > td span.fooicon-pencil:before
 {
-    content: '';
+    content: '';
 }
 .footable > tbody > tr > td span.fooicon-trash:before
 {
-    content: '';
+    content: '';
 }
 .footable > tfoot > tr > td span.fooicon-pencil:before
 {
-    content: '';
+    content: '';
 }
 .footable > tfoot .pagination
 {
@@ -287,8 +287,8 @@
     cursor: default;
 
     color: #fff;
-    border-color: #62a8ea; 
-    background-color: #62a8ea;
+    border-color: #3f51b5; 
+    background-color: #3f51b5;
 }
 .footable > tfoot .pagination > li.disabled > a,
 .footable > tfoot .pagination > li.disabled > a:focus,
@@ -296,8 +296,8 @@
 {
     cursor: not-allowed;
 
-    color: #ccd5db;
-    border-color: #e4eaec; 
+    color: #bdbdbd;
+    border-color: #e0e0e0; 
     background-color: transparent;
 }
 .footable > tfoot .pagination a
@@ -313,16 +313,16 @@
 
     text-decoration: none;
 
-    color: #76838f;
-    border: 1px solid #e4eaec; 
+    color: #757575;
+    border: 1px solid #e0e0e0; 
     background-color: transparent;
 }
 .footable > tfoot .pagination a:focus,
 .footable > tfoot .pagination a:hover
 {
-    color: #89bceb;
-    border-color: #e4eaec; 
-    background-color: #f3f7f9;
+    color: #3f51b5;
+    border-color: #e0e0e0; 
+    background-color: #eee;
 }
 .footable.no-paging .hide-if-no-paging
 {
@@ -366,7 +366,7 @@
 
 .footable-odd
 {
-    background-color: rgba(243, 247, 249, .3);
+    background-color: rgba(238, 238, 238, .3);
 }
 
 /** fix table-hover **/

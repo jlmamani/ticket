@@ -127,8 +127,8 @@ div.dataTables_paginate .paginate_button.active > a:hover
     cursor: default;
 
     color: #fff;
-    border-color: #62a8ea; 
-    background-color: #62a8ea;
+    border-color: #3f51b5; 
+    background-color: #3f51b5;
 }
 div.dataTables_paginate .paginate_button.disabled > a,
 div.dataTables_paginate .paginate_button.disabled > a:focus,
@@ -136,8 +136,8 @@ div.dataTables_paginate .paginate_button.disabled > a:hover
 {
     cursor: not-allowed;
 
-    color: #ccd5db;
-    border-color: #e4eaec; 
+    color: #bdbdbd;
+    border-color: #e0e0e0; 
     background-color: transparent;
 }
 div.dataTables_paginate .paginate_button > a
@@ -153,16 +153,16 @@ div.dataTables_paginate .paginate_button > a
 
     text-decoration: none;
 
-    color: #76838f;
-    border: 1px solid #e4eaec; 
+    color: #757575;
+    border: 1px solid #e0e0e0; 
     background-color: transparent;
 }
 div.dataTables_paginate .paginate_button > a:focus,
 div.dataTables_paginate .paginate_button > a:hover
 {
-    color: #89bceb;
-    border-color: #e4eaec; 
-    background-color: #f3f7f9;
+    color: #3f51b5;
+    border-color: #e0e0e0; 
+    background-color: #eee;
 }
 
 @media (max-width: 767px)
@@ -219,7 +219,7 @@ table.dataTable thead .sorting:after,
 table.dataTable thead .sorting_asc:after,
 table.dataTable thead .sorting_desc:after
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
 
     position: absolute;
     top: 8px;
@@ -232,19 +232,19 @@ table.dataTable thead .sorting_desc:after
 
 table.dataTable thead .sorting:after
 {
-    content: ''; 
+    content: ''; 
 
     opacity: .2;
 }
 
 table.dataTable thead .sorting_asc:after
 {
-    content: '';
+    content: '';
 }
 
 table.dataTable thead .sorting_desc:after
 {
-    content: '';
+    content: '';
 }
 
 div.dataTables_scrollBody table.dataTable thead .sorting:after,
@@ -458,8 +458,8 @@ div.DTTT_print_info
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: .286rem;
     background-color: #fff;
-    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, .2);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1);
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1);
 }
 
 div.DTTT_print_info h6

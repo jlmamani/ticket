@@ -57,6 +57,9 @@ $popover-danger-border  : $brand-danger !default;
       border-bottom-color: $popover-title-bg;
     }
   }
+  &-content {
+    padding: 20px;
+  }
 }
 
 //fix v4a6-dev 20170303 ---Kevin_y
@@ -66,6 +69,7 @@ $popover-danger-border  : $brand-danger !default;
 }
 
 //---Kevin_y
+
 
 // Color Modifier
 // ========================================================================

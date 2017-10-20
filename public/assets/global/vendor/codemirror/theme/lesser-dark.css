@@ -6,9 +6,9 @@ Ported to CodeMirror by Peter Kroon
   line-height: 1.3em;
 }
 .cm-s-lesser-dark.CodeMirror {
-  background: #262626;
   color: #ebefe7;
   text-shadow: 0 -1px 1px #262626;
+  background: #262626;
 }
 .cm-s-lesser-dark div.CodeMirror-selected {
   background: #45443b;
@@ -121,6 +121,6 @@ Ported to CodeMirror by Peter Kroon
   background: #3c3a3a;
 }
 .cm-s-lesser-dark .CodeMirror-matchingbracket {
-  outline: 1px solid grey;
   color: white !important;
+  outline: 1px solid grey;
 }

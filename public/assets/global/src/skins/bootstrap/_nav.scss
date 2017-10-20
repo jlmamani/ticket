@@ -1,10 +1,7 @@
 // Base class
 //
-// Kickstart any navigation component with a set of style resets. Works with
-// `<nav>`s or `<ul>`s.
 
 .nav-link {
-
   // Disabled state lightens text and removes hover/tab effects
   &.disabled {
     color: $nav-disabled-link-color;
@@ -24,8 +21,6 @@
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
   .nav-link {
-    border: $nav-tabs-border-width solid transparent;
-
     @include hover-focus {
       border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
     }
@@ -53,7 +48,6 @@
 //
 
 .nav-pills {
-
   .nav-link.active,
   .nav-item.open .nav-link {
     @include plain-hover-focus {

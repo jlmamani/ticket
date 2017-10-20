@@ -32,7 +32,7 @@
     babelHelpers.createClass(_class, [{
       key: 'initializePlugins',
       value: function initializePlugins() {
-        var context = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+        var context = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
 
         (0, _jquery2.default)('[data-plugin]', context || this.$el).each(function () {
           var $this = (0, _jquery2.default)(this),
@@ -46,7 +46,7 @@
     }, {
       key: 'initializePluginAPIs',
       value: function initializePluginAPIs() {
-        var context = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document;
+        var context = arguments.length <= 0 || arguments[0] === undefined ? document : arguments[0];
 
         var apis = (0, _Plugin.getPluginAPI)();
 

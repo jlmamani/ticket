@@ -43,9 +43,9 @@ input.labelauty + label
          -o-transition: background-color .25s;
             transition: background-color .25s;
 
-    color: #76838f;
+    color: #757575;
     border-radius: .215rem;
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 
 /* Stylish text inside label */
@@ -88,8 +88,8 @@ input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked
 /* When not Checked */
 input.labelauty:not(:checked):not([disabled]) + label:hover
 {
-    color: #76838f; 
-    background-color: #e4eaec;
+    color: #757575; 
+    background-color: #e0e0e0;
 }
 
 input.labelauty:not(:checked) + label > span.labelauty-checked-image
@@ -106,12 +106,12 @@ input.labelauty:not(:checked) + label > span.labelauty-checked
 input.labelauty:checked + label
 {
     color: #fff; 
-    background-color: #62a8ea;
+    background-color: #3949ab;
 }
 
 input.labelauty:checked:not([disabled]) + label:hover
 {
-    background-color: #89bceb;
+    background-color: #3f51b5;
 }
 
 input.labelauty:checked + label > span.labelauty-unchecked-image

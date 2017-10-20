@@ -8,7 +8,7 @@
     height: 150px;
     margin: 0; 
 
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
     outline: none;
     background: #fff;
     -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
@@ -70,7 +70,7 @@ li.ui-timepicker-selected,
 .ui-timepicker-list .ui-timepicker-selected:hover
 {
     color: #fff; 
-    background: #62a8ea;
+    background: #3f51b5;
 }
 
 li.ui-timepicker-selected .ui-timepicker-duration,

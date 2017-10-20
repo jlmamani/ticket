@@ -142,8 +142,8 @@ $radio-inline-gap: 20px !default;
 
     &:checked + label::after,
     &:checked + input[type="hidden"] + label::after {
-      font-family: $wb-font-family;
-      content: $wb-var-check;
+      font-family: $zmdi-font-name;
+      content: $zmdi-var-check;
     }
 
     &:disabled {

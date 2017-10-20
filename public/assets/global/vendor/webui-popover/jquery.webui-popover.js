@@ -6,7 +6,6 @@
  *  Made by Sandy Duan
  *  Under MIT License
  */
-;
 (function($, window, document, undefined) {
 
     'use strict';
@@ -26,6 +25,7 @@
             hide: null
         },
         async: {
+            type: 'GET',
             before: null, //function(that, xhr){}
             success: null //function(that, xhr){}
         },
@@ -42,7 +42,7 @@
         template: '<div class="webui-popover">' +
             '<div class="arrow"></div>' +
             '<div class="webui-popover-inner">' +
-            '<a href="#" class="close">&times;</a>' +
+            '<a href="#" class="close"></a>' +
             '<h3 class="webui-popover-title"></h3>' +
             '<div class="webui-popover-content"><i class="icon-refresh"></i> <p>&nbsp;</p></div>' +
             '</div>' +
@@ -54,7 +54,17 @@
         abortXHR: true,
         autoHide: false,
         offsetTop: 0,
-        offsetLeft: 0
+        offsetLeft: 0,
+        iframeOptions: {
+            frameborder: '0',
+            allowtransparency: 'true',
+            id: '',
+            name: '',
+            scrolling: '',
+            onload: '',
+            height: '',
+            width: ''
+        }
     };
 
 
@@ -80,6 +90,13 @@
         $document.trigger('hiddenAll.' + pluginType);
     };
 
+    var removeAllTargets = function() {
+        // for (var i = 0; i < _srcElements.length; i++) {
+        //     var pop = getPopFromElement(_srcElements[i]);
+        //     console.log(pop.$target);
+        // }
+    };
+
     var pointerEventToXY = function(e) {
         var out = {
             x: 0,
@@ -95,7 +112,6 @@
         }
         return out;
     };
-
 
 
 
@@ -235,10 +251,13 @@
         },
         /*core method ,show popover */
         show: function() {
+            removeAllTargets();
             var
                 $target = this.getTarget().removeClass().addClass(pluginClass).addClass(this._customTargetClass);
             if (!this.options.multi) {
                 this.hideAll();
+
+
             }
             if (this._opened) {
                 return;
@@ -288,11 +307,24 @@
             //if (this.hasContent()){
             this.$element.trigger(e, [$target]);
             //}
-            if (this.options.width !== 'auto') {
-                $target.width(this.options.width);
+            // support width as data attribute
+            var optWidth = this.$element.data('width') || this.options.width;
+            if (optWidth === '') {
+                optWidth = this._defaults.width;
             }
-            if (this.options.height !== 'auto') {
-                $targetContent.height(this.options.height);
+
+            if (optWidth !== 'auto') {
+                $target.width(optWidth);
+            }
+
+            // support height as data attribute
+            var optHeight = this.$element.data('height') || this.options.height;
+            if (optHeight === '') {
+                optHeight = this._defaults.height;
+            }
+
+            if (optHeight !== 'auto') {
+                $targetContent.height(optHeight);
             }
 
             if (this.options.style) {
@@ -337,7 +369,18 @@
 
             if (this.options.type === 'iframe') {
                 var $iframe = $target.find('iframe');
-                $iframe.width($target.width()).height($iframe.parent().height());
+                var iframeWidth = $target.width();
+                var iframeHeight = $iframe.parent().height();
+
+                if (this.options.iframeOptions.width !== '' && this.options.iframeOptions.width !== 'auto') {
+                    iframeWidth = this.options.iframeOptions.width;
+                }
+
+                if (this.options.iframeOptions.height !== '' && this.options.iframeOptions.height !== 'auto') {
+                    iframeHeight = this.options.iframeOptions.height;
+                }
+
+                $iframe.width(iframeWidth).height(iframeHeight);
             }
 
 
@@ -351,6 +394,18 @@
             if (this.options.arrow) {
                 var $arrow = this.$target.find('.arrow');
                 $arrow.removeAttr('style');
+
+                //prevent arrow change by content size
+                if (placement === 'left' || placement === 'right') {
+                    $arrow.css({
+                        top: this.$target.height() / 2
+                    });
+                } else if (placement === 'top' || placement === 'bottom') {
+                    $arrow.css({
+                        left: this.$target.width() / 2
+                    });
+                }
+
                 if (postionInfo.arrowOffset) {
                     //hide the arrow if offset is negative 
                     if (postionInfo.arrowOffset.left === -1 || postionInfo.arrowOffset.top === -1) {
@@ -359,6 +414,7 @@
                         $arrow.css(postionInfo.arrowOffset);
                     }
                 }
+
             }
             this._poped = true;
             this.$element.trigger('shown.' + pluginType, [this.$target]);
@@ -459,11 +515,22 @@
         hasContent: function() {
             return this.getContent();
         },
+        getIframe: function() {
+            var $iframe = $('<iframe></iframe>').attr('src', this.getUrl());
+            var self = this;
+            $.each(this._defaults.iframeOptions, function(opt) {
+                if (typeof self.options.iframeOptions[opt] !== 'undefined') {
+                    $iframe.attr(opt, self.options.iframeOptions[opt]);
+                }
+            });
+
+            return $iframe;
+        },
         getContent: function() {
             if (this.getUrl()) {
                 switch (this.options.type) {
                     case 'iframe':
-                        this.content = $('<iframe frameborder="0"></iframe>').attr('src', this.getUrl());
+                        this.content = this.getIframe();
                         break;
                     case 'html':
                         try {
@@ -516,7 +583,7 @@
             }
             this.xhr = $.ajax({
                 url: this.getUrl(),
-                type: 'GET',
+                type: this.options.async.type,
                 cache: this.getCache(),
                 beforeSend: function(xhr) {
                     if (that.options.async.before) {
@@ -579,8 +646,6 @@
 
         bodyClickHandler: function(e) {
             _isBodyEventHandled = true;
-
-
             //alert(pointerEventToXY(e).x);
             var canHide = true;
             for (var i = 0; i < _srcElements.length; i++) {

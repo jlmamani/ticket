@@ -171,7 +171,7 @@
     border: 0;
     border-radius: 4px;
     background: transparent;
-    background: #62a8ea;
+    background: #3f51b5;
 }
 .plyr input[type='range']::-ms-thumb
 {
@@ -211,14 +211,14 @@
             transform: scale(1.25); 
 
     border-color: #fff;
-    background: #62a8ea;
+    background: #3f51b5;
 }
 .plyr input[type='range']:active::-moz-range-thumb
 {
     transform: scale(1.25); 
 
     border-color: #fff;
-    background: #62a8ea;
+    background: #3f51b5;
 }
 .plyr input[type='range']:active::-ms-thumb
 {
@@ -226,7 +226,7 @@
         transform: scale(1.25); 
 
     border-color: #fff;
-    background: #62a8ea;
+    background: #3f51b5;
 }
 
 .plyr--video input[type='range'].tab-focus:focus
@@ -236,7 +236,7 @@
 
 .plyr--audio input[type='range'].tab-focus:focus
 {
-    outline: 1px dotted rgba(228, 234, 236, .5);
+    outline: 1px dotted rgba(224, 224, 224, .5);
 }
 
 .plyr__sr-only
@@ -504,15 +504,15 @@
 .plyr--video .plyr__controls button:hover
 {
     color: #fff; 
-    background: #62a8ea;
+    background: #3f51b5;
 }
 
 .plyr--audio .plyr__controls
 {
     padding: 10px;
 
-    color: #e4eaec; 
-    border: 1px solid #f3f7f9;
+    color: #e0e0e0; 
+    border: 1px solid #eee;
     border-radius: inherit;
     background: #fff;
 }
@@ -520,7 +520,7 @@
 .plyr--audio .plyr__controls button:hover
 {
     color: #fff; 
-    background: #62a8ea;
+    background: #3f51b5;
 }
 
 .plyr__play-large
@@ -545,7 +545,7 @@
     color: #fff;
     border: 2px solid currentColor;
     border-radius: 100%;
-    background: #62a8ea;
+    background: #3f51b5;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
             box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
 }
@@ -842,7 +842,7 @@
          -o-transition: none;
             transition: none; 
 
-    color: #62a8ea;
+    color: #3f51b5;
     background: transparent;
 }
 .plyr__progress--played::-webkit-progress-value,
@@ -904,12 +904,12 @@
 .plyr--audio .plyr__progress--buffer,
 .plyr--audio .plyr__volume--display
 {
-    background: rgba(204, 213, 219, .67);
+    background: rgba(189, 189, 189, .67);
 }
 
 .plyr--audio .plyr__progress--buffer
 {
-    color: rgba(204, 213, 219, .67);
+    color: rgba(189, 189, 189, .67);
 }
 
 .plyr--loading .plyr__progress--buffer
@@ -934,7 +934,7 @@
 
 .plyr--audio.plyr--loading .plyr__progress--buffer
 {
-    background-color: rgba(204, 213, 219, .67);
+    background-color: rgba(189, 189, 189, .67);
 }
 
 .plyr__time

@@ -1,4 +1,4 @@
-$font-size-root: 14px !default;
+$font-size-root: 16px !default;
 
 @function pxToRem($px) {
 	$base: null !default;
@@ -9,8 +9,8 @@ $font-size-root: 14px !default;
 	} @else if unit($font-size-root) == "" {
 		$base: $font-size-root * 16px;
 	}
-
-	@return (floor(ceil(($px / $base) * 1000)) / 1000) * 1rem;
+	
+  @return (floor(ceil(($px / $base)*1000))/1000) * 1rem;
 }
 
 @function remToPx($rem) {

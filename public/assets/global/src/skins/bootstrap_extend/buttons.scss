@@ -3,7 +3,6 @@
 // Component:       `btn`
 //
 // Modifiers:       `btn-block`
-//                  `btn-outline`
 //                  `btn-lg`
 //                  `btn-sm`
 //                  `btn-xs`
@@ -37,7 +36,9 @@
 // Variables
 // ========================================================================
 
-$btn-tagged-tag-bgColor:                 rgba(0, 0, 0, 0.15) !default;
+$btn-shadow:                             $box-shadow-1;
+
+$btn-tagged-tag-bgColor:                rgba(0, 0, 0, 0.15) !default;
 
 $btn-color:                              $inverse !default;
 $btn-bg:                                 transparent !default;
@@ -71,16 +72,12 @@ $btn-dark-disabled-color:                $color-white !default;
 $btn-dark-disabled-bg:                   $gray !default;
 $btn-dark-disabled-border:               $btn-dark-disabled-bg !default;
 
-
 $btn-raised-shadow-top:                  $shadow-2-top !default;
 $btn-raised-shadow-bottom:               $shadow-2-bottom !default;
 $btn-raised-shadow-active-top:           $shadow-3-top !default;
 $btn-raised-shadow-active-bottom:        $shadow-3-bottom !default;
 
 $btn-flat-disabled-color:                $gray !default;
-
-
-$btn-floating-shadow:                    $shadow-5-bottom !default;
 
 $btn-inverse-color:                      $text-color !default;
 $btn-inverse-bg:                         $inverse !default;
@@ -117,6 +114,7 @@ $btn-pure-dark-hover-color:              $brand-dark-hover !default;
 
 $btn-pure-inverse-color:                 $inverse !default;
 $btn-pure-inverse-hover-color:           $btn-inverse-hover-bg !default;
+
 
 $btn-styles: (
   'default': (
@@ -215,62 +213,8 @@ $btn-styles: (
     'disabled-bg': $btn-dark-disabled-bg,
     'disabled-border': $btn-dark-disabled-border
   )
-) !default;
+);
 
-// Component: Button
-// ========================================================================
-
-.btn {
-  &,
-  &:active,
-  &.active {
-    &:focus {
-      outline: 0;
-    }
-  }
-
-  &:active,
-  &.active {
-    box-shadow: none;
-  }
-}
-
-// Modifier: `btn-outline`
-// ========================================================================
-
-.btn-outline {
-  &.btn-default {
-    @include button-outline-styles-variant('default');
-  }
-
-  &.btn-primary {
-    @include button-outline-styles-variant('primary');
-  }
-
-  &.btn-success {
-    @include button-outline-styles-variant('success');
-  }
-
-  &.btn-info {
-    @include button-outline-styles-variant('info');
-  }
-
-  &.btn-warning {
-    @include button-outline-styles-variant('warning');
-  }
-
-  &.btn-danger {
-    @include button-outline-styles-variant('danger');
-  }
-
-  &.btn-dark {
-    @include button-outline-styles-variant('dark');
-  }
-
-  &.btn-inverse {
-    @include button-outline-styles-variant('inverse');
-  }
-}
 
 // Color Modifier
 // ========================================================================
@@ -310,14 +254,6 @@ $btn-styles: (
   @include button-styles-variant('danger');
 }
 
-// Modifier: `btn-default`
-// -------------------------
-
-.btn-default {
-  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
-  @include button-styles-variant('default');
-}
-
 // Modifier: `btn-inverse`
 // -------------------------
 
@@ -338,13 +274,20 @@ $btn-styles: (
   }
 }
 
+// Modifier: `btn-default`
+// -------------------------
+
+.btn-default {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  @include button-styles-variant('default');
+}
+
 // Modifier: `btn-flat`
 // ========================================================================
 
 .btn-flat {
   background: none;
   border: none;
-
   &.disabled {
     color: $btn-flat-disabled-color;
   }
@@ -360,9 +303,23 @@ $btn-styles: (
   }
 }
 
+// Modifier: `btn-tagged`
+// ========================================================================
 .btn-tag {
   background-color: $btn-tagged-tag-bgColor;
 }
+
+
+// Direction Modifier
+// ========================================================================
+
+.btn-direction {
+ 
+  &:before {
+    border: 8px solid transparent;
+  }
+}
+
 
 // Modifier: `btn-up`
 // -------------------------

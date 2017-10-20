@@ -6,8 +6,8 @@ CodeMirror template by Jan T. Sott (https://github.com/idleberg), adapted by Bra
 */
 
 .cm-s-duotone-dark.CodeMirror {
-  background: #2a2734;
   color: #6c6783;
+  background: #2a2734;
 }
 .cm-s-duotone-dark div.CodeMirror-selected {
   background: #545167!important;
@@ -22,8 +22,8 @@ CodeMirror template by Jan T. Sott (https://github.com/idleberg), adapted by Bra
 
 /* begin cursor */
 .cm-s-duotone-dark .CodeMirror-cursor {
-  border-left: 1px solid #ffad5c; /* border-left: 1px solid #ffad5c80; */
   border-right: .5em solid #ffad5c; /* border-right: .5em solid #ffad5c80; */
+  border-left: 1px solid #ffad5c; /* border-left: 1px solid #ffad5c80; */
   opacity: .5;
 }
 .cm-s-duotone-dark .CodeMirror-activeline-background {
@@ -75,6 +75,6 @@ CodeMirror template by Jan T. Sott (https://github.com/idleberg), adapted by Bra
   font-weight: normal;
 }
 .cm-s-duotone-dark .CodeMirror-matchingbracket {
-  text-decoration: underline;
   color: #eeebff !important;
+  text-decoration: underline;
 }

@@ -1,6 +1,6 @@
 /*!
  * hoverIntent v1.8.1 // 2014.08.11 // jQuery v1.9.1+
- * http://cherne.net/brian/resources/jquery.hoverIntent.html
+ * http://briancherne.github.io/jquery-hoverIntent/
  *
  * You may use hoverIntent under the terms of the MIT license. Basically that
  * means you are free to use hoverIntent as long as this header is left intact.
@@ -93,8 +93,11 @@
         // extend the default configuration and parse parameters
         var cfg = $.extend({}, _cfg);
         if ( $.isPlainObject(handlerIn) ) {
-            cfg = $.extend(cfg, handlerIn );
-        } else if ($.isFunction(handlerOut)) {
+            cfg = $.extend(cfg, handlerIn);
+            if ( !$.isFunction(cfg.out) ) {
+                cfg.out = cfg.over;
+            }
+        } else if ( $.isFunction(handlerOut) ) {
             cfg = $.extend(cfg, { over: handlerIn, out: handlerOut, selector: selector } );
         } else {
             cfg = $.extend(cfg, { over: handlerIn, out: handlerIn, selector: handlerOut } );

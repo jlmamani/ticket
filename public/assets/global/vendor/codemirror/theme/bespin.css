@@ -9,8 +9,8 @@
 */
 
 .cm-s-bespin.CodeMirror {
-  background: #28211c;
   color: #9d9b97;
+  background: #28211c;
 }
 .cm-s-bespin div.CodeMirror-selected {
   background: #36312e !important;
@@ -56,8 +56,8 @@
   color: #cf7d34;
 }
 .cm-s-bespin span.cm-error {
-  background: #cf6a4c;
   color: #797977;
+  background: #cf6a4c;
 }
 .cm-s-bespin span.cm-bracket {
   color: #9d9b97;
@@ -70,8 +70,8 @@
 }
 
 .cm-s-bespin .CodeMirror-matchingbracket {
-  text-decoration: underline;
   color: white !important;
+  text-decoration: underline;
 }
 .cm-s-bespin .CodeMirror-activeline-background {
   background: #404040;

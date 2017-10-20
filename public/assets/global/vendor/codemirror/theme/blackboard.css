@@ -1,8 +1,8 @@
 /* Port of TextMate's Blackboard theme */
 
 .cm-s-blackboard.CodeMirror {
-  background: #0c1021;
   color: #f8f8f8;
+  background: #0c1021;
 }
 .cm-s-blackboard div.CodeMirror-selected {
   background: #253b76;
@@ -82,14 +82,14 @@
   color: #8da6ce;
 }
 .cm-s-blackboard .cm-error {
-  background: #9d1e15;
   color: #f8f8f8;
+  background: #9d1e15;
 }
 
 .cm-s-blackboard .CodeMirror-activeline-background {
   background: #3c3636;
 }
 .cm-s-blackboard .CodeMirror-matchingbracket {
-  outline: 1px solid grey;
   color: white !important;
+  outline: 1px solid grey;
 }

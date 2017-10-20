@@ -19,12 +19,7 @@ class Wizard extends Plugin {
       },
       classes: {
         step: {
-          done: 'done',
-          error: 'error',
-          active: 'active',
-          disabled: 'disabled',
-          activing: 'activing',
-          loading: 'loading'
+          active: 'active'
         },
         button: {
           hide: 'hidden-xs-up',

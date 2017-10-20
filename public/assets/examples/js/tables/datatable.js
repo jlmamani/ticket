@@ -8,6 +8,7 @@
 
   var Site = window.Site;
 
+
   $(document).ready(function($) {
     Site.run();
   });
@@ -30,6 +31,7 @@
       "bPaginate": false,
       "sDom": "t" // just show table, no other controls
     });
+
 
 
     // redraw fixedHeaders as necessary
@@ -62,7 +64,7 @@
               });
 
             column.data().unique().sort().each(function(d, j) {
-              select.append('<option value="' + d + '">' + d + '</option>')
+              select.append('<option value="' + d + '">' + d + '</option>');
             });
           });
         }
@@ -210,6 +212,7 @@
         return this;
       },
 
+
       // =============
       // ROW FUNCTIONS
       // =============
@@ -223,10 +226,10 @@
           $row;
 
         actions = [
-          '<a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-editing save-row" data-toggle="tooltip" data-original-title="Save" hidden><i class="icon wb-wrench" aria-hidden="true"></i></a>',
-          '<a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-editing cancel-row" data-toggle="tooltip" data-original-title="Delete" hidden><i class="icon wb-close" aria-hidden="true"></i></a>',
-          '<a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row" data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>',
-          '<a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Remove"><i class="icon wb-trash" aria-hidden="true"></i></a>'
+          '<a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-editing save-row" data-toggle="tooltip" data-original-title="Save" hidden><i class="icon md-wrench" aria-hidden="true"></i></a>',
+          '<a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-editing cancel-row" data-toggle="tooltip" data-original-title="Delete" hidden><i class="icon md-close" aria-hidden="true"></i></a>',
+          '<a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row" data-toggle="tooltip" data-original-title="Edit" hidden><i class="icon md-edit" aria-hidden="true"></i></a>',
+          '<a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Remove" hidden><i class="icon md-delete" aria-hidden="true"></i></a>'
         ].join(' ');
 
         data = this.datatable.row.add(['', '', '', actions]);
@@ -337,5 +340,6 @@
     });
 
   }).apply(this, [jQuery]);
+
 
 })(document, window, jQuery);

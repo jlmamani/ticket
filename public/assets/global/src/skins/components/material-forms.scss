@@ -1,4 +1,4 @@
-$form-material-focus-text:              $brand-primary !default;
+$form-material-focus-text:                $brand-primary !default;
 
 
 $form-material-danger-text:               $form-danger-text !default;
@@ -17,7 +17,6 @@ $form-material-disabled-placeholder-color:      $gray-light !default;
 
 // Mixins
 // ========================================================================
-
 @mixin form-material-control-validation($text-color, $border-color: $form-material-underline-color){
   .form-control {
     // box-shadow: none;
@@ -72,12 +71,12 @@ $form-material-disabled-placeholder-color:      $gray-light !default;
 .form-material {
 
   .form-control {
-    box-shadow: none;
-    background-color: transparent;
-
     &, &:focus, &.focus {
+      box-shadow: none;
       @include form-material-control-underline($form-material-focus-text, $form-material-underline-color);
     }
+    background-color: transparent;
+    background-color: rgba(0,0,0,0);
 
     .no-cssgradients & {
       border-bottom: 2px solid $form-material-underline-color;
@@ -108,6 +107,7 @@ $form-material-disabled-placeholder-color:      $gray-light !default;
     &:focus, &.focus {
 
       .no-cssgradients & {
+        background: transparent;
         border-bottom: 2px solid $form-material-focus-text;
       }
     }
@@ -115,6 +115,8 @@ $form-material-disabled-placeholder-color:      $gray-light !default;
     &:disabled,
     &[disabled],
     fieldset[disabled] & {
+      background: transparent;
+      background: rgba(0,0,0,0);
       border-bottom: 1px dashed $form-material-disabled-underline-color;
 
       ~ .floating-label {
@@ -135,6 +137,11 @@ $form-material-disabled-placeholder-color:      $gray-light !default;
     }
   }
 
+  // Select
+  select.form-control {
+    border: 0;
+  }
+
   // Invalid
   .form-control {
     &:not(.empty):invalid, &.focus:invalid {
@@ -148,8 +155,8 @@ $form-material-disabled-placeholder-color:      $gray-light !default;
     @include form-material-control-underline($form-material-danger-text, $form-material-underline-color);
   }
 
-  // States
   &.form-group {
+    // States
     &.has-warning {
       @include form-material-control-validation($form-material-warning-text, $form-material-underline-color);
     }
@@ -166,5 +173,14 @@ $form-material-disabled-placeholder-color:      $gray-light !default;
       @include form-material-control-validation($form-material-info-text, $form-material-underline-color);
     }
   }
+
+  .input-group {
+    .input-group-addon {
+      border: 0;
+      background: transparent;
+    }
+  }
 }
+
+
 

@@ -275,6 +275,7 @@
 
   })
 
+
   function initVML() {
 
     /* Utility function to create a VML tag */

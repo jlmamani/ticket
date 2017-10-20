@@ -1,4 +1,11 @@
-#exampleFlotCurve, #exampleFlotRealtime, #exampleFlotMix, #exampleFlotFullBg, #exampleFlotStackBar, #exampleFlotHorizontalBar, #exampleFlotPie, #exampleFlotVisitors {
+#exampleFlotCurve,
+#exampleFlotRealtime,
+#exampleFlotMix,
+#exampleFlotFullBg,
+#exampleFlotStackBar,
+#exampleFlotHorizontalBar,
+#exampleFlotPie,
+#exampleFlotVisitors {
   height: 300px;
 }
 

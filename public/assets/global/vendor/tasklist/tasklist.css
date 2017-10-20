@@ -7,7 +7,7 @@
 
 .list-task .task-done
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 .list-task .task-done.list-group-item span
 {
@@ -20,20 +20,24 @@
 
 .list-task .list-group-item-success
 {
-    background-color: rgba(70, 190, 138, .1);
+    color: #4caf50;
+    background-color: rgba(76, 175, 80, .1);
 }
 
 .list-task .list-group-item-info
 {
-    background-color: rgba(87, 199, 212, .1);
+    color: #00bcd4;
+    background-color: rgba(0, 188, 212, .1);
 }
 
 .list-task .list-group-item-warning
 {
-    background-color: rgba(242, 166, 84, .1);
+    color: #ff9800;
+    background-color: rgba(255, 152, 0, .1);
 }
 
 .list-task .list-group-item-danger
 {
-    background-color: rgba(249, 104, 104, .1);
+    color: #f44336;
+    background-color: rgba(244, 67, 54, .1);
 }

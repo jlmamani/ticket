@@ -2,14 +2,14 @@
   color: #762;
 }
 .cm-s-elegant span.cm-comment {
-  color: #262;
   font-style: italic;
   line-height: 1em;
+  color: #262;
 }
 .cm-s-elegant span.cm-meta {
-  color: #555;
   font-style: italic;
   line-height: 1em;
+  color: #555;
 }
 .cm-s-elegant span.cm-variable {
   color: black;
@@ -37,6 +37,6 @@
   background: #e8f2ff;
 }
 .cm-s-elegant .CodeMirror-matchingbracket {
-  outline: 1px solid grey;
   color: black !important;
+  outline: 1px solid grey;
 }

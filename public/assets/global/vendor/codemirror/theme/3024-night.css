@@ -9,8 +9,8 @@
 */
 
 .cm-s-3024-night.CodeMirror {
-  background: #090300;
   color: #d6d5d4;
+  background: #090300;
 }
 .cm-s-3024-night div.CodeMirror-selected {
   background: #3a3432;
@@ -81,14 +81,14 @@
   color: #a16a94;
 }
 .cm-s-3024-night span.cm-error {
-  background: #db2d20;
   color: #807d7c;
+  background: #db2d20;
 }
 
 .cm-s-3024-night .CodeMirror-activeline-background {
   background: #2f2f2f;
 }
 .cm-s-3024-night .CodeMirror-matchingbracket {
-  text-decoration: underline;
   color: white !important;
+  text-decoration: underline;
 }

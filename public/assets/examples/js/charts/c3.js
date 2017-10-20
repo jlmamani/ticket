@@ -5,7 +5,6 @@
  */
 (function(document, window, $) {
   'use strict';
-
   var Site = window.Site;
 
   $(document).ready(function($) {
@@ -52,6 +51,7 @@
       }
     });
   })();
+
 
   // Example C3 Line Regions
   // -----------------------
@@ -105,6 +105,7 @@
       }
     });
   })();
+
 
   // Example C3 Timeseries
   // ---------------------
@@ -162,6 +163,7 @@
     }, 1000);
   })();
 
+
   // Example C3 Spline
   // -----------------
   (function() {
@@ -203,6 +205,7 @@
       }
     });
   })();
+
 
   // Example C3 Scatter
   // ------------------
@@ -259,6 +262,7 @@
     });
   })();
 
+
   // Example C3 Bar
   // --------------
   (function() {
@@ -280,7 +284,7 @@
         }
       },
       color: {
-        pattern: [Config.colors("red", 400), Config.colors("blue-grey", 400), Config.colors("blue-grey", 200)]
+        pattern: [Config.colors("red", 400), Config.colors("grey", 500), Config.colors("grey", 300)]
       },
       grid: {
         y: {
@@ -301,6 +305,7 @@
     }, 1000);
   })();
 
+
   // Example C3 Stacked Bar
   // ----------------------
   (function() {
@@ -318,7 +323,7 @@
         ]
       },
       color: {
-        pattern: [Config.colors("primary", 500), Config.colors("blue-grey", 300), Config.colors("purple", 500), Config.colors("light-green", 500)]
+        pattern: [Config.colors("primary", 500), Config.colors("grey", 400), Config.colors("purple", 500), Config.colors("light-green", 500)]
       },
       bar: {
         width: {
@@ -356,6 +361,7 @@
     }, 2000);
   })();
 
+
   // Example C3 Combination
   // ----------------------
   (function() {
@@ -381,7 +387,7 @@
         ]
       },
       color: {
-        pattern: [Config.colors("blue-grey", 400), Config.colors("blue-grey", 200), Config.colors("yellow", 600), Config.colors("primary", 600), Config.colors("red", 400), Config.colors("green", 600)]
+        pattern: [Config.colors("grey", 500), Config.colors("grey", 300), Config.colors("yellow", 600), Config.colors("primary", 600), Config.colors("red", 400), Config.colors("green", 600)]
       },
       grid: {
         x: {
@@ -393,6 +399,7 @@
       }
     });
   })();
+
 
   // Example C3 Pie
   // --------------
@@ -408,7 +415,7 @@
         type: 'pie',
       },
       color: {
-        pattern: [Config.colors("primary", 500), Config.colors("blue-grey", 200)]
+        pattern: [Config.colors("primary", 500), Config.colors("grey", 300)]
       },
       legend: {
         position: 'right'
@@ -424,6 +431,7 @@
     });
   })();
 
+
   // Example C3 Donut
   // ----------------
   (function() {
@@ -438,7 +446,7 @@
         type: 'donut'
       },
       color: {
-        pattern: [Config.colors("primary", 500), Config.colors("blue-grey", 200), Config.colors("red", 400)]
+        pattern: [Config.colors("primary", 500), Config.colors("grey", 300), Config.colors("red", 400)]
       },
       legend: {
         position: 'right'
@@ -495,4 +503,5 @@
       }
     });
   })();
+
 })(document, window, jQuery);

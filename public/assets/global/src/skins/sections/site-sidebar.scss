@@ -6,11 +6,12 @@
 // ========================================================================
 .site-sidebar {
   .conversation {
+    background-color: #fff;
+
     &-header {
       border-bottom: 1px solid $divider-color-base;
     }
 
-    &-more,
     &-return {
       color: $icon-color;
 
@@ -32,8 +33,11 @@
       border-top: 1px solid $divider-color-base;
 
       .form-control {
+        border: none;
         border-right: 1px solid $input-border;
       }
     }
   }
 }
+
+

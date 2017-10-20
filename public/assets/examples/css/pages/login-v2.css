@@ -8,7 +8,7 @@
 }
 
 .page-login-v2.page-dark.layout-full:after {
-  background-color: rgba(38, 50, 56, .6);
+  background-color: rgba(33, 33, 33, .6);
 }
 
 .page-login-v2 .page-brand-info {
@@ -21,23 +21,23 @@
 
 .page-login-v2 .page-brand-info .brand-text {
   display: inline-block;
-  vertical-align: middle;
   margin: 11px 0 11px 20px;
+  vertical-align: middle;
 }
 
 .page-login-v2 .page-brand-info p {
-  opacity: .6;
   max-width: 650px;
+  opacity: .6;
 }
 
 .page-login-v2 .page-login-main {
   position: absolute;
-  right: 0;
   top: 0;
+  right: 0;
   height: auto;
   min-height: 100%;
   padding: 150px 60px 180px;
-  color: #76838f;
+  color: #757575;
   background: #fff;
 }
 
@@ -51,9 +51,9 @@
 
 .page-login-v2 .page-login-main .brand-text {
   display: inline-block;
-  vertical-align: middle;
   margin: 11px 0 11px 20px;
-  color: #62a8ea;
+  color: #3f51b5;
+  vertical-align: middle;
 }
 
 .page-login-v2 form {
@@ -71,9 +71,9 @@
 
 .page-login-v2 footer {
   position: absolute;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
   margin: 50px 60px;
   text-align: center;
 }
@@ -102,15 +102,15 @@
     margin: 160px 0 0 35px;
   }
   .page-login-v2 .page-brand-info > p {
-    opacity: 0;
     color: transparent;
+    opacity: 0;
   }
 }
 
 @media (max-width: 767px) {
   .page-login-v2 .page-login-main {
-    padding-top: 60px;
     width: 100%;
+    padding-top: 60px;
   }
   .page-login-v2 form {
     width: auto;

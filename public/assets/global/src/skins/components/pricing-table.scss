@@ -30,6 +30,7 @@ $pricing-table-column-featured-bg: $color-white !default;
   [class*="pricing-column"] {
     background-color: $pricing-table-column-bg;
     border: 1px solid $pricing-table-border;
+    border-right: none;
     
     &:last-child {
       border-right: 1px solid $pricing-table-border;
@@ -47,3 +48,4 @@ $pricing-table-column-featured-bg: $color-white !default;
     border-bottom: 1px solid $pricing-table-border;
   }
 }
+

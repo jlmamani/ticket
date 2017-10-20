@@ -21,7 +21,6 @@ $timeline-dot-border:                  $color-white !default;
 
 $timeline-info-bg:                     $gray-lighter !default;
 $timeline-info-border:                 $timeline-info-bg !default;
-$timeline-info-border-size:            1px !default;
 
 $timeline-period-bg:                   $page-bg !default;
 
@@ -29,18 +28,22 @@ $timeline-nav-color:                   $color-white !default;
 $timeline-nav-bg:                      $brand-primary !default;
 $timeline-nav-hover-bg:                $brand-primary-hover !default;
 
+$timeline-info-border-size:            1px !default;
 
 // Component: Timeline
 // ========================================================================
 
 .timeline {
+  background: transparent;
+
   &:before {
     background-color: $timeline-line-color;
   }
-}
 
-.timeline-period {
-  background: $timeline-period-bg;
+  &-period {
+    background: $timeline-period-bg;
+  }
+
 }
 
 .timeline-dot {
@@ -52,3 +55,7 @@ $timeline-nav-hover-bg:                $brand-primary-hover !default;
   background: $timeline-info-bg;
   border: $timeline-info-border-size solid $timeline-info-border;
 }
+
+
+
+

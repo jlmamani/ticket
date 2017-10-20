@@ -1,8 +1,8 @@
-@mixin transform($transform) {
+@mixin transform($transform){
   transform: $transform;
 }
 
-@mixin transform-style($transform-style) {
+@mixin transform-style($transform-style){
   transform-style: $transform-style;
 }
 

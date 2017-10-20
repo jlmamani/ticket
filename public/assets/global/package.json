@@ -15,7 +15,9 @@
     "web",
     "admin",
     "bootstrap",
-    "scss"
+    "scss",
+    "material design",
+    "bootstrap-v4"
   ],
   "author": {
     "name": "amazingsurge",

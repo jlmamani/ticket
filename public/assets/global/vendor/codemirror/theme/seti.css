@@ -9,8 +9,8 @@
 
 
 .cm-s-seti.CodeMirror {
-  background-color: #151718 !important;
   color: #cfd2d1 !important;
+  background-color: #151718 !important;
   border: none;
 }
 .cm-s-seti .CodeMirror-gutters {
@@ -91,6 +91,6 @@
   background: #101213;
 }
 .cm-s-seti .CodeMirror-matchingbracket {
-  text-decoration: underline;
   color: white !important;
+  text-decoration: underline;
 }

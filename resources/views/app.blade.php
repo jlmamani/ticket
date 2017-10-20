@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html class="no-js css-menubar" lang="en">
+<html class="no-js css-menubar" lang="es">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
   <meta name="description" content="bootstrap admin template">
   <meta name="author" content="">
-  <title>Panel de adminstración</title>
+  <title>Blank | Remark Admin Template</title>
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="shortcut icon" href="assets/images/favicon.ico">
   <!-- Stylesheets -->
-  
   <link href="{{ asset('assets/global/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/global/css/bootstrap-extend.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/site.min.css') }}" rel="stylesheet">
+  <!-- Plugins -->
   <link href="{{ asset('assets/global/vendor/animsition/animsition.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/global/vendor/asscrollable/asScrollable.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/global/vendor/switchery/switchery.css') }}" rel="stylesheet">
@@ -21,25 +21,24 @@
   <link href="{{ asset('assets/global/vendor/slidepanel/slidePanel.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/global/vendor/flag-icon-css/flag-icon.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/global/vendor/waves/waves.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/global/vendor/chartist/chartist.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/global/vendor/jvectormap/jquery-jvectormap.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/examples/css/dashboard/v1.css') }}" rel="stylesheet">
+  <!-- Fonts -->
   <link href="{{ asset('assets/global/fonts/material-design/material-design.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/global/fonts/brand-icons/brand-icons.min.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
-<script src="{{asset('components/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+  <!--[if lt IE 9]>
+    <script src="../../../global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+  <!--[if lt IE 10]>
+    <script src="../../../global/vendor/media-match/media.match.min.js"></script>
+    <script src="../../../global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+  <!-- Scripts -->
   <script src="{{asset('assets/global/vendor/breakpoints/breakpoints.js')}}" type="text/javascript"></script>
   <script>
   Breakpoints();
   </script>
-  <link href="{{ asset('assets/skins/green.css') }}" rel="stylesheet">
-
-  
 </head>
-
-<body class="animsition dashboard">
-  
+<body class="animsition">
   <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided"
@@ -362,14 +361,11 @@
     </div>
     -->
   </div>
-
-
-@yield('content')
-
+  @yield('content')
   <footer class="site-footer">
-    <div class="site-footer-legal">© 2017 <a href="" target="_blank">Remark</a></div>
+    <div class="site-footer-legal">© 2017 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
     <div class="site-footer-right">
-      Crafted with <i class="red-600 icon md-favorite"></i> by <a href="">amazingSurge</a>
+      Crafted with <i class="red-600 icon md-favorite"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>
     </div>
   </footer>
   <!-- Core  -->
@@ -388,12 +384,6 @@
   <script src="{{asset('assets/global/vendor/intro-js/intro.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/vendor/screenfull/screenfull.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/vendor/slidepanel/jquery-slidePanel.js')}}" type="text/javascript"></script>
-  <script src="{{asset('assets/global/vendor/chartist/chartist.min.js')}}" type="text/javascript"></script>
-  <script src="{{asset('assets/global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.min.js')}}" type="text/javascript"></script>
-  <script src="{{asset('assets/global/vendor/jvectormap/jquery-jvectormap.min.js')}}" type="text/javascript"></script>
-  <script src="{{asset('assets/global/vendor/jvectormap/maps/jquery-jvectormap-world-mill-en.js')}}" type="text/javascript"></script>
-  <script src="{{asset('assets/global/vendor/matchheight/jquery.matchHeight-min.js')}}" type="text/javascript"></script>
-  <script src="{{asset('assets/global/vendor/peity/jquery.peity.min.js')}}" type="text/javascript"></script>
 <!-- Scripts -->
   <script src="{{asset('assets/global/js/State.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/js/Component.js')}}" type="text/javascript"></script>
@@ -410,14 +400,19 @@
   <script>
   Config.set('assets','assets');
   </script>
-<!-- Page -->
+  <!-- Page -->
   <script src="{{asset('assets/js/Site.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/js/Plugin/asscrollable.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/js/Plugin/slidepanel.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/js/Plugin/switchery.js')}}" type="text/javascript"></script>
-  <script src="{{asset('assets/global/js/Plugin/matchheight.js')}}" type="text/javascript"></script>
-  <script src="{{asset('assets/global/js/Plugin/jvectormap.js')}}" type="text/javascript"></script>
-  <script src="{{asset('assets/global/js/Plugin/peity.js')}}" type="text/javascript"></script>
-  <script src="{{asset('assets/examples/js/dashboard/v1.js')}}" type="text/javascript"></script>
+  <script>
+  (function(document, window, $) {
+    'use strict';
+    var Site = window.Site;
+    $(document).ready(function() {
+      Site.run();
+    });
+  })(document, window, jQuery);
+  </script>
 </body>
 </html>  

@@ -128,7 +128,6 @@
 
   // Example Styles
   // --------------
-
   (function() {
     $('#exampleSuccessMessage').on("click", function() {
       swal({
@@ -179,4 +178,5 @@
         });
     });
   })();
+
 })(document, window, jQuery);

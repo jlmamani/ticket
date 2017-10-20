@@ -1,11 +1,10 @@
-
+$radio-border-width: 2px !default;
 
 // Checkboxes
 // ========================================================================
 .checkbox-custom {
 
   label {
-
     &::before {
       border: 1px solid $input-border;
       background-color: $color-white;
@@ -18,17 +17,11 @@
 
   input[type="checkbox"],
   input[type="radio"]{
-
-    &:focus + label::before {
-      @include tab-focus();
-    }
-
     &:checked + label::before {
       border-color: $input-border;
     }
 
     &:disabled + label {
-
       &::before {
         background-color: $input-bg-disabled;
         border-color: $input-border;
@@ -82,6 +75,31 @@
   @include checkbox-variant($brand-success);
 }
 
+// Radios
+// ========================================================================
+
+.radio-custom {
+
+  label {
+
+    &::before {
+      border: 1px solid $input-border;
+      background-color: $color-white;
+    }
+
+    &::after {
+      border: $radio-border-width solid $gray-dark;
+      background-color: transparent;
+    }
+  }
+
+  input[type="radio"]{
+    &:checked + label::before {
+      border-color: $input-border;
+    }
+  }
+}
+
 // Rdios Color Modifier
 // ========================================================================
 
@@ -124,3 +142,5 @@
 .radio-success {
   @include radio-variant($brand-success);
 }
+
+

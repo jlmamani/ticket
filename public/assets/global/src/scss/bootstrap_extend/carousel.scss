@@ -15,9 +15,10 @@ $carousel-caption-title-font-size:        20px !default;
 $carousel-caption-title-color:            $inverse !default;
 
 $carousel-control-hover-opacity:          0.4 !default;
-$carousel-control-icon-size:              $carousel-control-font-size !default;
 
-$carousel-control-screen-icon-size:       24px !default;
+$carousel-control-icon-font-size:         30px !default;
+
+$carousel-control-screen-icon-size:       48px !default;
 $carousel-control-screen-icon-font-size:  $carousel-control-screen-icon-size !default;
 
 $carousel-indicators-list-margin:         3px !default;
@@ -38,6 +39,7 @@ $carousel-indicators-list-border-radius:  10px !default;
 
   // In order to add icons by myself
   &-icon {
+    font-size: $carousel-control-icon-font-size;
     z-index: 5;
     background-image: none;
   }

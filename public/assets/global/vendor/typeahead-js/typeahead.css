@@ -152,7 +152,7 @@ select .input-group.input-group-lg .twitter-typeahead
 
 .twitter-typeahead .tt-hint
 {
-    color: #a3afb7;
+    color: #616161;
 }
 
 .twitter-typeahead .tt-input
@@ -165,7 +165,7 @@ fieldset[disabled] .twitter-typeahead .tt-input
 {
     cursor: not-allowed;
 
-    background-color: #f3f7f9 !important;
+    background-color: #eee !important;
 }
 
 .tt-dropdown-menu,
@@ -186,7 +186,7 @@ fieldset[disabled] .twitter-typeahead .tt-input
     list-style: none;
 
     border: 1px solid #ccc;
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
     border-radius: .215rem;
     background-color: #fff;
     -webkit-background-clip: padding-box;
@@ -205,7 +205,7 @@ fieldset[disabled] .twitter-typeahead .tt-input
 
     padding: 3px 20px;
 
-    color: #76838f;
+    color: #757575;
 }
 .tt-dropdown-menu .tt-suggestion.tt-cursor,
 .tt-dropdown-menu .tt-suggestion:hover,
@@ -215,16 +215,16 @@ fieldset[disabled] .twitter-typeahead .tt-input
     cursor: pointer;
     text-decoration: none;
 
-    color: #76838f; 
+    color: #757575; 
     outline: 0;
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 .tt-dropdown-menu .tt-suggestion.tt-cursor a,
 .tt-dropdown-menu .tt-suggestion:hover a,
 .tt-menu .tt-suggestion.tt-cursor a,
 .tt-menu .tt-suggestion:hover a
 {
-    color: #76838f;
+    color: #757575;
 }
 .tt-dropdown-menu .tt-suggestion p,
 .tt-menu .tt-suggestion p

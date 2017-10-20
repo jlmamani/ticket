@@ -12,7 +12,7 @@ $example-title-text-shadow:     $color-white !default;
 $example-title-span-color:      #ED5565 !default;
 
 $example-typography-note-color: #AAB2BD !default;
-$example-well-bg:               #f3f7f9 !default;
+$example-well-bg:               #eceff1 !default;
 
 // Component: Example
 // ========================================================================
@@ -28,7 +28,7 @@ $example-well-bg:               #f3f7f9 !default;
   margin-top: 20px;
   margin-bottom: 20px;
 
-  &:before {   // add 
+  &:before, &:after {   // add 
     content: "";
     display: table;
   }

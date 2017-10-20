@@ -11,7 +11,7 @@
 // Variables
 // ========================================================================
 
-$navbar-default-shadow:           0 2px 4px rgba(0, 0, 0, 0.08) !default;
+$navbar-default-shadow:           $box-shadow-1 !default;
 $navbar-avatar-size:              pxToRem(30px) !default;
 $navbar-toolbar-float-max-height: pxToRem(400px) !default;
 
@@ -279,6 +279,14 @@ $navbar-toolbar-float-max-height: pxToRem(400px) !default;
   }
 }
 
+@include media-breakpoint-up(md) {
+  .navbar-brand-center {
+    .navbar > .container &,
+    .navbar > .container-fluid & {
+      margin-left: 0;
+    }
+  }
+}
 // Component: Mega Navbar
 // ========================================================================
 .navbar-mega {
@@ -529,26 +537,26 @@ $navbar-toolbar-float-max-height: pxToRem(400px) !default;
 // Component: Navbar icons
 // ========================================================================
 .icon-fullscreen {
-  font-family: $wb-font-family;
+  font-family: $zmdi-font-name;
 
   &:before {
-    content: $wb-var-expand;
+    content: $zmdi-var-fullscreen;
   }
 
   &.active:before {
-    content: $wb-var-contract;
+    content: $zmdi-var-fullscreen-exit;
   }
 }
 
 .icon-menubar {
-  font-family: $wb-font-family;
+  font-family: $zmdi-font-name;
 
   &:before {
-    content: $wb-var-menu;
+    content: $zmdi-var-menu;
   }
 
   &.active:before {
-    content: $wb-var-menu;
+    content: $zmdi-var-menu;
   }
 }
 

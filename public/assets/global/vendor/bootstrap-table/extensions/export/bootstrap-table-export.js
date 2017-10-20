@@ -16,7 +16,6 @@
         sql: 'SQL',
         doc: 'MS-Word',
         excel: 'MS-Excel',
-        xlsx: 'MS-Excel (OpenXML)',
         powerpoint: 'MS-Powerpoint',
         pdf: 'PDF'
     };
@@ -59,7 +58,7 @@
                         '<button class="btn' +
                             sprintf(' btn-%s', this.options.buttonsClass) +
                             sprintf(' btn-%s', this.options.iconSize) +
-                            ' dropdown-toggle" aria-label="export type" ' +
+                            ' dropdown-toggle" ' +
                             'title="' + this.options.formatExport() + '" ' +
                             'data-toggle="dropdown" type="button">',
                             sprintf('<i class="%s %s"></i> ', this.options.iconsPrefix, this.options.icons.export),
@@ -82,7 +81,7 @@
                 }
                 $.each(exportTypes, function (i, type) {
                     if (TYPE_NAME.hasOwnProperty(type)) {
-                        $menu.append(['<li role="menuitem" data-type="' + type + '">',
+                        $menu.append(['<li data-type="' + type + '">',
                                 '<a href="javascript:void(0)">',
                                     TYPE_NAME[type],
                                 '</a>',
@@ -108,15 +107,6 @@
                     } else if (that.options.exportDataType === 'selected') {
                         var data = that.getData(),
                             selectedData = that.getAllSelections();
-
-                        // Quick fix #2220
-                        if (that.options.sidePagination === 'server') {
-                            data = {total: that.options.totalRows};
-                            data[that.options.dataField] = that.getData();
-
-                            selectedData = {total: that.options.totalRows};
-                            selectedData[that.options.dataField] = that.getAllSelections();
-                        }
 
                         that.load(selectedData);
                         doExport();

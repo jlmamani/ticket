@@ -1,5 +1,5 @@
 // Name:      Blocks
-//
+//base
 // Component:     `blocks`
 //
 // Modifiers:     `blocks-2`
@@ -14,13 +14,12 @@
 // ========================================================================
 
 $blocks-enable-flex: false !default;
-
 $blocks-grid-gutter-width:         $grid-gutter-width-base !default;
 $block-margin-bottom:              $blocks-grid-gutter-width !default;
 $blocks-columns: (100: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6) !default;
 
 //for not enable-flex
-$block-font-size:                  $font-size-base !default;
+$block-font-size:                $font-size-base !default;
 
 
 // $blocks-breakpoints: (
@@ -45,7 +44,7 @@ $block-font-size:                  $font-size-base !default;
   @each $i in map-keys($columns) {
     .blocks-#{$i} > .block,
     .blocks-#{$i} > li {
-      $rate1: ((1 / map-get($blocks-columns, $i))) !default;
+      $rate1: ((1 / map-get($blocks-columns, $i)));
       @if not $blocks-enable-flex {
         width: percentage($rate1);
       } @else {
@@ -76,7 +75,7 @@ $block-font-size:                  $font-size-base !default;
       @each $i in map-keys($columns) {
         .blocks-#{$j}-#{$i} > .block,
         .blocks-#{$j}-#{$i} > li {
-          $rate2: ((1 / map-get($blocks-columns, $i))) !default;
+          $rate2: ((1 / map-get($blocks-columns, $i)));
           @if not $blocks-enable-flex {
             width: percentage($rate2);
           } @else {

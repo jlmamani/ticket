@@ -1,7 +1,7 @@
 .CodeMirror-merge {
   position: relative;
-  border: 1px solid #ddd;
   white-space: pre;
+  border: 1px solid #ddd;
 }
 
 .CodeMirror-merge, .CodeMirror-merge .CodeMirror {
@@ -33,17 +33,17 @@
 }
 
 .CodeMirror-merge-gap {
+  position: relative;
   z-index: 2;
   display: inline-block;
   height: 100%;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   overflow: hidden;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  position: relative;
   background: #f8f8f8;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .CodeMirror-merge-scrolllock-wrap {
@@ -54,31 +54,31 @@
 .CodeMirror-merge-scrolllock {
   position: relative;
   left: -50%;
-  cursor: pointer;
-  color: #555;
   line-height: 1;
+  color: #555;
+  cursor: pointer;
 }
 
 .CodeMirror-merge-copybuttons-left, .CodeMirror-merge-copybuttons-right {
   position: absolute;
-  left: 0;
   top: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   line-height: 1;
 }
 
 .CodeMirror-merge-copy {
   position: absolute;
-  cursor: pointer;
-  color: #44c;
   z-index: 3;
+  color: #44c;
+  cursor: pointer;
 }
 
 .CodeMirror-merge-copy-reverse {
   position: absolute;
-  cursor: pointer;
   color: #44c;
+  cursor: pointer;
 }
 
 .CodeMirror-merge-copybuttons-left .CodeMirror-merge-copy {
@@ -90,14 +90,14 @@
 
 .CodeMirror-merge-r-inserted, .CodeMirror-merge-l-inserted {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAGUlEQVQI12MwuCXy3+CWyH8GBgYGJgYkAABZbAQ9ELXurwAAAABJRU5ErkJggg==);
-  background-position: bottom left;
   background-repeat: repeat-x;
+  background-position: bottom left;
 }
 
 .CodeMirror-merge-r-deleted, .CodeMirror-merge-l-deleted {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAGUlEQVQI12M4Kyb2/6yY2H8GBgYGJgYkAABURgPz6Ks7wQAAAABJRU5ErkJggg==);
-  background-position: bottom left;
   background-repeat: repeat-x;
+  background-position: bottom left;
 }
 
 .CodeMirror-merge-r-chunk {
@@ -144,12 +144,12 @@
   content: "(...)";
 }
 .CodeMirror-merge-collapsed-widget {
-  cursor: pointer;
+  padding: 0 3px;
+  font-size: 90%;
   color: #88b;
+  cursor: pointer;
   background: #eef;
   border: 1px solid #ddf;
-  font-size: 90%;
-  padding: 0 3px;
   border-radius: 4px;
 }
 .CodeMirror-merge-collapsed-line .CodeMirror-gutter-elt {

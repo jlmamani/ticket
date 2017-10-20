@@ -15,6 +15,7 @@
 $media-meta-color:         $text-muted !default;
 $media-meta-font-size:     $font-size-sm !default;
 // @media-padding-vertical:   30px;
+$media-column-spacing:     20px !default;
 
 
 // Component: Media
@@ -36,11 +37,10 @@ $media-meta-font-size:     $font-size-sm !default;
 .media-body {
   overflow: auto;
 }
-
 .media-meta {
-  color: $media-meta-color;
-  font-size: $media-meta-font-size;
-  margin-bottom: 3px;
+    color: $media-meta-color;
+    font-size: $media-meta-font-size;
+    margin-bottom: 3px;
 }
 
 // Media Modifier
@@ -60,7 +60,7 @@ $media-meta-font-size:     $font-size-sm !default;
 
 @include media-breakpoint-down(xs) {
   .media {
-    //for v4a6-dev 20170302 ---Kevin_y
+    //fix for remark-v4 v4a6-dev 20170302 ---Kevin_y
     flex-direction: column;
     > div:first-child {
       margin-bottom: 5px;
@@ -71,4 +71,8 @@ $media-meta-font-size:     $font-size-sm !default;
       padding-left: 15px;
     }
   }
+
+  // .media-body {
+    // width: auto; for /root/remark-material-v4/issues/141
+  // }
 }

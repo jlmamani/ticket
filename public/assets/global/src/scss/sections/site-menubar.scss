@@ -8,27 +8,31 @@ body {
 }
 
 .site-menubar {
-  position: fixed;
-  top: $site-navbar-height;
   z-index: $zindex-menubar;
 
+  position: fixed;
+  top: $site-navbar-height;
+
   height: 100%;
+  height: -webkit-calc(100% - #{$site-navbar-height});
   height: calc(100% - #{$site-navbar-height});
 
-  font-family: $site-menubar-font-family;
-  color: $site-menubar-color;
   background: $site-menubar-bg;
+  color: $site-menubar-color;
+  font-family: $site-menubar-font-family;
   box-shadow: $site-menubar-shadow;
 
   &-body {
     height: 100%;
+    height: -webkit-calc(100% - #{$site-menubar-footer-height});
     height: calc(100% - #{$site-menubar-footer-height});
   }
 
   ul {
-    padding: 0;
-    margin: 0;
     list-style: none;
+
+    margin: 0;
+    padding: 0;
   }
 
   a {
@@ -38,13 +42,13 @@ body {
     }
   }
 
-  &.site-menubar-light {
-    background: $site-menubar-light-bg;
-    box-shadow: $site-menubar-light-shadow;
+  .scrollable-inverse.scrollable .scrollable-bar-handle {
+    background: rgba($gray, (60/100));;
+  }
 
-    .scrollable-inverse.scrollable .scrollable-bar-handle {
-      background: rgba($gray, (60 / 100));
-    }
+  &.site-menubar-dark {
+    background: $site-menubar-dark-bg;
+    box-shadow: $site-menubar-dark-shadow;
   }
 }
 
@@ -67,8 +71,8 @@ body {
 .site-menubar-footer {
   position: fixed;
   bottom: 0;
-  z-index: $zindex-menubar;
   display: block;
+  z-index: $zindex-menubar;
 
   > a {
     display: block;
@@ -76,8 +80,8 @@ body {
     width: (100% / 3);
     height: $site-menubar-footer-height;
     padding: 26px 0;
-    font-size: 16px;
     color: $site-menubar-footer-color;
+    font-size: 16px;
     text-align: center;
     background-color: $site-menubar-footer-link-bg;
 
@@ -88,13 +92,13 @@ body {
   }
 }
 
-.site-menubar-light {
+.site-menubar-dark {
   .site-menubar-footer {
     > a {
-      background-color: $site-menubar-light-footer-link-bg;
+      background-color: $site-menubar-dark-footer-link-bg;
       &:hover,
       &:focus {
-        background-color: $site-menubar-light-footer-link-hover-bg;
+        background-color: $site-menubar-dark-footer-link-hover-bg;
       }
     }
   }

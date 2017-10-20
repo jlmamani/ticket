@@ -55,8 +55,8 @@
     text-decoration: none;
     text-transform: capitalize;
 
-    color: #76838f;
-    border: 1px solid #e4eaec;
+    color: #757575;
+    border: 1px solid #e0e0e0;
     border-radius: .25em;
     background: none;
     -webkit-box-shadow: 0 1px 0 white;
@@ -69,7 +69,7 @@
 
 .tablesaw-bar a.btn
 {
-    color: #89bceb;
+    color: #3f51b5;
 }
 
 .tablesaw-bar .btn:hover
@@ -92,8 +92,8 @@
     }
     .tablesaw-bar .btn:focus
     {
-        -webkit-box-shadow: 0 0 .35em #a2caee !important;
-                box-shadow: 0 0 .35em #a2caee !important;
+        -webkit-box-shadow: 0 0 .35em #5c6bc0 !important;
+                box-shadow: 0 0 .35em #5c6bc0 !important;
     }
 }
 
@@ -169,7 +169,7 @@
 
 .tablesaw-bar .btn-select:after
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
     font-size: 16px;
     font-weight: 300;
     font-style: normal;
@@ -189,7 +189,7 @@
     margin: 0 5px 0;
     padding: 0;
 
-    content: '';
+    content: '';
 
     background: transparent;
 
@@ -230,7 +230,7 @@
 
 .tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
     font-size: inherit;
     font-weight: 300;
     font-style: normal;
@@ -260,22 +260,22 @@
 
 .tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.down:before
 {
-    content: '';
+    content: '';
 }
 
 .tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.up:before
 {
-    content: '';
+    content: '';
 }
 
 .tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.left:before
 {
-    content: '';
+    content: '';
 }
 
 .tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.right:before
 {
-    content: '';
+    content: '';
 }
 
 .tablesaw-advance a.tablesaw-nav-btn.disabled
@@ -311,7 +311,7 @@
 
     text-transform: uppercase; 
 
-    color: #76838f;
+    color: #757575;
 }
 
 .tablesaw-bar .btn,
@@ -358,7 +358,7 @@
 {
     text-transform: none;
 
-    color: #76838f;
+    color: #757575;
     background: transparent;
 }
 
@@ -612,7 +612,7 @@
 
     padding: .5em .8em;
 
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
     border-radius: .215rem;
     background-color: #fff;
 }
@@ -808,7 +808,7 @@
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-ascending .tablesaw-sortable-arrow:after,
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-descending .tablesaw-sortable-arrow:after
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
     font-size: inherit;
     font-weight: 300;
     font-style: normal;
@@ -842,12 +842,12 @@
 
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-ascending .tablesaw-sortable-arrow:after
 {
-    content: '';
+    content: '';
 }
 
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-descending .tablesaw-sortable-arrow:after
 {
-    content: '';
+    content: '';
 }
 
 .tablesaw-sortable .not-applicable:after
@@ -897,7 +897,7 @@
     height: 4px;
 
     border-radius: 100%;
-    background: #a3afb7;
+    background: #9e9e9e;
 }
 
 .tablesaw-advance-dots-hide

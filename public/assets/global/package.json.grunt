@@ -2,7 +2,7 @@
   "name": "remark",
   "title": "Remark",
   "description": "The best backend-end framework for developing responsive, mobile first projects on the web.",
-  "version": "3.1.0",
+  "version": "3.1.0"
   "homepage": "http://getbootstrapadmin.com/remark",
   "private": true,
   "keywords": [
@@ -15,7 +15,9 @@
     "web",
     "admin",
     "bootstrap",
-    "scss"
+    "scss",
+    "material design",
+    "bootstrap-v4"
   ],
   "author": {
     "name": "amazingsurge",

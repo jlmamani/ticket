@@ -5,12 +5,9 @@
  */
 (function(document, window, $) {
   'use strict';
-
   var Site = window.Site;
-
   $(document).ready(function($) {
     Site.run();
-
     $(".user-posts .user-posts-list").slick({
       dots: false,
       infinite: true,
@@ -22,4 +19,5 @@
       swipeToSlide: true
     });
   });
+
 })(document, window, jQuery);

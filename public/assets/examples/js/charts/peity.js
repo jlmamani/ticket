@@ -35,6 +35,7 @@
     }, 1000);
   })();
 
+
   // Example Peity Red
   // -------------------
   (function() {
@@ -57,6 +58,7 @@
         .change();
     }, 1000);
   })();
+
 
   // Example Peity Green
   // -------------------
@@ -81,6 +83,7 @@
     }, 1000);
   })();
 
+
   // Example Peity Orange
   // --------------------
   (function() {
@@ -103,4 +106,5 @@
         .change();
     }, 1000);
   })();
+
 })(document, window, jQuery);

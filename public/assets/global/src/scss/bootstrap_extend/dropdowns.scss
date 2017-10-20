@@ -25,8 +25,8 @@
 // ========================================================================
 
 // $dropdown-header-item-padding: 8px 35px !default;
-$dropdown-header-padding:            8px 20px 6px !default;
-$dropdown-header-font-size:          $font-size-base !default;
+$dropdown-header-padding:            8px 13px 6px !default;
+$dropdown-header-font-size:          $font-size-small !default;
 $dropdown-header-font-weight:        $font-weight-bold !default;
 
 $dropdown-divider-margin:            6px 0 !default;
@@ -58,6 +58,7 @@ $dropdown-dark-link-active-bg:       $brand-dark !default;
 $dropdownm-menu-animation-name:      slide-left !default;
 $dropdownm-menu-animation-duration:  .5s !default;
 $dropdownm-menu-animation-delay:     0.02s !default;
+
 
 // Component: Dropdown menus
 // ========================================================================
@@ -98,6 +99,7 @@ $dropdownm-menu-animation-delay:     0.02s !default;
 
 .dropdown-menu {
   transition: .25s;
+  box-shadow: $dropdown-menu-shadow;
 
   &.dropdown-menu-bullet {
     margin-top: 12px;
@@ -260,6 +262,7 @@ $dropdownm-menu-animation-delay:     0.02s !default;
   padding: $dropdown-header-padding;
   font-size: $dropdown-header-font-size;
   font-weight: $dropdown-header-font-weight;
+  text-transform: uppercase;
   cursor: default;
 }
 
@@ -366,10 +369,10 @@ $dropdown-menu-media-footer-btn-hover-color:             $link-hover-color !defa
   }
 
   .list-group-item {
+    margin: 0;
     padding: 0 $dropdown-menu-media-padding-horizontal;
     border-radius: 0 !important;
     border: none;
-    margin: 0;
 
     .media {
       padding: 15px 0;
@@ -388,8 +391,8 @@ $dropdown-menu-media-footer-btn-hover-color:             $link-hover-color !defa
     background-color: $dropdown-menu-media-footer-bg;
 
     > a {
-      padding: $dropdown-menu-media-footer-padding !important;
       margin: 0;
+      padding: $dropdown-menu-media-footer-padding !important;
       color: $dropdown-menu-media-footer-color !important;
 
       &:hover {

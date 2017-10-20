@@ -120,7 +120,6 @@ $panel-loading-z-index                   : ($zindex-base + 5) !default;
     }
   }
   // end--20160810--fish
-
   + .nav-tabs {
     margin-top: -$nav-padding-vertical;
   }
@@ -787,6 +786,38 @@ ul.panel-actions {
   border-top-width: 0;
 }
 
+// Panel-group
+// ========================================================================
+.panel-group {
+  margin-bottom: $line-height-computed;
+
+  // Tighten up margin so it's only between panels
+  .panel {
+    margin-bottom: 0;
+    border-radius: $panel-border-radius;
+
+    + .panel {
+      margin-top: 5px;
+    }
+  }
+
+  .panel-heading {
+    border-bottom: 0;
+
+    + .panel-collapse > .panel-body,
+    + .panel-collapse > .list-group {
+      border-top: 1px solid $panel-inner-border;
+    }
+  }
+
+  .panel-footer {
+    border-top: 0;
+    + .panel-collapse .panel-body {
+      border-bottom: 1px solid $panel-inner-border;
+    }
+  }
+}
+
 // Color Modifier
 // ========================================================================
 
@@ -808,10 +839,12 @@ ul.panel-actions {
 // --------------------------------
 
 @mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
-  .panel-heading {
+  border-color: $border;
+
+  & > .panel-heading {
     color: $heading-text-color;
     background-color: $heading-bg-color;
-    border: none;
+    border-color: $heading-border;
 
     + .panel-collapse > .panel-body {
       border-top-color: $border;
@@ -821,15 +854,12 @@ ul.panel-actions {
       background-color: $heading-text-color;
     }
   }
-
   .panel-title {
     color: $heading-text-color;
   }
-
   .panel-action {
     color: $heading-text-color;
   }
-
   .panel-footer {
     + .panel-collapse > .panel-body {
       border-bottom-color: $border;
@@ -840,7 +870,6 @@ ul.panel-actions {
 
 .panel-default {
   @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
-
   .panel-title {
     color: $headings-color;
   }
@@ -863,6 +892,27 @@ ul.panel-actions {
 
 .panel-dark {
   @include panel-variant($panel-dark-border, $panel-dark-text, $panel-dark-heading-bg, $panel-dark-border);
+}
+
+.panel-primary,
+.panel-info,
+.panel-success,
+.panel-warning,
+.panel-danger,
+.panel-dark {
+  border: none;
+
+  .panel-heading {
+    border: none;
+  }
+
+  .panel-title {
+    color: $panel-colored-title-color;
+  }
+
+  .panel-action {
+    color: $panel-colored-action-color;
+  }
 }
 
 // Panel-line
@@ -926,6 +976,7 @@ ul.panel-actions {
 
 // Tablet //--20160518fish
 // ========================================================================
+
 @include media-breakpoint-down(sm) {
   .panel-actions {
     position: relative;
@@ -961,6 +1012,7 @@ ul.panel-actions {
     .progress {
       min-width: 80px;
     }
+    
     .show-on-hover {
       display: none;
     }

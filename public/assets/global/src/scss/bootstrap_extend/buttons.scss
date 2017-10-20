@@ -3,7 +3,6 @@
 // Component:       `btn`
 //
 // Modifiers:       `btn-block`
-//                  `btn-outline`
 //                  `btn-lg`
 //                  `btn-sm`
 //                  `btn-xs`
@@ -37,6 +36,7 @@
 // Variables
 // ========================================================================
 
+$btn-shadow:                             $box-shadow-1 !default;
 
 $btn-tagged-padding-horizontal:         pxToRem(8px) !default;
 $btn-tagged-xs-padding-horizontal:      pxToRem(4px) !default;
@@ -91,21 +91,21 @@ $btn-icon-lg-font-size:                  pxToRem(20px) !default;
 
 $btn-floating-size:                      pxToRem(56px) !default;
 $btn-floating-padding:                   pxToRem(14px) !default;
-$btn-floating-font-size:                 pxToRem(24px) !default;
+$btn-floating-font-size:                 pxToRem(36px) !default;
 
 $btn-floating-shadow:                    $shadow-5-bottom !default;
 
 $btn-floating-xs-size:                   pxToRem(30px) !default;
 /*$btn-floating-xs-padding:                10px !default;*/
-$btn-floating-xs-font-size:              pxToRem(13px) !default;
+$btn-floating-xs-font-size:              pxToRem(18px) !default;
 
 $btn-floating-sm-size:                   pxToRem(40px) !default;
 /*$btn-floating-sm-padding:                13px !default;*/
-$btn-floating-sm-font-size:              pxToRem(15px) !default;
+$btn-floating-sm-font-size:              pxToRem(26px) !default;
 
 $btn-floating-lg-size:                   pxToRem(70px) !default;
 /*$btn-floating-lg-padding:                15px !default;*/
-$btn-floating-lg-font-size:              pxToRem(30px) !default;
+$btn-floating-lg-font-size:              pxToRem(46px) !default;
 
 $btn-animate-side-padding:               pxToRem(8px) pxToRem(28px) !default;
 $btn-animate-side-xs-padding:            pxToRem(3px) pxToRem(14px) !default;
@@ -152,6 +152,7 @@ $btn-pure-dark-hover-color:              $brand-dark-hover !default;
 
 $btn-pure-inverse-color:                 $inverse !default;
 $btn-pure-inverse-hover-color:           $btn-inverse-hover-bg !default;
+
 
 $btn-styles: (
   'default': (
@@ -258,6 +259,7 @@ $btn-styles: (
 .btn {
   // @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius);
   -webkit-font-smoothing: subpixel-antialiased;
+  box-shadow: $btn-shadow;
   transition: border .2s linear, color .2s linear, width .2s linear, background-color .2s linear;
 
   &,
@@ -290,6 +292,13 @@ a.btn:not(.btn-link) {
   }
 }
 
+// Modifier: `btn-link`
+// -------------------------
+
+.btn-link {
+  box-shadow: none;
+}
+
 // Modifier: `btn-block`
 // -------------------------
 
@@ -297,45 +306,16 @@ a.btn:not(.btn-link) {
   white-space: normal;
 }
 
-// Modifier: `btn-outline`
-// ========================================================================
-
-.btn-outline {
-  &.btn-default {
-    @include button-outline-styles-variant('default');
-  }
-
-  &.btn-primary {
-    @include button-outline-styles-variant('primary');
-  }
-
-  &.btn-success {
-    @include button-outline-styles-variant('success');
-  }
-
-  &.btn-info {
-    @include button-outline-styles-variant('info');
-  }
-
-  &.btn-warning {
-    @include button-outline-styles-variant('warning');
-  }
-
-  &.btn-danger {
-    @include button-outline-styles-variant('danger');
-  }
-
-  &.btn-dark {
-    @include button-outline-styles-variant('dark');
-  }
-
-  &.btn-inverse {
-    @include button-outline-styles-variant('inverse');
-  }
-}
-
 // Size Modifier
 // ========================================================================
+
+// .btn-lg {
+//   @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-lg, $line-height-lg, $border-radius-large);
+// }
+
+// .btn-sm {
+//   @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-sm, $line-height-sm, $border-radius-small);
+// }
 
 .btn-xs {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-sm, $border-radius-small);
@@ -431,6 +411,10 @@ a.btn:not(.btn-link) {
   background: none;
   border: none;
   box-shadow: none;
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
   &.disabled {
     color: $btn-flat-disabled-color;
   }
@@ -442,6 +426,7 @@ a.btn:not(.btn-link) {
 
 .btn-icon, .btn.icon {
   padding: pxToRem(10px);
+  font-size: $font-size-icon;
   line-height: 1em;
 
   &.btn-xs {

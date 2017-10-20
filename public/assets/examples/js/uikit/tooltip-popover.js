@@ -12,6 +12,7 @@
     Site.run();
   });
 
+
   var defaults = Plugin.getDefaults("webuiPopover");
 
   // Example Webui Popover Pop with Table
@@ -55,4 +56,5 @@
 
     $('#examplePopWithLargeContent').webuiPopover($.extend({}, defaults, largeSettings));
   })();
+
 })(document, window, jQuery);

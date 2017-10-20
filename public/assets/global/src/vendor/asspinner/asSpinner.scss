@@ -5,11 +5,11 @@
 
 $spinner:                         spinnerUi;
 $spinner-input-height:            40px;
-// $spinner-width:  $spinner-input-width + $spinner-control-width + 3px;
+// $spinner-width:  $spinner-input-width + $spinner-control-width + 3px !default;
 $spinner-input-width:             170px;
 $spinner-control-width:           36px;
 
-// $spinner-width:  $spinner-input-width + $spinner-control-width + 3px;
+// $spinner-width:  $spinner-input-width + $spinner-control-width + 3px !default;
 $spinner-input-width:             170px;
 $spinner-control-width:           40px;
 
@@ -85,15 +85,15 @@ $spinner-arrow-active-bgColor:    $color-blue-700;
   &-up {
     position: relative;
     display: block;
-    
-    font-family: $wb-font-family;
+
+    font-family: $zmdi-font-name;
     font-style: normal;
     font-weight: normal;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    
+
     height: 50%;
     color: $spinner-arrow-color;
     font-size: 20px;
@@ -106,7 +106,7 @@ $spinner-arrow-active-bgColor:    $color-blue-700;
     border-radius: 0 $input-border-radius 0 0;
 
     &:before {
-      content: $wb-var-triangle-up;
+      content: $zmdi-var-caret-up;
     }
   }
 
@@ -117,7 +117,7 @@ $spinner-arrow-active-bgColor:    $color-blue-700;
     border-radius: 0 0 $input-border-radius 0;
 
     &:before {
-      content: $wb-var-triangle-down;
+      content: $zmdi-var-caret-down;
     }
   }
 }
@@ -166,6 +166,6 @@ $spinner-arrow-active-bgColor:    $color-blue-700;
 
   .#{$spinner}-down,
   .#{$spinner}-up {
-    background-color: #e1e6e8 !important;
+    background-color: #eee !important;
   }
 }

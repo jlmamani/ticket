@@ -13,26 +13,22 @@ $small-icon-form-height: 2.2rem !default;
 .input-group-btn {
   .btn {
     padding: 6px 10px;
+    box-shadow: none;
 
     > .icon {
-      line-height: inherit;
       vertical-align: bottom;
     }
   }
-}
 
-// for vertical align
-.input-group-lg {
-  .input-group-addon,
-  .input-group-btn {
-    line-height: $line-height-lg;
+  .dropdown-toggle.btn .caret {
+    margin-left: 2px;
   }
-}
 
-.input-group-sm {
-  .input-group-addon,
-  .input-group-btn {
-    line-height: $line-height-sm;
+  &:last-child {
+    > .btn,
+    > .btn-group {
+      z-index: $zindex-base;
+    }
   }
 }
 

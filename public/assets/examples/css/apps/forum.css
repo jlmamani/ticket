@@ -29,7 +29,7 @@
 }
 
 .app-forum .page-content .table .title .locked {
-  color: #a3afb7;
+  color: #9e9e9e;
 }
 
 .app-forum .page-content .table .sticky-top {
@@ -41,7 +41,7 @@
 }
 
 .app-forum .page-content .table .metas {
-  color: #a3afb7;
+  color: #9e9e9e;
 }
 
 .app-forum .page-content .table .metas > span {
@@ -50,12 +50,12 @@
 }
 
 .app-forum .page-content .table .metas > span + span:before {
-  content: "";
   position: absolute;
-  width: 2px;
-  height: 2px;
   top: 50%;
   left: -8px;
+  width: 2px;
+  height: 2px;
+  content: "";
   background-color: #a7b0b8;
 }
 
@@ -64,13 +64,13 @@
 }
 
 .app-forum .slidePanel-header {
-  background-color: #9ece67;
+  background-color: #7cb342;
 }
 
 .app-forum .slidePanel-header::after {
   display: block;
-  content: "";
   clear: both;
+  content: "";
 }
 
 .app-forum .slidePanel .actions-top {
@@ -81,8 +81,8 @@
 
 .app-forum .slidePanel .actions-bottom {
   position: absolute;
-  bottom: 30px;
   right: 20px;
+  bottom: 30px;
 }
 
 .app-forum .slidePanel .avatar, .app-forum .slidePanel .name {
@@ -90,7 +90,7 @@
 }
 
 .app-forum .slidePanel .time {
-  color: #a3afb7;
+  color: #9e9e9e;
 }
 
 .app-forum .slidePanel .forum-header, .app-forum .slidePanel .forum-content, .app-forum .slidePanel .forum-metas {
@@ -99,8 +99,8 @@
 
 .app-forum .slidePanel .forum-header::after, .app-forum .slidePanel .forum-content::after, .app-forum .slidePanel .forum-metas::after {
   display: block;
-  content: "";
   clear: both;
+  content: "";
 }
 
 .app-forum .slidePanel .forum-content:last-child {

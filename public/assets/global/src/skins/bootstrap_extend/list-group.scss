@@ -16,7 +16,6 @@
 $list-group-active-color                 : $brand-primary !default;
 
 $list-group-link-hover-bg                : $bg-color-base !default;
-
 $list-group-link-disabled-color          : $disabled-color-base !default;
 $list-group-link-disabled-bg             : $gray-lightest !default;
 
@@ -47,8 +46,8 @@ a.list-group-item {
       color: $list-group-link-disabled-color;
       background-color: $list-group-link-disabled-bg;
     }
+    
   }
-
   &.active {
     @include plain-hover-focus {
       color: $list-group-link-active-color;
@@ -62,9 +61,14 @@ a.list-group-item {
 
 .list-group.bg-inherit {
   .list-group-item {
+    background-color: transparent;
     border-bottom-color: $list-group-bg-inherit-item-border;
+    &:last-child {
+      border-bottom-color: transparent;
+    }
     &:hover {
       background-color: $list-group-bg-inherit-item-hover-bg;
+      border-color: transparent;
     }
   }
 }
@@ -110,6 +114,7 @@ a.list-group-item {
   }
 }
 
+
 // add from---v3
 .list-group-item.active {
   @include plain-hover-focus {
@@ -119,6 +124,9 @@ a.list-group-item {
   }
 }
 
+.list-group-item {
+  border: 1px solid transparent;
+}
 // add end
 
 // Color Modifier

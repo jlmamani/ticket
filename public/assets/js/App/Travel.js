@@ -118,7 +118,7 @@
           /* create new marker and add to map */
           var itemName = $(items[i]).find('.item-name').html();
           var itemTitle = $(items[i]).find('.item-title').html();
-          var popupInfo = '<div class=\'marker-popup-info\'>\n                        <div class=\'detail\'>info</div>\n                        <h3>' + itemName + '</h3>\n                        <p>' + itemTitle + '</p>\n                      </div>\n                      <i class=\'icon wb-chevron-right-mini\'>\n                      </i>';
+          var popupInfo = '<div class=\'marker-popup-info\'>\n                        <div class=\'detail\'>info</div>\n                        <h3>' + itemName + '</h3>\n                        <p>' + itemTitle + '</p>\n                      </div>\n                      <i class=\'icon md-chevron-right\'>\n                      </i>';
           var marker = L.marker(markerLatlng, {
             title: itemName,
             icon: itemImg

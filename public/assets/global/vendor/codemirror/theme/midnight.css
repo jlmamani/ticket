@@ -14,8 +14,8 @@
 }
 
 .cm-s-midnight.CodeMirror {
-  background: #0f192a;
   color: #d1edff;
+  background: #0f192a;
 }
 
 .cm-s-midnight.CodeMirror {
@@ -91,11 +91,11 @@
   color: #ae81ff;
 }
 .cm-s-midnight span.cm-error {
-  background: #f92672;
   color: #f8f8f0;
+  background: #f92672;
 }
 
 .cm-s-midnight .CodeMirror-matchingbracket {
-  text-decoration: underline;
   color: white !important;
+  text-decoration: underline;
 }

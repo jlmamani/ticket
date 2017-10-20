@@ -121,12 +121,12 @@
     });
   })();
 
+
   // Example Wizard Form Container
   // -----------------------------
   // http://formvalidation.io/api/#is-valid-container
   (function() {
     var defaults = Plugin.getDefaults("wizard");
-
     var options = $.extend(true, {}, defaults, {
       onInit: function() {
         $('#exampleFormContainer').formValidation({
@@ -190,7 +190,6 @@
       buttonsAppendTo: '.panel-body'
     });
 
-    console.dir(options);
     $("#exampleWizardFormContainer").wizard(options);
   })();
 
@@ -204,8 +203,8 @@
       templates: {
         buttons: function() {
           var options = this.options;
-          var html = '<div class="btn-group btn-group-sm">' +
-            '<a class="btn btn-default btn-outline" href="#' + this.id + '" data-wizard="back" role="button">' + options.buttonLabels.back + '</a>' +
+          var html = '<div class="btn-group btn-group-sm btn-group-flat">' +
+            '<a class="btn btn-default" href="#' + this.id + '" data-wizard="back" role="button">' + options.buttonLabels.back + '</a>' +
             '<a class="btn btn-success btn-outline float-right" href="#' + this.id + '" data-wizard="finish" role="button">' + options.buttonLabels.finish + '</a>' +
             '<a class="btn btn-default btn-outline float-right" href="#' + this.id + '" data-wizard="next" role="button">' + options.buttonLabels.next + '</a>' +
             '</div>';
@@ -213,9 +212,9 @@
         }
       },
       buttonLabels: {
-        next: '<i class="icon wb-chevron-right" aria-hidden="true"></i>',
-        back: '<i class="icon wb-chevron-left" aria-hidden="true"></i>',
-        finish: '<i class="icon wb-check" aria-hidden="true"></i>'
+        next: '<i class="icon md-chevron-right" aria-hidden="true"></i>',
+        back: '<i class="icon md-chevron-left" aria-hidden="true"></i>',
+        finish: '<i class="icon md-check" aria-hidden="true"></i>'
       },
 
       buttonsAppendTo: '.panel-actions'
@@ -313,4 +312,5 @@
 
     $("#exampleWizardAccordion").wizard(options);
   })();
+
 })(document, window, jQuery);

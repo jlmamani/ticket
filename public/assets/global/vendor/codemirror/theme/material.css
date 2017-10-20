@@ -7,13 +7,13 @@
 
 */
 
-.cm-s-material.CodeMirror {
-  background-color: #263238;
+.cm-s-material {
   color: rgba(233, 237, 237, 1);
+  background-color: #263238;
 }
 .cm-s-material .CodeMirror-gutters {
-  background: #263238;
   color: rgb(83,127,126);
+  background: #263238;
   border: none;
 }
 .cm-s-material .CodeMirror-guttermarker, .cm-s-material .CodeMirror-guttermarker-subtle, .cm-s-material .CodeMirror-linenumber {
@@ -103,6 +103,6 @@
   background-color: #ec5f67;
 }
 .cm-s-material .CodeMirror-matchingbracket {
-  text-decoration: underline;
   color: white !important;
+  text-decoration: underline;
 }

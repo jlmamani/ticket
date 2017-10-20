@@ -7,7 +7,7 @@
 // Variables
 // ========================================================================
 
-$form-control-round-border-radius:       200px !default;
+$form-control-round-border-radius: 200px !default;
 
 $input-search-font-size:                 16px !default;
 $input-search-icon-width:                $input-height !default;
@@ -95,6 +95,8 @@ select.form-control-sm {
 // --
 
 // -- update 20160627 fish from dev-v4-a3 about label and legend
+// bootstrp rename form-control-label to col-form-label
+// and form-control-legend to col-form-legend
 // only here  and not change related
 // so here we only add this code snippets
 // .col-form-label {

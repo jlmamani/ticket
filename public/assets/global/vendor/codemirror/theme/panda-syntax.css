@@ -4,10 +4,10 @@
 	CodeMirror template by Siamak Mokhtari (https://github.com/siamak/atom-panda-syntax)
 */
 .cm-s-panda-syntax {
-  background: #292a2b;
-  color: #e6e6e6;
+  font-family: 'Operator Mono', 'Source Sans Pro', Menlo, Monaco, Consolas, Courier New, monospace;
   line-height: 1.5;
-  font-family: "Operator Mono", "Source Sans Pro", Menlo, Monaco, Consolas, Courier New, monospace;
+  color: #e6e6e6;
+  background: #292a2b;
 }
 .cm-s-panda-syntax .CodeMirror-cursor {
   border-color: #ff2c6d;
@@ -73,9 +73,9 @@
 }
 
 .cm-s-panda-syntax .CodeMirror-matchingbracket {
-  border-bottom: 1px dotted #19f9d8;
   padding-bottom: 2px;
   color: #e6e6e6;
+  border-bottom: 1px dotted #19f9d8;
 }
 .cm-s-panda-syntax .CodeMirror-gutters {
   background: #292a2b;

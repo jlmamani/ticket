@@ -12,6 +12,7 @@
     Site.run();
   });
 
+
   // Example Flot Realtime
   // ---------------------
   (function() {
@@ -52,14 +53,14 @@
       data: getRandomData()
     }], {
 
-      colors: [Config.colors("blue-grey", 100)],
+      colors: [Config.colors("grey", 200)],
       series: {
         shadowSize: 0,
         lines: {
           show: true,
           lineWidth: 0,
           fill: true,
-          fillColor: Config.colors("blue-grey", 100)
+          fillColor: Config.colors("grey", 200)
         }
       },
       legend: {
@@ -108,6 +109,7 @@
     update();
 
   })();
+
 
   // Example Flot Full-Bg Line
   // -------------------------
@@ -191,6 +193,7 @@
     });
 
   })();
+
 
   // Example Flot Curve
   // ------------------
@@ -286,6 +289,7 @@
 
   })();
 
+
   // Example Flot Mix
   // ----------------
   (function() {
@@ -327,7 +331,7 @@
         show: true,
         align: "center",
         fill: true,
-        fillColor: Config.colors("blue-grey", 100)
+        fillColor: Config.colors("grey", 200)
       }
     }, {
       data: b1,
@@ -405,7 +409,7 @@
       series: {
         shadowSize: 0
       },
-      colors: [Config.colors("blue-grey", 100),
+      colors: [Config.colors("grey", 200),
         Config.colors("orange", 200),
         Config.colors("green", 600),
         Config.colors("yellow", 600),
@@ -414,6 +418,7 @@
       ]
     });
   })();
+
 
   // Example Flot Stack Bar
   // ----------------------
@@ -448,7 +453,7 @@
       data: a2,
       bars: {
         fill: true,
-        fillColor: Config.colors("blue-grey", 300)
+        fillColor: Config.colors("grey", 400)
       }
     }, {
       data: a3,
@@ -477,7 +482,7 @@
           barWidth: 0.38
         }
       },
-      colors: [Config.colors("light-green", 500), Config.colors("blue-grey", 300), Config.colors("primary", 500), Config.colors("purple", 500)],
+      colors: [Config.colors("light-green", 500), Config.colors("grey", 400), Config.colors("primary", 500), Config.colors("purple", 500)],
       xaxis: {
         tickLength: 0,
         color: "#474e54",
@@ -517,6 +522,7 @@
     });
   })();
 
+
   // Example Flot Horizontal Bar
   // ---------------------------
   (function() {
@@ -545,7 +551,7 @@
       data: a22,
       bars: {
         fill: true,
-        fillColor: Config.colors("blue-grey", 300)
+        fillColor: Config.colors("grey", 400)
       }
     }, {
       data: a33,
@@ -567,7 +573,7 @@
           horizontal: true
         }
       },
-      colors: [Config.colors("primary", 500), Config.colors("blue-grey", 300), Config.colors("red", 500)],
+      colors: [Config.colors("primary", 500), Config.colors("grey", 400), Config.colors("red", 500)],
       xaxis: {
         color: "#474e54",
         font: {
@@ -631,7 +637,7 @@
             show: true
           }
         },
-        colors: [Config.colors("primary", 500), Config.colors("blue-grey", 200)]
+        colors: [Config.colors("primary", 500), Config.colors("grey", 300)]
       });
     });
 
@@ -648,7 +654,7 @@
             }
           }
         },
-        colors: [Config.colors("primary", 500), Config.colors("blue-grey", 200)],
+        colors: [Config.colors("primary", 500), Config.colors("grey", 300)],
         legend: {
           show: false
         }
@@ -671,7 +677,7 @@
             }
           }
         },
-        colors: [Config.colors("primary", 500), Config.colors("blue-grey", 200)],
+        colors: [Config.colors("primary", 500), Config.colors("grey", 300)],
         legend: {
           show: false
         }
@@ -694,7 +700,7 @@
             }
           }
         },
-        colors: [Config.colors("primary", 500), Config.colors("blue-grey", 200)],
+        colors: [$.colors("primary", 500), $.colors("grey", 300)],
         legend: {
           show: false
         }
@@ -712,7 +718,7 @@
             show: true
           }
         },
-        colors: [Config.colors("primary", 500), Config.colors("blue-grey", 200)]
+        colors: [Config.colors("primary", 500), Config.colors("grey", 300)]
       });
     });
 
@@ -726,7 +732,7 @@
             show: true
           }
         },
-        colors: [Config.colors("primary", 500), Config.colors("blue-grey", 200)],
+        colors: [Config.colors("primary", 500), Config.colors("grey", 300)],
         grid: {
           hoverable: true,
           clickable: true
@@ -763,6 +769,7 @@
       return "<div" + " style='" + "font-size: 8pt; text-align: center; padding: 2px; color: #747474;'" + ">" + label + "<br/>" + Math.round(series.percent) + "%</div>";
     }
   })();
+
 
   // Example Flot Visitors
   // ---------------------
@@ -1022,6 +1029,7 @@
       opacity: 0.80
     }).appendTo("body");
 
+
     $("#exampleFlotCurve").bind("plothover", function(event, pos, item) {
       if (item) {
         var x = item.datapoint[0].toFixed(2),
@@ -1068,4 +1076,5 @@
     });
 
   })();
+
 })(document, window, jQuery);

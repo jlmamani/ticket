@@ -61,6 +61,7 @@
         this.setupGridMenu();
         this.setupFullScreen();
         this.setupMegaNavbar();
+        this.setupWave();
         this.setupTour();
         this.setupNavbarCollpase();
         // Dropdown menu setup
@@ -233,6 +234,7 @@
           }
         }).on('shown.bs.dropdown', function (e) {
           var $menu = (0, _jquery2.default)(e.target).find('.dropdown-menu-media > .list-group');
+
           if ($menu.length > 0) {
             var api = $menu.data('asScrollable');
             if (api) {
@@ -356,6 +358,16 @@
         //   this.tour.start();
         //   window.localStorage.setItem('startTour', true);
         // }
+      }
+    }, {
+      key: 'setupWave',
+      value: function setupWave() {
+        if (typeof Waves !== 'undefined') {
+          Waves.init();
+          Waves.attach('.site-menu-item > a', ['waves-classic']);
+          Waves.attach(".site-navbar .navbar-toolbar a", ["waves-light", "waves-round"]);
+          Waves.attach('.btn');
+        }
       }
     }]);
     return Site;

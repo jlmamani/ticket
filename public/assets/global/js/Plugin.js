@@ -25,7 +25,7 @@
 
   var Plugin = function () {
     function Plugin($el) {
-      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
       babelHelpers.classCallCheck(this, Plugin);
 
       this.name = this.getName();
@@ -147,7 +147,7 @@
   }
 
   function pluginFactory(name, $el) {
-    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    var options = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
 
     var PluginClass = getPlugin(name);
 

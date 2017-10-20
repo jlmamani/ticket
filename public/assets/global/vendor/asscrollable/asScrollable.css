@@ -118,7 +118,7 @@
             transition: width, height .5s;
 
     border-radius: 2; 
-    background: rgba(163, 175, 183, .6);
+    background: rgba(158, 158, 158, .6);
 }
 .scrollable-bar-vertical
 {
@@ -195,27 +195,27 @@
 }
 .scrollable.is-dragging .scrollable-bar-handle
 {
-    background: rgba(163, 175, 183, .8) !important;
+    background: rgba(158, 158, 158, .8) !important;
 }
 
 .scrollable-inverse.scrollable .scrollable-bar-handle
 {
-    background: rgba(228, 234, 236, .6);
+    background: rgba(238, 238, 238, .5);
 }
 
 .scrollable-inverse.scrollable.is-dragging .scrollable-bar-handle
 {
-    background: rgba(228, 234, 236, .8) !important;
+    background: rgba(238, 238, 238, .7) !important;
 }
 
 .scrollable-shadow.scrollable.is-dragging .scrollable-bar,
 .scrollable-shadow.scrollable.is-hovering .scrollable-bar
 {
-    background: rgba(228, 234, 236, .5);
+    background: rgba(224, 224, 224, .5);
 }
 
 .scrollable-inverse.scrollable-shadow.scrollable.is-dragging .scrollable-bar,
 .scrollable-inverse.scrollable-shadow.scrollable.is-hovering .scrollable-bar
 {
-    background: rgba(228, 234, 236, .4);
+    background: rgba(238, 238, 238, .3);
 }

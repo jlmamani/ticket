@@ -6,34 +6,56 @@ Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
 
 .hljs {
   display: block;
-  overflow-x: auto;
   padding: .5em;
+  overflow-x: auto;
   background: #fff;
 }
 
-.hljs, .hljs-subst {
+.hljs,
+.hljs-subst {
   color: #434f54;
 }
 
-.hljs-keyword, .hljs-attribute, .hljs-selector-tag, .hljs-doctag, .hljs-name {
+.hljs-keyword,
+.hljs-attribute,
+.hljs-selector-tag,
+.hljs-doctag,
+.hljs-name {
   color: #00979d;
 }
 
-.hljs-built_in, .hljs-literal, .hljs-bullet, .hljs-code, .hljs-addition {
+.hljs-built_in,
+.hljs-literal,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
   color: #d35400;
 }
 
-.hljs-regexp, .hljs-symbol, .hljs-variable, .hljs-template-variable, .hljs-link, .hljs-selector-attr, .hljs-selector-pseudo {
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
   color: #00979d;
 }
 
-.hljs-type, .hljs-string, .hljs-selector-id, .hljs-selector-class, .hljs-quote, .hljs-template-tag, .hljs-deletion {
+.hljs-type,
+.hljs-string,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
   color: #005c5f;
 }
 
-.hljs-title, .hljs-section {
-  color: #800;
+.hljs-title,
+.hljs-section {
   font-weight: bold;
+  color: #800;
 }
 
 .hljs-comment {

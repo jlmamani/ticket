@@ -8,8 +8,8 @@ ICEcoder default theme by Matt Pass, used in code editor available at https://ic
 }
 
 .cm-s-icecoder span.cm-keyword {
-  color: #eee;
   font-weight: bold;
+  color: #eee;
 }  /* off-white 1 */
 .cm-s-icecoder span.cm-atom {
   color: #e1c76e;
@@ -93,8 +93,8 @@ ICEcoder default theme by Matt Pass, used in code editor available at https://ic
   background: #037;
 }
 .cm-s-icecoder .CodeMirror-gutters {
-  background: #1d1d1b;
   min-width: 41px;
+  background: #1d1d1b;
   border-right: 0;
 }
 .cm-s-icecoder .CodeMirror-linenumber {

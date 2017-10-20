@@ -20,7 +20,8 @@
 }
 
 @media (max-width: 1360px) {
-  .input-daterange-wrap, .input-daterange-to {
+  .input-daterange-wrap,
+  .input-daterange-to {
     display: block;
     float: none;
   }

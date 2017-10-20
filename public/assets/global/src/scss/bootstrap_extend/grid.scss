@@ -35,7 +35,6 @@
   margin-right: ($grid-lg-gutter-width / -2);
 }
 
-
 @mixin make-grid-columns-extend($columns: $grid-columns, $gutter: $grid-gutter-width-base, $gutter-lg: $grid-lg-gutter-width, $breakpoints: $grid-breakpoints){
   // %grid-columns-extend {
   //   position: relative;

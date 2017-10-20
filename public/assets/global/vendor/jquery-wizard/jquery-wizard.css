@@ -43,15 +43,15 @@
 
 .color-active
 {
-    color: #62a8ea !important;
+    color: #3f51b5 !important;
 }
 
 .color-error
 {
-    color: #f96868 !important;
+    color: #f44336 !important;
 }
 
 .color-done
 {
-    color: #46be8a !important;
+    color: #4caf50 !important;
 }

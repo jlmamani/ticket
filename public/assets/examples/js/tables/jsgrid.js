@@ -12,6 +12,7 @@
     Site.run();
   });
 
+
   jsGrid.setDefaults({
     tableClass: "jsgrid-table table table-striped table-hover"
   });
@@ -122,8 +123,9 @@
     });
   })();
 
+
   // Example Static Data
-  // -------------------
+  // ----------------------------
   (function() {
     $('#exampleStaticData').jsGrid({
       height: "500px",
@@ -199,7 +201,7 @@
         width: 50,
         align: "center",
         itemTemplate: function(value) {
-          return $("<div>").addClass("rating text-nowrap").append(Array(value + 1).join('<i class="icon wb-star orange-600 mr-3"></i>'));
+          return $("<div>").addClass("rating text-nowrap").append(new Array(value + 1).join('<i class="icon md-star orange-600 mr-3"></i>'));
         }
       }, {
         name: "Price",
@@ -303,6 +305,7 @@
       }]
     });
 
+
     $("#pager").on("change", function() {
       var page = parseInt($(this).val(), 10);
       $("#exampleLoadingByPage").jsGrid("openPage", page);
@@ -363,6 +366,7 @@
     });
   })();
 
+
   // Example Custom Row Renderer
   // ---------------------------
   (function() {
@@ -390,6 +394,7 @@
       },
 
       rowRenderer: function(item) {
+
         var $photo = $("<div>").addClass("pr-20").append(
           $('<a>').addClass('avatar avatar-lg').attr('href', 'javascript:void(0)').append(
             $("<img>").attr("src", item.picture.medium)
@@ -557,6 +562,7 @@
     });
   })();
 
+
   // Example Custom Grid Field
   // -------------------------
   (function() {
@@ -589,6 +595,7 @@
         $result.val(value);
         return $result;
       },
+
 
       insertValue: function() {
         return this.insertControl.datepicker("getDate");
@@ -638,4 +645,6 @@
     });
 
   })();
+
+
 })(document, window, jQuery);

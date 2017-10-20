@@ -1,6 +1,6 @@
 .cm-s-colorforth.CodeMirror {
-  background: #000;
   color: #f8f8f8;
+  background: #000;
 }
 .cm-s-colorforth .CodeMirror-gutters {
   background: #0a001f;
@@ -23,8 +23,8 @@
   color: #ededed;
 }
 .cm-s-colorforth span.cm-def {
-  color: #ff1c1c;
   font-weight: bold;
+  color: #ff1c1c;
 }
 .cm-s-colorforth span.cm-keyword {
   color: #ffd900;

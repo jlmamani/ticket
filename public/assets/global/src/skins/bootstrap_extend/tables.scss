@@ -2,10 +2,15 @@
 //
 // Component:       `table`
 //
-// Modifiers:       `table-row`
-//                  `table-thead`
+// Modifiers:       `table-default`
+//                  `table-primary`
+//                  `table-success`
+//                  `table-info`
+//                  `table-warning`
+//                  `table-danger`
+//                  `table-dark`
+//                  `table-gray`
 //                  `table-bordered`
-//                  `table-section`
 //
 // ========================================================================
 
@@ -46,6 +51,10 @@
 @include table-thead-variant(dark, $gray-darker, $inverse);
 @include table-thead-variant(gray, $gray-light, $gray-darker);
 
+// Modifier: `table-bordered`
+// ========================================================================
+
+
 // Modifier: `table-section`
 // ========================================================================
 .table-section {
@@ -55,3 +64,4 @@
     }
   }
 }
+

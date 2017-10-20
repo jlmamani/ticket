@@ -13,17 +13,12 @@
 
 // Variables
 // ========================================================================
-
-
 $pricing-list-border-color:          $border-color-base !default;
 
 // Component: Pricing List
 // ========================================================================
 
 .pricing-list {
-
-  border: 1px solid $pricing-list-border-color;
-
   [class^="bg-"],
   [class*="bg-"] {
     &,
@@ -47,8 +42,12 @@ $pricing-list-border-color:          $border-color-base !default;
   // Modifier: `pricing-features`
   // ========================================================================
   .pricing-features {
+   
     li {
       border-top: 1px dashed $pricing-list-border-color;
+      &:first-child {
+        border-top: none;
+      }
     }
   }
 }

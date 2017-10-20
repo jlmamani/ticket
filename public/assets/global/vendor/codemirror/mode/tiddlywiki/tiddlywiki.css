@@ -5,10 +5,10 @@ span.cm-strikethrough {
   text-decoration: line-through;
 }
 span.cm-brace {
-  color: #170;
   font-weight: bold;
+  color: #170;
 }
 span.cm-table {
-  color: blue;
   font-weight: bold;
+  color: blue;
 }

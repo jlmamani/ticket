@@ -15,7 +15,6 @@
 
 // Variables
 // ========================================================================
-
 $status-online-color:   $brand-success !default;
 $status-off-color:      $brand-dark !default;
 $status-busy-color:     $brand-warning !default;
@@ -46,3 +45,5 @@ $status-away-color:     $brand-danger !default;
 .status-away {
   background-color: $status-away-color;
 }
+
+

@@ -36,7 +36,7 @@ $pricing-list-footer-padding:        30px !default;
 .pricing-list {
   margin-bottom: $pricing-list-margin-bottom;
   text-align: center;
-  border: 1px solid $pricing-list-border-color;
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2);
   border-radius: $pricing-list-border-radius;
   [class^="bg-"],
   [class*="bg-"] {

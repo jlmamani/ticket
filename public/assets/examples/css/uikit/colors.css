@@ -15,10 +15,6 @@
   border-radius: 100%;
 }
 
-.color-primaries > .bg-blue-grey-200 {
-  color: #868a8d;
-}
-
 .color-palette {
   margin-bottom: 25px;
 }
@@ -28,8 +24,8 @@
 }
 
 .color-palette .list-group {
-  color: white;
   margin-bottom: 60px;
+  color: white;
 }
 
 .color-palette .list-group-item {
@@ -66,14 +62,14 @@
 }
 
 .example-divider {
-  background-color: rgba(38, 50, 56, .1) !important;
+  background-color: rgba(33, 33, 33, .1) !important;
 }
 
 .example-border {
   max-width: 300px;
   height: 120px;
   margin-bottom: 20px;
-  border: 1px solid #e4eaec;
+  border: 1px solid #eee;
 }
 
 .example-border > div {
@@ -91,17 +87,20 @@
 }
 
 .opacity-four {
-  color: rgba(55, 71, 79, .4) !important;
+  color: rgba(66, 66, 66, .4) !important;
 }
 
 .opacity-six {
-  color: rgba(55, 71, 79, .6) !important;
+  color: rgba(66, 66, 66, .6) !important;
 }
 
 .opacity-eight {
-  color: rgba(55, 71, 79, .8) !important;
+  color: rgba(66, 66, 66, .8) !important;
 }
 
-.opacity-four i, .opacity-six i, .opacity-eight i, .blue-grey-700 i {
+.opacity-example .opacity-four i,
+.opacity-example .opacity-six i,
+.opacity-example .opacity-eight i,
+.opacity-example .grey-800 i {
   margin-right: 5px;
 }

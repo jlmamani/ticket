@@ -38,10 +38,10 @@
       key: 'getDefaults',
       value: function getDefaults() {
         return {
-          verticalupclass: 'wb-plus',
-          verticaldownclass: 'wb-minus',
-          buttondown_class: 'btn btn-outline btn-default',
-          buttonup_class: 'btn btn-outline btn-default'
+          verticalupclass: 'md-plus',
+          verticaldownclass: 'md-minus',
+          buttondown_class: 'btn btn-default',
+          buttonup_class: 'btn btn-default'
         };
       }
     }]);

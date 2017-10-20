@@ -8,7 +8,7 @@
 {
     height: 4px;
 
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 .rangeUi-pointer
 {
@@ -28,7 +28,7 @@
          -o-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
 
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
     border-radius: 50%;
     background-color: #fff;
 }
@@ -58,9 +58,9 @@
     text-align: center;
 
     color: #fff;
-    border: 1px solid #526069;
+    border: 1px solid #616161;
     border-radius: 2px; 
-    background-color: #526069;
+    background-color: #616161;
 }
 .rangeUi-tip:before
 {
@@ -80,7 +80,7 @@
          -o-transform: rotate(-45deg);
             transform: rotate(-45deg); 
 
-    background-color: #526069;
+    background-color: #616161;
 }
 .rangeUi-selected
 {
@@ -92,7 +92,7 @@
     width: 60%;
     height: 4px;
 
-    background-color: #62a8ea;
+    background-color: #3f51b5;
 }
 .rangeUi-scale
 {
@@ -130,7 +130,7 @@
     width: 1px;
     height: 4px;
 
-    background-color: #e4eaec;
+    background-color: #e0e0e0;
 }
 .rangeUi-scale-inlineGrid
 {
@@ -148,5 +148,5 @@
 
     margin-left: -50%; 
 
-    color: #76838f;
+    color: #757575;
 }

@@ -32,9 +32,9 @@
 // Variables
 // ========================================================================
 
-$modal-header-padding-x    : 20px !default;//fix v4a6-dev set width equal to modal-body---Kevin_y
+$modal-header-padding      : 15px 20px !default;
 
-$modal-header-padding-y    : 15px !default;//fix v4a6-dev ---Kevin_y
+$modal-body-padding        : 20px !default;
 
 $modal-footer-padding      : 6px 20px 20px !default;
 
@@ -63,14 +63,16 @@ $modal-danger-bg           : $brand-danger !default;
 // ========================================================================
 .modal-content {
   border: none;
+  border-radius: $modal-radius;
+  box-shadow: $modal-content-shadow;
 }
 
 .modal-header {
-  padding: $modal-header-padding-y $modal-header-padding-x;//fix v4a6-dev ---Kevin_y
+  padding: $modal-header-padding;
   border-bottom: none;
 }
 
-//start add for v4a6-dev correct position ---Kevin_y
+//start add for remark-v4 v4a6-dev correct position ---Kevin_y
 .modal-header .modal-title {
   margin-top: 0;
   order: 1;
@@ -79,7 +81,11 @@ $modal-danger-bg           : $brand-danger !default;
 
 .modal-header .close {
   margin-top: 1px;
-  order: 2;//add for v4a6-dev correct position ---Kevin_y
+  order: 2;//add for remark-v4 v4a6-dev correct position ---Kevin_y
+}
+
+.modal-body {
+  padding: $modal-body-padding;
 }
 
 .modal-footer {
@@ -103,7 +109,7 @@ $modal-danger-bg           : $brand-danger !default;
 
 @include media-breakpoint-up(md) {
   .modal-dialog {
-    width: auto;
+    width: $modal-md;
     margin: 30px auto;
   }
 
@@ -111,6 +117,13 @@ $modal-danger-bg           : $brand-danger !default;
     width: $modal-sm;
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .modal-lg {
+    width: $modal-lg;
+  }
+}
+
 
 // Modifier: `modal-top`
 // -------------------------
@@ -200,7 +213,7 @@ $modal-danger-bg           : $brand-danger !default;
 
   .modal-footer {
     border-top: none;
-    flex-wrap: wrap;//fix v4a6-dev  sidebar style---Kevin_y
+    flex-wrap: wrap;//fix remark-v4 v4a6-dev  sidebar style---Kevin_y
   }
   
   button.close {
@@ -263,7 +276,7 @@ $modal-danger-bg           : $brand-danger !default;
       button.close {
         position: fixed;
         top: 20px;
-        right: 40px;
+        right: 20px;
         opacity: .5;
         z-index: 1;
         @include translate(0%, 0%);
@@ -278,6 +291,12 @@ $modal-danger-bg           : $brand-danger !default;
     background-color: transparent;
     border-radius: 0;
     box-shadow: none;
+  }
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
   }
 }
 

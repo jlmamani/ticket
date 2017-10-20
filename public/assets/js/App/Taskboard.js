@@ -108,7 +108,7 @@
     }, {
       key: 'getTpl',
       value: function getTpl(title) {
-        return '\n            <li class="taskboard-stage">\n              <header class="taskboard-stage-header">\n                <div class="taskboard-stage-actions float-right">\n                  <div class="dropdown">\n                    <a data-toggle="dropdown" href="#" aria-expanded="false"><i class="icon wb-chevron-down" aria-hidden="true"></i></a>\n                    <div class="dropdown-menu bullet" role="menu">\n                      <a class="taskboard-stage-rename dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon wb-pencil" aria-hidden="true"></i>Rename</a>\n                      <a class="taskboard-stage-delete dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Delete</a>\n                        <div class="taskboard-stage-rename-wrap">\n                          <div class="form-group">\n                            <input class="form-control taskboard-stage-rename-input" type="text" value="' + title + '" name="name">\n                          </div>\n                          <button class="btn btn-primary btn-block taskboard-stage-rename-save" type="button">Save</button>\n                        </div>\n                    </div>\n                  </div>\n                </div>\n                <h5 class="taskboard-stage-title">' + title + '</h5>\n              </header>\n              <div class="taskboard-stage-content">\n                <ul class="list-group taskboard-list"></ul>\n                <div class="action-wrap">\n                  <a class="add-item-toggle" href="#"><i class="icon wb-plus" aria-hidden="true"></i>Add Task</a>\n                    <div class="add-item-wrap">\n                      <form class="add-item" role="form" method="post" action="#">\n                        <div class="form-group">\n                          <label class="form-control-label mb-15" for="name">Task name:</label>\n                          <input class="form-control" type="text" placeholder="Task name" name="name">\n                        </div>\n                        <div class="form-group text-right">\n                          <a class="btn btn-sm btn-white add-item-cancel">Cancel</a>\n                          <button type="button" class="btn btn-primary add-item-add">Add</button>\n                        </div>\n                      </form>\n                    </div>\n                </div>\n              </div>\n            </li>\n           ';
+        return '\n            <li class="taskboard-stage">\n              <header class="taskboard-stage-header">\n                <div class="taskboard-stage-actions float-right">\n                  <div class="dropdown">\n                    <a data-toggle="dropdown" href="#" aria-expanded="false"><i class="icon md-chevron-down" aria-hidden="true"></i></a>\n                    <div class="dropdown-menu bullet" role="menu">\n                      <a class="taskboard-stage-rename dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon md-edit" aria-hidden="true"></i>Rename</a>\n                      <a class="taskboard-stage-delete dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon md-delete" aria-hidden="true"></i>Delete</a>\n                        <div class="taskboard-stage-rename-wrap">\n                          <div class="form-group">\n                            <input class="form-control taskboard-stage-rename-input" type="text" value="' + title + '" name="name">\n                          </div>\n                          <button class="btn btn-primary btn-block taskboard-stage-rename-save" type="button">Save</button>\n                        </div>\n                    </div>\n                  </div>\n                </div>\n                <h5 class="taskboard-stage-title">' + title + '</h5>\n              </header>\n              <div class="taskboard-stage-content">\n                <ul class="list-group taskboard-list"></ul>\n                <div class="action-wrap">\n                  <a class="add-item-toggle" href="#"><i class="icon md-plus" aria-hidden="true"></i>Add Task</a>\n                    <div class="add-item-wrap">\n                      <form class="add-item" role="form" method="post" action="#">\n                        <div class="form-group">\n                          <label class="form-control-label mb-15" for="name">Task name:</label>\n                          <input class="form-control" type="text" placeholder="Task name" name="name">\n                        </div>\n                        <div class="form-group text-right">\n                          <a class="btn btn-sm btn-white add-item-cancel">Cancel</a>\n                          <button type="button" class="btn btn-primary add-item-add">Add</button>\n                        </div>\n                      </form>\n                    </div>\n                </div>\n              </div>\n            </li>\n           ';
       }
     }, {
       key: 'bindStageDropdownArrow',
@@ -120,9 +120,11 @@
     }, {
       key: 'bindRenameBtn',
       value: function bindRenameBtn() {
+        var _this2 = this;
+
         this.$renameBtn.on('click', function (e) {
-          var $header = $(this).closest('.taskboard-stage-header'),
-              $menu = $(this).closest('.dropdown-menu');
+          var $header = $(_this2).closest('.taskboard-stage-header'),
+              $menu = $(_this2).closest('.dropdown-menu');
 
           var $input = $('.taskboard-stage-rename-input', $menu),
               $title = $('.taskboard-stage-title', $header);
@@ -226,34 +228,34 @@
     }, {
       key: 'bindAddItemToggle',
       value: function bindAddItemToggle() {
-        var _this2 = this;
+        var _this3 = this;
 
         this.$addItemToggle.on('click', function () {
-          var $input = $('[name="name"]', _this2.$wrap);
-          _this2.$wrap.toggleClass('action-open');
+          var $input = $('[name="name"]', _this3.$wrap);
+          _this3.$wrap.toggleClass('action-open');
           $input.val('');
         });
 
         this.$wrap.on('click.add-item', '.form-control-label', function (e) {
-          _this2.$wrap.removeClass('action-open');
-          _this2.$el.off('click.add-item');
+          _this3.$wrap.removeClass('action-open');
+          _this3.$el.off('click.add-item');
         });
       }
     }, {
       key: 'bindAddItemBtn',
       value: function bindAddItemBtn() {
-        var _this3 = this;
+        var _this4 = this;
 
         this.$addItemBtn.on('click', function () {
-          var $input = $('[name="name"]', _this3.$wrap);
+          var $input = $('[name="name"]', _this4.$wrap);
           var taskData = dataTpl();
 
           if ($input.val().length !== 0) {
             taskData.title = $input.val();
-            _this3.add(taskData);
+            _this4.add(taskData);
           }
 
-          _this3.$wrap.toggleClass('action-open');
+          _this4.$wrap.toggleClass('action-open');
         });
       }
     }, {
@@ -293,8 +295,9 @@
         var options = $.extend({}, slidePanel.defaults, slidePanel.defaultsOptions);
         this.$el.on('click', '[data-taskboard="slidePanel"]', function (e) {
           var $target = $(e.target).closest('.list-group-item');
+          var url = $(this).data('url');
           var jsonData = {
-            url: $(this).data('url'),
+            url: url,
             target: $target
           };
 
@@ -372,7 +375,6 @@
         default:
           $checked = $('#priorityNormal', $panel);
           break;
-        // no default
       }
 
       $checked.prop('checked', true);
@@ -471,7 +473,7 @@
             return '<div class="' + this.namespace + '">\n            ' + this.options.tpl.items.call(this) + '\n            <div class="' + this.namespace + '-trigger">\n            ' + this.options.tpl.triggerButton.call(this) + '\n            <div class="' + this.namespace + '-trigger-dropdown">\n            ' + this.options.tpl.list.call(this) + '\n            </div>\n            </div>\n            </div>';
           },
           triggerButton: function triggerButton() {
-            return '<div class="' + this.namespace + '-trigger-button"><i class="wb-plus"></i></div>';
+            return '<div class="' + this.namespace + '-trigger-button"><i class="md-plus"></i></div>';
           },
           listItem: function listItem(data) {
             return '<li class="' + this.namespace + '-list-item"><img class="avatar" src="' + data.img + '">' + data.name + '</li>';
@@ -480,7 +482,7 @@
             return '<li class="' + this.namespace + '-item"><img class="avatar" src="' + data.img + '">\n            ' + this.options.tpl.itemRemove.call(this) + '\n            </li>';
           },
           itemRemove: function itemRemove() {
-            return '<span class="' + this.namespace + '-remove"><i class="wb-minus-circle"></i></span>';
+            return '<span class="' + this.namespace + '-remove"><i class="md-minus-circle"></i></span>';
           },
           option: function option(data) {
             return '<option value="' + this.options.tpl.optionValue.call(this, data) + '">' + data.name + '</option>';
@@ -515,7 +517,7 @@
     },
     attachmentTpl: function attachmentTpl(data) {
 
-      return '\n            <li class="list-group-item">\n              <div class="meida">\n                <div class="pr-20">\n                  <div class="attachments-image">\n                    <img src="' + data.src + '">\n                  </div>\n                </div>\n                <div class="media-body">\n                  <p><span class="name">' + data.title + '</span><span</p>\n                  <p>\n                    <span class="size">' + data.size + '</span>\n                    <span class="attachments-actions">\n                      <button class="btn btn-icon btn-pure" type="button">\n                        <i class="icon wb-download" aria-hidden="true"></i>\n                      </button>\n                      <button class="btn btn-icon btn-pure" type="button">\n                         <i class="icon wb-trash" aria-hidden="true"></i>\n                      </button>\n                    </span>\n                  </p>\n                </div>\n              </div>\n            </li>\n           ';
+      return '\n            <li class="list-group-item">\n              <div class="meida">\n                <div class="pr-20">\n                  <div class="attachments-image">\n                    <img src="' + data.src + '">\n                  </div>\n                </div>\n                <div class="media-body">\n                  <p><span class="name">' + data.title + '</span><span</p>\n                  <p>\n                    <span class="size">' + data.size + '</span>\n                    <span class="attachments-actions">\n                      <button class="btn btn-icon btn-pure" type="button">\n                        <i class="icon md-download" aria-hidden="true"></i>\n                      </button>\n                      <button class="btn btn-icon btn-pure" type="button">\n                         <i class="icon md-delete" aria-hidden="true"></i>\n                      </button>\n                    </span>\n                  </p>\n                </div>\n              </div>\n            </li>\n           ';
     },
     commentTpl: function commentTpl(src, user, time, content) {
       return '\n            <div class="comment media">\n              <div class="pr-20">\n                <a class="avatar avatar-lg" href="javascript:void(0)">\n                  <img src="' + src + '" alt="...">\n                </a>\n              </div>\n              <div class="media-body">\n                <div class="comment-body">\n                  <a class="comment-author" href="javascript:void(0)">' + user + '</a>\n                  <div class="comment-meta">\n                    <span class="date">' + time + '</span>\n                  </div>\n                <div class="comment-content"><p>' + content + '</p></div>\n              </div>\n            </div>\n           ';
@@ -586,6 +588,8 @@
       });
     },
     handleSubtasks: function handleSubtasks() {
+      var _this5 = this;
+
       var self = this;
       $(document).on('click', '.subtask-toggle', function () {
         var length = $('.subtask').length;
@@ -676,7 +680,6 @@
 
       $(document).on('click', '.subtask-editor-save', function () {
         var $this = $(this);
-
         var $subtask = $this.closest('.subtask'),
             $target = $this.closest('.slidePanel').data('slidePanel').target;
 
@@ -692,7 +695,7 @@
       });
 
       $(document).on('click', '.subtask-editor-delete', function (e) {
-        var $this = $(this);
+        var $this = $(_this5);
         bootbox.dialog({
           message: 'Do you want to delete the subtask?',
           buttons: {
@@ -702,7 +705,6 @@
               callback: function callback() {
                 var $subtask = $this.closest('.subtask'),
                     $target = $this.closest('.slidePanel').data('slidePanel').target;
-
                 var data = $target.data('taskInfo'),
                     index = $subtask.index(),
                     taskData = $target.data('taskInfo');
@@ -867,7 +869,7 @@
     }, {
       key: 'getTpl',
       value: function getTpl(content) {
-        return '<span class="task-badge task-badge-subtask icon wb-calendar">' + content + '</span>';
+        return '<span class="task-badge task-badge-subtask icon md-calendar">' + content + '</span>';
       }
     }]);
     return Duedate;
@@ -899,7 +901,7 @@
     }, {
       key: 'getTpl',
       value: function getTpl(content) {
-        return '<span class="task-badge task-badge-subtask icon wb-list-bulleted">' + content + '</span>';
+        return '<span class="task-badge task-badge-subtask icon md-format-list-bulleted">' + content + '</span>';
       }
     }]);
     return Subtask;
@@ -925,7 +927,7 @@
     }, {
       key: 'getTpl',
       value: function getTpl(content) {
-        return '<span class="task-badge task-badge-attachments icon wb-paperclip">' + content + '</span>';
+        return '<span class="task-badge task-badge-attachments icon md-attachment-alt">' + content + '</span>';
       }
     }]);
     return Attachment;
@@ -951,7 +953,7 @@
     }, {
       key: 'getTpl',
       value: function getTpl(content) {
-        return '<span class="task-badge task-badge-comments icon wb-chat">' + content + '</span>';
+        return '<span class="task-badge task-badge-comments icon md-comment">' + content + '</span>';
       }
     }]);
     return Comment;
@@ -1050,36 +1052,36 @@
     }, {
       key: 'init',
       value: function init() {
-        var _this5 = this;
+        var _this7 = this;
 
         var assets = Config.get('assets');
 
         $.getJSON(assets + '/data/taskboard.json', function (data) {
-          _this5.stageList = new StageList(_this5.$taskboard, data);
+          _this7.stageList = new StageList(_this7.$taskboard, data);
         });
       }
     }, {
       key: 'bindFloatBtn',
       value: function bindFloatBtn() {
-        var _this6 = this;
+        var _this8 = this;
 
         this.$floatBtn.on('click', function () {
-          $('input', _this6.$model).val('');
-          $('option:first', $('select', _this6.$model)).prop('selected', 'selected');
+          $('input', _this8.$model).val('');
+          $('option:first', $('select', _this8.$model)).prop('selected', 'selected');
         });
       }
     }, {
       key: 'bindStageCreateBtn',
       value: function bindStageCreateBtn() {
-        var _this7 = this;
+        var _this9 = this;
 
         this.$stageCreateBtn.on('click', function () {
-          var $name = $('[name="name"]', _this7.$model);
+          var $name = $('[name="name"]', _this9.$model);
           var stageData = {
             title: $name.val(),
             tasks: []
           };
-          _this7.stageList.add(stageData);
+          _this9.stageList.add(stageData);
         });
       }
     }, {

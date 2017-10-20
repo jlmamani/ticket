@@ -12,11 +12,9 @@
 // ========================================================================
 
 // @media-border:             $divider-color-base;
-$media-meta-color:         $text-muted !default;
+$media-meta-color:         $text-muted;
 
-// Component: Media
-// ========================================================================
 
 .media-meta {
-  color: $media-meta-color;
+    color: $media-meta-color;
 }

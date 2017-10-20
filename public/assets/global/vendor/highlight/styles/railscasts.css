@@ -6,22 +6,28 @@ Railscasts-like style (c) Visoft, Inc. (Damien White)
 
 .hljs {
   display: block;
-  overflow-x: auto;
   padding: .5em;
-  background: #232323;
+  overflow-x: auto;
   color: #e6e1dc;
+  background: #232323;
 }
 
-.hljs-comment, .hljs-quote {
-  color: #bc9458;
+.hljs-comment,
+.hljs-quote {
   font-style: italic;
+  color: #bc9458;
 }
 
-.hljs-keyword, .hljs-selector-tag {
+.hljs-keyword,
+.hljs-selector-tag {
   color: #c26230;
 }
 
-.hljs-string, .hljs-number, .hljs-regexp, .hljs-variable, .hljs-template-variable {
+.hljs-string,
+.hljs-number,
+.hljs-regexp,
+.hljs-variable,
+.hljs-template-variable {
   color: #a5c261;
 }
 
@@ -29,7 +35,8 @@ Railscasts-like style (c) Visoft, Inc. (Damien White)
   color: #519f50;
 }
 
-.hljs-tag, .hljs-name {
+.hljs-tag,
+.hljs-name {
   color: #e8bf6a;
 }
 
@@ -38,7 +45,12 @@ Railscasts-like style (c) Visoft, Inc. (Damien White)
 }
 
 
-.hljs-symbol, .hljs-bullet, .hljs-built_in, .hljs-builtin-name, .hljs-attr, .hljs-link {
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-attr,
+.hljs-link {
   color: #6d9cbe;
 }
 
@@ -54,22 +66,23 @@ Railscasts-like style (c) Visoft, Inc. (Damien White)
   color: #9b859d;
 }
 
-.hljs-title, .hljs-section {
+.hljs-title,
+.hljs-section {
   color: #ffc66d;
 }
 
 .hljs-addition {
-  background-color: #144212;
-  color: #e6e1dc;
   display: inline-block;
   width: 100%;
+  color: #e6e1dc;
+  background-color: #144212;
 }
 
 .hljs-deletion {
-  background-color: #600;
-  color: #e6e1dc;
   display: inline-block;
   width: 100%;
+  color: #e6e1dc;
+  background-color: #600;
 }
 
 .hljs-selector-class {

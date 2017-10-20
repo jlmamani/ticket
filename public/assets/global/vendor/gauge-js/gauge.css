@@ -21,7 +21,7 @@
 
     width: 100%;
 
-    color: #37474f;
+    color: #424242;
 }
 
 .gauge-sm canvas
@@ -72,7 +72,7 @@
          -o-transform: translateY(-50%);
             transform: translateY(-50%);
 
-    color: #37474f;
+    color: #424242;
 }
 
 .donut-sm canvas

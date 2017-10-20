@@ -4,15 +4,18 @@ $scrollable:                                   scrollable;
 
 $scrollable-bar-size:                          4px;
 $scrollable-bar-dragging-size:                 8px;
+
 $scrollable-bar-handle-offset:                 4px;
 
 $scrollable-bar-handle-color:                  rgba($gray, (60/100));
 $scrollable-bar-handle-dragging-color:         rgba($gray, (80/100));
 $scrollable-shadow-bar-color:                  rgba($gray-lighter, (50/100));
 
-$scrollable-inverse-bar-handle-color:          rgba($gray-lighter, (60/100));
-$scrollable-inverse-bar-handle-dragging-color: rgba($gray-lighter, (80/100));
-$scrollable-inverse-shadow-bar-color:          rgba($gray-lighter, (40/100));
+$scrollable-inverse-bar-handle-color:          rgba($gray-lightest, (50/100));
+$scrollable-inverse-bar-handle-dragging-color: rgba($gray-lightest, (70/100));
+$scrollable-inverse-shadow-bar-color:          rgba($gray-lightest, (30/100));
+
+
 
 
 .#{$scrollable} {
@@ -115,7 +118,7 @@ $scrollable-inverse-shadow-bar-color:          rgba($gray-lighter, (40/100));
       height: calc(100% - #{$height});
     }
 
-    &-vertical .#{$scrollable}-bar-handle {
+    &-vertical &-handle {
       width: 100%;
     }
 
@@ -144,7 +147,7 @@ $scrollable-inverse-shadow-bar-color:          rgba($gray-lighter, (40/100));
       }
     }
 
-    &-horizontal .#{$scrollable}-bar-handle {
+    &-horizontal &-handle {
       height: 100%;
     }
   }

@@ -3,23 +3,20 @@
   background: $page-aside-bg;
 }
 
-.page-aside-right {
-  .page-aside {
-    .page-aside-inner {
-      border-left: 1px solid $gray-lighter;
-    }
-  }
-}
-
-
 // Page Aside Section
 // ------------------
 .page-aside-section {
-
   &:after {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+// Page Aside Switch
+// -----------------
+.page-aside-switch {
+  background-color: white;
+}
+
 
 // Page Aside Title
 // ----------------
@@ -34,13 +31,11 @@
   .list-group {
 
     &-item {
-
-      .icon {
-        color: $gray;
-      }
+      border: none;
 
       &:hover, &:focus {
         background-color: $gray-lightest;
+        border: none;
         color: $brand-primary;
 
         > .icon {
@@ -49,6 +44,7 @@
       }
 
       &.active {
+        background-color: transparent;
         color: $brand-primary;
 
         > .icon {
@@ -57,6 +53,7 @@
 
         &:hover, &:focus {
           background-color: $gray-lightest;
+          border: none;
           color: $brand-primary;
 
           > .icon {
@@ -68,11 +65,15 @@
 
     &.has-actions {
       .list-group-item {
-
+        .list-editable {
+          .input-editable-close {
+            background: 0 0;
+            border: 0;
+          }
+        }
         .item-actions {
-
           .btn-icon {
-
+            background-color: transparent;
             &:hover {
               .icon {
                 color: $brand-primary;
@@ -95,8 +96,10 @@
 
 @include media-breakpoint-down(sm) {
   .page-aside {
+    border-color: transparent;
 
     .page-aside-inner {
+      background-color: white;
       border-right: 1px solid $gray-lighter;
     }
   }

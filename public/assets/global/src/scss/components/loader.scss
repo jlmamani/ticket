@@ -317,7 +317,12 @@ body > .loader {
 // Modifier: `index loading`
 // ========================================================================
 
-.loader-overlay {
+.index{
+  position: relative;
+  opacity: 0;
+  animation-fill-mode: both;
+}
+.loader-overlay{
   position: fixed;
   width:100%;
   height:100%;
@@ -326,8 +331,7 @@ body > .loader {
   background:$color-primary-600;
   z-index:999999;
 }
-
-.loader-content {
+.loader-content{
   margin: 50vh auto 0;
   transform: translateY(-50%);
   text-align:center;
@@ -361,6 +365,8 @@ body > .loader {
     &:nth-child(6){
       animation-delay: loaderdelay(0.2s, 4, 3) !important;
     }
+
+
   }
 }
 

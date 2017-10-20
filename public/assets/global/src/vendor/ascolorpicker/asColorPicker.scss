@@ -105,7 +105,7 @@ $colorpicker-dropdown-z-index:        $zindex-fullscreen;//500002;
     transform: translateY(-50%);
     right: $trigger-width + pxToRem(5px);
 
-    font-family: $wb-font-family;
+    font-family:  $zmdi-font-name;
     color: $colorInput-clear-color;
     transition: color .1s ease-in;
 
@@ -120,7 +120,7 @@ $colorpicker-dropdown-z-index:        $zindex-fullscreen;//500002;
       text-decoration: none;
     }
     &:after{
-      content: $wb-var-close;
+      content: $zmdi-var-close;
     }
   }
 
@@ -293,7 +293,6 @@ $colorpicker-dropdown-z-index:        $zindex-fullscreen;//500002;
     }
 
     box-shadow: $colorInput-dropdown-shadow;
-
     input {
       color: $input-color;
       background-color: $input-bg;

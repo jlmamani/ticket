@@ -10,8 +10,9 @@
 
   $(document).ready(function($) {
     Site.run();
-
-    hljs.initHighlightingOnLoad();
   });
+
+  hljs.initHighlightingOnLoad();
+
 
 })(document, window, jQuery);

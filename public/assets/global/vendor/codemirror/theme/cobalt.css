@@ -1,6 +1,6 @@
 .cm-s-cobalt.CodeMirror {
-  background: #002240;
   color: white;
+  background: #002240;
 }
 .cm-s-cobalt div.CodeMirror-selected {
   background: #b36539;
@@ -72,6 +72,6 @@
   background: #002d57;
 }
 .cm-s-cobalt .CodeMirror-matchingbracket {
-  outline: 1px solid grey;
   color: white !important;
+  outline: 1px solid grey;
 }

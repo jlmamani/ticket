@@ -1,3 +1,5 @@
+
+
 //.owl-theme {
 .owl-carousel {
   &.owl-carousel-navOut {
@@ -29,7 +31,7 @@
       opacity: 0.6;
       border-radius: 50px;
 
-      font-family: '#{$wb-font-family}';
+      font-family: $zmdi-font-name;
       font-style: normal;
       font-weight: normal;
       text-rendering: auto;
@@ -52,7 +54,7 @@
       left: 10px;
 
       &:before {
-        content: $wb-var-chevron-left;
+        content: $zmdi-var-chevron-left; //"←"
       }
     }
 
@@ -60,7 +62,7 @@
       right: 10px;
 
       &:before {
-        content: $wb-var-chevron-right;
+        content: $zmdi-var-chevron-right; // "→"
       }
     }
   }

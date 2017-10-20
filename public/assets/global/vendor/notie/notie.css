@@ -7,22 +7,22 @@
 
 .notie-background-success
 {
-    background-color: #5cd29d !important;
+    background-color: #66bb6a !important;
 }
 
 .notie-background-warning
 {
-    background-color: #f4b066 !important;
+    background-color: #ffa726 !important;
 }
 
 .notie-background-error
 {
-    background-color: #fa7a7a !important;
+    background-color: #ef5350 !important;
 }
 
 .notie-background-info
 {
-    background-color: #77d6e1 !important;
+    background-color: #26c6da !important;
 }
 
 #notie-alert-outer,
@@ -104,7 +104,7 @@
 
     cursor: default;
 
-    background-color: #77d6e1;
+    background-color: #26c6da;
 }
 
 #notie-confirm-text
@@ -136,7 +136,7 @@
 
     cursor: pointer;
 
-    background-color: #5cd29d;
+    background-color: #66bb6a;
 }
 
 #notie-confirm-no,
@@ -144,7 +144,7 @@
 {
     float: right;
 
-    background-color: #fa7a7a;
+    background-color: #ef5350;
 }
 
 #notie-confirm-background,
@@ -254,7 +254,7 @@
 #notie-select-choices,
 .notie-select-choice
 {
-    background-color: #5cd29d;
+    background-color: #66bb6a;
 }
 
 .notie-select-choice
@@ -277,7 +277,7 @@
     cursor: pointer;
 
     color: #fff;
-    background-color: #a3afb7;
+    background-color: #78909c;
 }
 
 .notie-select-choice-bottom-border
@@ -290,7 +290,7 @@
     cursor: default; 
 
     color: #fff;
-    background-color: #77d6e1;
+    background-color: #26c6da;
 }
 
 #notie-date-selector
@@ -358,10 +358,10 @@
     cursor: pointer; 
 
     color: #fff;
-    background-color: #5cd29d;
+    background-color: #66bb6a;
 }
 
 #notie-date-no
 {
-    background-color: #fa7a7a;
+    background-color: #ef5350;
 }

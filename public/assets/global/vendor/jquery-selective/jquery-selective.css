@@ -43,7 +43,7 @@
 
     cursor: pointer;
 
-    color: #fa7a7a;
+    color: #f44336;
     border-radius: 50%;
     background-color: #fff;
 }
@@ -135,5 +135,5 @@
 .addMember-list-item.addMember-selected,
 .addMember-list-item:hover
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }

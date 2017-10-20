@@ -12,21 +12,21 @@
     text-align: center;
 
     border-radius: 6px;
-    background: #76838f;
+    background: #757575;
 }
 
 .btn-toolbar > i
 {
     font-size: 16px; 
 
-    color: #76838f;
+    color: #757575;
 }
 
 .btn-toolbar:hover
 {
     cursor: pointer; 
 
-    background: #89bceb;
+    background: #5c6bc0;
 }
 
 .btn-toolbar:hover > i
@@ -36,17 +36,17 @@
 
 .btn-toolbar-primary
 {
-    background-color: #62a8ea;
+    background-color: #3f51b5;
 }
 
 .btn-toolbar-primary.pressed
 {
-    background-color: #89bceb;
+    background-color: #5c6bc0;
 }
 
 .btn-toolbar-primary:hover
 {
-    background-color: #89bceb;
+    background-color: #5c6bc0;
 }
 
 .btn-toolbar-primary > i
@@ -56,17 +56,17 @@
 
 .btn-toolbar-danger
 {
-    background-color: #f96868;
+    background-color: #f44336;
 }
 
 .btn-toolbar-danger.pressed
 {
-    background-color: #fa7a7a;
+    background-color: #ef5350;
 }
 
 .btn-toolbar-danger:hover
 {
-    background-color: #fa7a7a;
+    background-color: #ef5350;
 }
 
 .btn-toolbar-danger > i
@@ -76,17 +76,17 @@
 
 .btn-toolbar-warning
 {
-    background-color: #f2a654;
+    background-color: #ff9800;
 }
 
 .btn-toolbar-warning.pressed
 {
-    background-color: #f4b066;
+    background-color: #ffa726;
 }
 
 .btn-toolbar-warning:hover
 {
-    background-color: #f4b066;
+    background-color: #ffa726;
 }
 
 .btn-toolbar-warning > i
@@ -96,17 +96,17 @@
 
 .btn-toolbar-info
 {
-    background-color: #57c7d4;
+    background-color: #00bcd4;
 }
 
 .btn-toolbar-info.pressed
 {
-    background-color: #77d6e1;
+    background-color: #26c6da;
 }
 
 .btn-toolbar-info:hover
 {
-    background-color: #77d6e1;
+    background-color: #26c6da;
 }
 
 .btn-toolbar-info > i
@@ -116,17 +116,17 @@
 
 .btn-toolbar-success
 {
-    background-color: #46be8a;
+    background-color: #4caf50;
 }
 
 .btn-toolbar-success.pressed
 {
-    background-color: #5cd29d;
+    background-color: #66bb6a;
 }
 
 .btn-toolbar-success:hover
 {
-    background-color: #5cd29d;
+    background-color: #66bb6a;
 }
 
 .btn-toolbar-success > i
@@ -136,17 +136,17 @@
 
 .btn-toolbar-info-o
 {
-    background-color: #526069;
+    background-color: #616161;
 }
 
 .btn-toolbar-info-o.pressed
 {
-    background-color: #76838f;
+    background-color: #757575;
 }
 
 .btn-toolbar-info-o:hover
 {
-    background-color: #76838f;
+    background-color: #757575;
 }
 
 .btn-toolbar-info-o > i
@@ -156,17 +156,17 @@
 
 .btn-toolbar-light
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 
 .btn-toolbar-light.pressed
 {
-    background-color: #e4eaec;
+    background-color: #e0e0e0;
 }
 
 .btn-toolbar-light:hover
 {
-    background-color: #e4eaec;
+    background-color: #e0e0e0;
 }
 
 .btn-toolbar-light > i
@@ -176,17 +176,17 @@
 
 .btn-toolbar-dark
 {
-    background-color: #76838f;
+    background-color: #757575;
 }
 
 .btn-toolbar-dark.pressed
 {
-    background-color: #526069;
+    background-color: #616161;
 }
 
 .btn-toolbar-dark:hover
 {
-    background-color: #526069;
+    background-color: #616161;
 }
 
 .btn-toolbar-dark > i
@@ -203,7 +203,7 @@
             box-sizing: content-box; 
 
     border-radius: 6px;
-    background-color: #e4eaec;
+    background-color: #e0e0e0;
     -webkit-background-size: 100% 100%;
             background-size: 100% 100%;
 }
@@ -245,13 +245,13 @@
 
 .tool-item > .icon
 {
-    color: #76838f;
+    color: #757575;
 }
 
 .tool-item.selected,
 .tool-item:hover
 {
-    background: #89bceb;
+    background: #5c6bc0;
 }
 
 .tool-item.selected > .icon,
@@ -310,7 +310,7 @@
 
     margin-left: -7px; 
 
-    border-color: #e4eaec transparent transparent;
+    border-color: #e0e0e0 transparent transparent;
 }
 
 .tool-container.tool-bottom .arrow
@@ -320,7 +320,7 @@
 
     margin-left: -7px; 
 
-    border-color: transparent transparent #e4eaec;
+    border-color: transparent transparent #e0e0e0;
 }
 
 .tool-container.tool-left .arrow
@@ -330,7 +330,7 @@
 
     margin-top: -7px; 
 
-    border-color: transparent transparent transparent #e4eaec;
+    border-color: transparent transparent transparent #e0e0e0;
 }
 
 .tool-container.tool-right .arrow
@@ -340,32 +340,32 @@
 
     margin-top: -7px; 
 
-    border-color: transparent #e4eaec transparent transparent;
+    border-color: transparent #e0e0e0 transparent transparent;
 }
 
 .toolbar-primary
 {
-    background-color: #89bceb;
+    background-color: #5c6bc0;
 }
 
 .toolbar-primary.tool-top .arrow
 {
-    border-color: #89bceb transparent transparent;
+    border-color: #5c6bc0 transparent transparent;
 }
 
 .toolbar-primary.tool-bottom .arrow
 {
-    border-color: transparent transparent #89bceb;
+    border-color: transparent transparent #5c6bc0;
 }
 
 .toolbar-primary.tool-left .arrow
 {
-    border-color: transparent transparent transparent #89bceb;
+    border-color: transparent transparent transparent #5c6bc0;
 }
 
 .toolbar-primary.tool-right .arrow
 {
-    border-color: transparent #89bceb transparent transparent;
+    border-color: transparent #5c6bc0 transparent transparent;
 }
 
 .toolbar-primary .tool-item > .icon
@@ -377,32 +377,32 @@
 .toolbar-primary .tool-item:hover
 {
     color: white; 
-    background: #62a8ea;
+    background: #3f51b5;
 }
 
 .toolbar-danger
 {
-    background-color: #fa7a7a;
+    background-color: #ef5350;
 }
 
 .toolbar-danger.tool-top .arrow
 {
-    border-color: #fa7a7a transparent transparent;
+    border-color: #ef5350 transparent transparent;
 }
 
 .toolbar-danger.tool-bottom .arrow
 {
-    border-color: transparent transparent #fa7a7a;
+    border-color: transparent transparent #ef5350;
 }
 
 .toolbar-danger.tool-left .arrow
 {
-    border-color: transparent transparent transparent #fa7a7a;
+    border-color: transparent transparent transparent #ef5350;
 }
 
 .toolbar-danger.tool-right .arrow
 {
-    border-color: transparent #fa7a7a transparent transparent;
+    border-color: transparent #ef5350 transparent transparent;
 }
 
 .toolbar-danger .tool-item > .icon
@@ -414,32 +414,32 @@
 .toolbar-danger .tool-item:hover
 {
     color: white; 
-    background: #f96868;
+    background: #f44336;
 }
 
 .toolbar-warning
 {
-    background-color: #f2a654;
+    background-color: #ff9800;
 }
 
 .toolbar-warning.tool-top .arrow
 {
-    border-color: #f2a654 transparent transparent;
+    border-color: #ff9800 transparent transparent;
 }
 
 .toolbar-warning.tool-bottom .arrow
 {
-    border-color: transparent transparent #f2a654;
+    border-color: transparent transparent #ff9800;
 }
 
 .toolbar-warning.tool-left .arrow
 {
-    border-color: transparent transparent transparent #f2a654;
+    border-color: transparent transparent transparent #ff9800;
 }
 
 .toolbar-warning.tool-right .arrow
 {
-    border-color: transparent #f2a654 transparent transparent;
+    border-color: transparent #ff9800 transparent transparent;
 }
 
 .toolbar-warning .tool-item > .icon
@@ -451,32 +451,32 @@
 .toolbar-warning .tool-item:hover
 {
     color: white; 
-    background: #f4b066;
+    background: #ffa726;
 }
 
 .toolbar-info
 {
-    background-color: #57c7d4;
+    background-color: #00bcd4;
 }
 
 .toolbar-info.tool-top .arrow
 {
-    border-color: #57c7d4 transparent transparent;
+    border-color: #00bcd4 transparent transparent;
 }
 
 .toolbar-info.tool-bottom .arrow
 {
-    border-color: transparent transparent #57c7d4;
+    border-color: transparent transparent #00bcd4;
 }
 
 .toolbar-info.tool-left .arrow
 {
-    border-color: transparent transparent transparent #57c7d4;
+    border-color: transparent transparent transparent #00bcd4;
 }
 
 .toolbar-info.tool-right .arrow
 {
-    border-color: transparent #57c7d4 transparent transparent;
+    border-color: transparent #00bcd4 transparent transparent;
 }
 
 .toolbar-info .tool-item > .icon
@@ -488,32 +488,32 @@
 .toolbar-info .tool-item:hover
 {
     color: white; 
-    background: #77d6e1;
+    background: #26c6da;
 }
 
 .toolbar-success
 {
-    background-color: #46be8a;
+    background-color: #4caf50;
 }
 
 .toolbar-success.tool-top .arrow
 {
-    border-color: #46be8a transparent transparent;
+    border-color: #4caf50 transparent transparent;
 }
 
 .toolbar-success.tool-bottom .arrow
 {
-    border-color: transparent transparent #46be8a;
+    border-color: transparent transparent #4caf50;
 }
 
 .toolbar-success.tool-left .arrow
 {
-    border-color: transparent transparent transparent #46be8a;
+    border-color: transparent transparent transparent #4caf50;
 }
 
 .toolbar-success.tool-right .arrow
 {
-    border-color: transparent #46be8a transparent transparent;
+    border-color: transparent #4caf50 transparent transparent;
 }
 
 .toolbar-success .tool-item > .icon
@@ -525,32 +525,32 @@
 .toolbar-success .tool-item:hover
 {
     color: white; 
-    background: #5cd29d;
+    background: #66bb6a;
 }
 
 .toolbar-info-o
 {
-    background-color: #526069;
+    background-color: #616161;
 }
 
 .toolbar-info-o.tool-top .arrow
 {
-    border-color: #526069 transparent transparent;
+    border-color: #616161 transparent transparent;
 }
 
 .toolbar-info-o.tool-bottom .arrow
 {
-    border-color: transparent transparent #526069;
+    border-color: transparent transparent #616161;
 }
 
 .toolbar-info-o.tool-left .arrow
 {
-    border-color: transparent transparent transparent #526069;
+    border-color: transparent transparent transparent #616161;
 }
 
 .toolbar-info-o.tool-right .arrow
 {
-    border-color: transparent #526069 transparent transparent;
+    border-color: transparent #616161 transparent transparent;
 }
 
 .toolbar-info-o .tool-item > .icon
@@ -562,32 +562,32 @@
 .toolbar-info-o .tool-item:hover
 {
     color: white; 
-    background: #76838f;
+    background: #757575;
 }
 
 .toolbar-light
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 
 .toolbar-light.tool-top .arrow
 {
-    border-color: #f3f7f9 transparent transparent;
+    border-color: #eee transparent transparent;
 }
 
 .toolbar-light.tool-bottom .arrow
 {
-    border-color: transparent transparent #f3f7f9;
+    border-color: transparent transparent #eee;
 }
 
 .toolbar-light.tool-left .arrow
 {
-    border-color: transparent transparent transparent #f3f7f9;
+    border-color: transparent transparent transparent #eee;
 }
 
 .toolbar-light.tool-right .arrow
 {
-    border-color: transparent #f3f7f9 transparent transparent;
+    border-color: transparent #eee transparent transparent;
 }
 
 .toolbar-light .tool-item > .icon
@@ -599,32 +599,32 @@
 .toolbar-light .tool-item:hover
 {
     color: white; 
-    background: #e4eaec;
+    background: #e0e0e0;
 }
 
 .toolbar-dark
 {
-    background-color: #76838f;
+    background-color: #757575;
 }
 
 .toolbar-dark.tool-top .arrow
 {
-    border-color: #76838f transparent transparent;
+    border-color: #757575 transparent transparent;
 }
 
 .toolbar-dark.tool-bottom .arrow
 {
-    border-color: transparent transparent #76838f;
+    border-color: transparent transparent #757575;
 }
 
 .toolbar-dark.tool-left .arrow
 {
-    border-color: transparent transparent transparent #76838f;
+    border-color: transparent transparent transparent #757575;
 }
 
 .toolbar-dark.tool-right .arrow
 {
-    border-color: transparent #76838f transparent transparent;
+    border-color: transparent #757575 transparent transparent;
 }
 
 .toolbar-dark .tool-item > .icon
@@ -636,7 +636,7 @@
 .toolbar-dark .tool-item:hover
 {
     color: white; 
-    background: #526069;
+    background: #616161;
 }
 
 .animate-standard

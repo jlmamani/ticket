@@ -1,16 +1,16 @@
-.dropdown-toggle {
-  // Generate the caret automatically
-  &::after {
-    border-right: $caret-width solid transparent;
-    border-left: $caret-width solid transparent;
-  }
-}
+
 
 // The dropdown menu
 .dropdown-menu {
   color: $body-color;
   background-color: $dropdown-bg;
   border: $dropdown-border-width solid $dropdown-border-color;
+  @include box-shadow($dropdown-box-shadow);
+}
+
+// Dividers (basically an `<hr>`) within the dropdown
+.dropdown-divider {
+  @include nav-divider($dropdown-divider-bg);
 }
 
 // Links, buttons, and more within the dropdown menu
@@ -39,11 +39,10 @@
     @include plain-hover-focus {
       color: $dropdown-link-disabled-color;
     }
-
-    // Nuke hover/focus effects
-    @include hover-focus {
-      background-color: transparent;
-    }
+    
+    // @include hover-focus {
+    //   @include reset-filter();
+    // }
   }
 }
 

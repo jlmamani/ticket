@@ -1,10 +1,10 @@
 /**
  * @author: Dennis Hernández
  * @webSite: http://djhvscf.github.io/Blog
- * @version: v1.0.1
+ * @version: v1.0.0
  */
 
-(function ($) {
+!function ($) {
 
     'use strict';
 
@@ -105,9 +105,7 @@
             row.data('index', i).attr('data-index', i);
         }
 
-        tableBsOptions.data = tableBsOptions.data.slice(0, tableBsData.pageFrom - 1)
-            .concat(newData)
-            .concat(tableBsOptions.data.slice(tableBsData.pageTo));
+        tableBsOptions.data = newData;
 
         //Call the user defined function
         tableBsOptions.onReorderRowsDrop.apply(table, [table, droppedRow]);
@@ -115,4 +113,4 @@
         //Call the event reorder-row
         tableBsData.trigger('reorder-row', newData);
     };
-})(jQuery);
+}(jQuery);

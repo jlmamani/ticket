@@ -12,6 +12,7 @@
     Site.run();
   });
 
+
   // Example Gauge Dynamic
   // ---------------------
   $(document).ready(function($) {
@@ -55,4 +56,5 @@
         .set(random);
     }, 1500);
   });
+
 })(document, window, jQuery);

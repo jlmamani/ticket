@@ -5,8 +5,8 @@
 /****************************************************************/
 
 .cm-s-mbo.CodeMirror {
-  background: #2c2c2c;
   color: #ffffec;
+  background: #2c2c2c;
 }
 .cm-s-mbo div.CodeMirror-selected {
   background: #716c62;
@@ -70,8 +70,8 @@
   color: #ffffec;
 }
 .cm-s-mbo span.cm-bracket {
-  color: #fffffc;
   font-weight: bold;
+  color: #fffffc;
 }
 .cm-s-mbo span.cm-tag {
   color: #9ddfe9;
@@ -80,8 +80,8 @@
   color: #f54b07;
 }
 .cm-s-mbo span.cm-error {
-  border-bottom: #636363;
   color: #ffffec;
+  border-bottom: #636363;
 }
 .cm-s-mbo span.cm-qualifier {
   color: #ffffec;

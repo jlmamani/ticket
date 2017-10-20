@@ -1,6 +1,7 @@
 .popover {
   background-color: $popover-bg;
   border: $popover-border-width solid $popover-border-color;
+  @include box-shadow($popover-box-shadow);
 
 
   // Popover directions

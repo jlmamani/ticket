@@ -1,8 +1,8 @@
 /* Taken from the popular Visual Studio Vibrant Ink Schema */
 
 .cm-s-vibrant-ink.CodeMirror {
-  background: black;
   color: white;
+  background: black;
 }
 .cm-s-vibrant-ink div.CodeMirror-selected {
   background: #35493c;
@@ -56,8 +56,8 @@
   color: #888;
 }
 .cm-s-vibrant-ink .cm-comment {
-  color: gray;
   font-weight: bold;
+  color: gray;
 }
 .cm-s-vibrant-ink .cm-string {
   color: #a5c25c;
@@ -94,6 +94,6 @@
   background: #27282e;
 }
 .cm-s-vibrant-ink .CodeMirror-matchingbracket {
-  outline: 1px solid grey;
   color: white !important;
+  outline: 1px solid grey;
 }

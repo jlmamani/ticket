@@ -24,6 +24,8 @@
 
 // Variables
 // ========================================================================
+$alert-close-opacity:             0.6 !default;
+$alert-close-hover-opacity:       1 !default;
 
 // link-color
 $alert-primary-link-color:        $brand-primary-active !default;
@@ -36,7 +38,8 @@ $alert-danger-link-color:         $brand-danger-active !default;
 $alert-alt-color:                 $text-color !default;
 $alert-alt-bg:                    rgba($bg-color-base, (80/100)) !default;
 $alert-alt-close-color:           $gray !default;
-
+$alert-alt-close-opacity:         0.6 !default;
+$alert-alt-close-hover-opacity:   1 !default;
 
 $alert-alt-primary-border:        $brand-primary !default;
 $alert-alt-primary-text:          $brand-primary !default;
@@ -68,10 +71,7 @@ $alert-dark-info-bg:               $brand-info !default;
 $alert-dark-warning-bg:            $brand-warning !default;
 $alert-dark-danger-bg:             $brand-danger !default;
 
-$alert-social-text:                $color-white !default;
-
-// Component: Alert
-// ========================================================================
+$alert-social-text: $color-white !default;
 
 // Alternate styles
 // -------------------------
@@ -79,6 +79,8 @@ $alert-social-text:                $color-white !default;
 .alert-alt {
   color: $alert-alt-color;
   background-color: $alert-alt-bg;
+  border: none;
+  border-left: 3px solid transparent;
 }
 
 
@@ -87,13 +89,23 @@ $alert-social-text:                $color-white !default;
 // -------------------------
 
 .alert-dismissible {
+  .close {
+    opacity: $alert-close-opacity;
 
+    &:hover,
+    &:focus {
+      opacity: $alert-close-hover-opacity;
+    }
+  }
   &.alert-alt {
     .close {
       color: $alert-alt-close-color;
+      opacity: $alert-alt-close-opacity;
+     
       &:hover,
       &:focus {
         color: $alert-alt-close-color;
+        opacity: $alert-alt-close-hover-opacity;
       }
     }
   }
@@ -274,6 +286,13 @@ $alert-social-text:                $color-white !default;
     color: $alert-dark-text !important;
   }
 
+  // Alternate styles
+  // -------------------------
+
+  .alert-left-border {
+    border-left: 3px solid transparent;
+  }
+
   // Modifier: `alert-dismissible`
   // -------------------------
 
@@ -349,3 +368,4 @@ $alert-social-text:                $color-white !default;
     }
   }
 }
+

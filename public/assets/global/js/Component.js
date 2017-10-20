@@ -25,7 +25,7 @@
 
   var _class = function () {
     function _class() {
-      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
       babelHelpers.classCallCheck(this, _class);
 
       this.$el = options.$el ? options.$el : (0, _jquery2.default)(document);
@@ -160,7 +160,7 @@
     }, {
       key: 'mix',
       value: function mix() {
-        var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
         if (this.isInit) return;
 

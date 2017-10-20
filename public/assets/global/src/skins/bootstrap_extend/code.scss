@@ -1,8 +1,11 @@
 code {
-  border: 1px solid $code-border-color;
+  border-color: $code-border-color;
 }
 
+// add from---v3
+// Blocks of code
 pre {
   color: $pre-color;
-  border: 1px solid $pre-border-color;
+  border-color: $pre-border-color;
 }
+// add end

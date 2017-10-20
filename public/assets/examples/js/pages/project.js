@@ -28,10 +28,10 @@
       '<div class="file-action-wrap">' +
       '<div class="file-action">' +
       '{% if (!i && !o.options.autoUpload) { %}' +
-      '<i class="icon wb-upload start" data-toggle="tooltip" data-original-title="Upload file" aria-hidden="true"></i>' +
+      '<i class="icon md-upload start" data-toggle="tooltip" data-original-title="Upload file" aria-hidden="true"></i>' +
       '{% } %}' +
       '{% if (!i) { %}' +
-      '<i class="icon wb-close cancel" data-toggle="tooltip" data-original-title="Stop upload file" aria-hidden="true"></i>' +
+      '<i class="icon md-close cancel" data-toggle="tooltip" data-original-title="Stop upload file" aria-hidden="true"></i>' +
       '{% } %}' +
       '</div>' +
       '</div>' +
@@ -53,7 +53,7 @@
       '<div class="preview vertical-align">' +
       '<div class="file-action-wrap">' +
       '<div class="file-action">' +
-      '<i class="icon wb-trash delete" data-toggle="tooltip" data-original-title="Delete files" aria-hidden="true"></i>' +
+      '<i class="icon md-delete delete" data-toggle="tooltip" data-original-title="Delete files" aria-hidden="true"></i>' +
       '</div>' +
       '</div>' +
       '<img src="{%=file.url%}"/>' +
@@ -144,6 +144,7 @@
     e.stopPropagation();
   });
 
+
   (function() {
     // bind checklist and progress bar
     $('input[type=checkbox]').on('click', function() {
@@ -154,7 +155,7 @@
         if ($($checklistItems[i]).find('input').prop('checked')) {
           checkedLength++;
         }
-      };
+      }
       var percent = 100 * (checkedLength / allLength);
       $('.project-checklist [data-plugin="progress"]').asProgress('go', percent);
     });

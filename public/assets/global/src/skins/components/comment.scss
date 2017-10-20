@@ -16,11 +16,15 @@ $comment-meta-color                : $prompt-color !default;
 .comments {
 
   .comment {
+    border: none;
     border-bottom: 1px solid $comment-border;
 
     .comment {
       &:first-child {
         border-top: 1px solid $comment-border;
+      }
+      &:last-child {
+        border-bottom: none;
       }
     }
   }
@@ -37,3 +41,4 @@ $comment-meta-color                : $prompt-color !default;
 .comment-meta {
   color: $comment-meta-color;
 }
+

@@ -37,9 +37,22 @@ $jumbotron-radius: $border-radius !default;
     width: 100%;
   }
 
+  h1, .h1 {
+    font-size: 28px;
+  }
+
+  h2, .h2 {
+    font-size: 24px;
+  }
+
   @include media-breakpoint-up(md) {
     &, .container & {
       padding: 0;
+    }
+
+    h1,
+    .h1 {
+      font-size: 28px;
     }
   }
 }

@@ -55,6 +55,30 @@
   }
 }
 
+@mixin button-flat-variant($color, $hover-color, $active-color){
+  &.btn-flat {
+    color: $color;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $hover-color;
+    }
+
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      color: $active-color;
+
+      &:hover,
+      &:focus,
+      &.focus {
+        color: $active-color;
+      }
+    }
+  }
+}
+
 @mixin button-styles-variant($styles){
   $styles_list: map-get($btn-styles, $styles);
 
@@ -69,8 +93,6 @@
   $disabled-bg: map-get($styles_list, 'disabled-bg') !default;
   $disabled-border: map-get($styles_list, 'disabled-border') !default;
 
-  box-shadow: none;
-
   &:hover,
   &:focus,
   &.focus {
@@ -83,7 +105,6 @@
   .open > &.dropdown-toggle {
     background-color: $active-bg;
     border-color: $active-border;
-    box-shadow: none;
 
     &:hover,
     &:focus,
@@ -114,6 +135,10 @@
   }
 
   @include button-direction-variant($background, $hover-bg, $active-bg);
+
+  @if ($styles != "default") {
+    @include button-flat-variant($background, $color, $color);
+  }
 }
 
 @mixin button-outline-styles-variant($styles){

@@ -13,9 +13,10 @@
   background: #fff;
 }
 
-.fix-sticky thead th, .fix-sticky thead th:first-child {
-  border-left: 0;
+.fix-sticky thead th,
+.fix-sticky thead th:first-child {
   border-right: 0;
   border-bottom: 1px solid #eee;
+  border-left: 0;
   border-radius: 0;
 }

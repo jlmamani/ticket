@@ -8,13 +8,12 @@
   }
 })(this, function (global) {
   var babelHelpers = global;
-  babelHelpers.typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-    return typeof obj;
-  } : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj;
+
+  babelHelpers.typeof = function (obj) {
+    return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj;
   };
 
-  babelHelpers.jsx = function () {
+  babelHelpers.jsx = (function () {
     var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7;
     return function createRawReactElement(type, props, key, children) {
       var defaultProps = type && type.defaultProps;
@@ -55,7 +54,7 @@
         _owner: null
       };
     };
-  }();
+  })();
 
   babelHelpers.asyncToGenerator = function (fn) {
     return function () {
@@ -73,15 +72,15 @@
           if (info.done) {
             resolve(value);
           } else {
-            return Promise.resolve(value).then(function (value) {
-              return step("next", value);
+            Promise.resolve(value).then(function (value) {
+              step("next", value);
             }, function (err) {
-              return step("throw", err);
+              step("throw", err);
             });
           }
         }
 
-        return step("next");
+        step("next");
       });
     };
   };
@@ -92,7 +91,7 @@
     }
   };
 
-  babelHelpers.createClass = function () {
+  babelHelpers.createClass = (function () {
     function defineProperties(target, props) {
       for (var i = 0; i < props.length; i++) {
         var descriptor = props[i];
@@ -108,7 +107,7 @@
       if (staticProps) defineProperties(Constructor, staticProps);
       return Constructor;
     };
-  }();
+  })();
 
   babelHelpers.defineEnumerableProperties = function (obj, descs) {
     for (var key in descs) {
@@ -291,7 +290,7 @@
     return value;
   };
 
-  babelHelpers.slicedToArray = function () {
+  babelHelpers.slicedToArray = (function () {
     function sliceIterator(arr, i) {
       var _arr = [];
       var _n = true;
@@ -327,7 +326,7 @@
         throw new TypeError("Invalid attempt to destructure non-iterable instance");
       }
     };
-  }();
+  })();
 
   babelHelpers.slicedToArrayLoose = function (arr, i) {
     if (Array.isArray(arr)) {

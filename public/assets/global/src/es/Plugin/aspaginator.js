@@ -28,12 +28,12 @@ class Paginator extends Plugin {
       components: {
         prev: {
           tpl() {
-            return `<li class="${this.namespace}-prev page-item"><a class="page-link" href="javascript:void(0)" aria-label="Prev"><span class="icon wb-chevron-left-mini"></span></a></li>`;
+            return `<li class="${this.namespace}-prev page-item"><a class="page-link" href="javascript:void(0)" aria-label="Prev"><span class="icon md-chevron-left"></span></a></li>`;
           }
         },
         next: {
           tpl() {
-            return `<li class="${this.namespace}-next page-item"><a class="page-link" href="javascript:void(0)" aria-label="Next"><span class="icon wb-chevron-right-mini"></span></a></li>`;
+            return `<li class="${this.namespace}-next page-item"><a class="page-link" href="javascript:void(0)" aria-label="Next"><span class="icon md-chevron-right"></span></a></li>`;
           }
         },
         lists: {

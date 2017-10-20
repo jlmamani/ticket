@@ -14,6 +14,7 @@
 $testimonial-content-bg:          $bg-color-base !default;
 $testimonial-content-border:      $border-color-base !default;
 $testimonial-control-color:       $gray-light !default;
+$testimonial-control-font-size:   26px !default;
 $testimonial-control-hover-color: $hover-color-base !default;
 
 
@@ -92,6 +93,7 @@ $testimonial-control-hover-color: $hover-color-base !default;
     }
   }
 }
+
 // Modifier: `testimonial-reverse`
 // ========================================================================
 

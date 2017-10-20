@@ -57,14 +57,14 @@
 
     text-decoration: none;
 
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
     border-radius: .215rem;
     background: #fff;
 }
 .dd-handle:hover
 {
-    color: #89bceb;
-    background: #f3f7f9;
+    color: #3f51b5;
+    background: #eee;
 }
 
 .dd-content
@@ -72,7 +72,7 @@
     margin-top: -5px;
     padding: 10px;
 
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
     border-top: 0;
     background: #fff;
 }
@@ -170,16 +170,16 @@
 {
     min-height: 30px;
 
-    border: 1px dashed #e4eaec; 
-    background: #f3f7f9;
+    border: 1px dashed #e0e0e0; 
+    background: #eee;
 }
 
 .dd-empty
 {
     min-height: 100px;
 
-    border: 1px dashed #e4eaec;
-    background-color: #f3f7f9;
+    border: 1px dashed #e0e0e0;
+    background-color: #eee;
     background-position: 0 0, 30px 30px; 
     -webkit-background-size: 60px 60px;
             background-size: 60px 60px;
@@ -187,7 +187,7 @@
 
 .dd-item-alt .dd-handle
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
     font-weight: normal;
     font-style: normal;
 
@@ -218,15 +218,11 @@
 }
 .dd-item-alt .dd-handle:before
 {
-    position: relative;
-    top: auto; 
-    left: -3px;
-
-    content: '';
+    content: '';
 }
 .dd-item-alt .dd-handle:hover
 {
-    background: #f3f7f9;
+    background: #eee;
 }
 
 .dd-item-alt > button
@@ -247,14 +243,14 @@
 
     text-decoration: none;
 
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
     border-radius: .215rem;
     background: #fff;
 }
 .dd-item-alt .dd-content:hover
 {
-    color: #89bceb;
-    background: #f3f7f9;
+    color: #3f51b5;
+    background: #eee;
 }
 
 .dd-item-with-media .dd-handle

@@ -12,6 +12,7 @@
     Site.run();
   });
 
+
   // Demo 2
   // ------
   (function() {
@@ -31,6 +32,7 @@
       }
     });
   })();
+
 
   // Demo 3
   // ------
@@ -58,4 +60,6 @@
       console.log('after hide event');
     });
   })();
+
+
 })(document, window, jQuery);

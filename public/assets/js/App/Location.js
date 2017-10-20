@@ -101,7 +101,7 @@
           });
 
           /* create new marker and add to map */
-          var popupInfo = '<div class=\'friend-popup-info\'><div class=\'detail\'>info</div><h3>' + $(this.friends[i]).find('.friend-name').html() + '</h3><p>' + $(this.friends[i]).find('.friend-title').html() + '</p></div><i class=\'icon wb-chevron-right-mini\'></i>';
+          var popupInfo = '<div class=\'friend-popup-info\'><div class=\'detail\'>info</div><h3>' + $(this.friends[i]).find('.friend-name').html() + '</h3><p>' + $(this.friends[i]).find('.friend-title').html() + '</p></div><i class=\'icon md-chevron-right\'></i>';
           var marker = L.marker(markerLatlng, {
             title: $(this.friends[i]).find('friend-name').html(),
             icon: friendImg
@@ -196,6 +196,7 @@
       value: function getDefaultActions() {
         return Object.assign(babelHelpers.get(AppLocation.prototype.__proto__ || Object.getPrototypeOf(AppLocation.prototype), 'getDefaultActions', this).call(this), {
           mapChange: function mapChange(change) {
+
             if (change) {
               console.log('map change');
             } else {

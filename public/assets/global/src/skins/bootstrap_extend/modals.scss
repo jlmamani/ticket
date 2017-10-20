@@ -55,32 +55,52 @@ $modal-danger-bg           : $brand-danger !default;
 // ========================================================================
 .modal-content {
   border: none;
+  box-shadow: $modal-content-shadow;
 }
 
 .modal-header {
   border-bottom: none;
 }
-
 .modal-footer {
   border-top: none;
 }
-// Component: Modal
-// ========================================================================
 
 // Modifier: `modal-sidebar`
 // -------------------------
 
 .modal-sidebar {
   background-color: $modal-sidebar-bg;
+
+  .modal-content {
+    background-color: transparent;
+  }
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
+  }
 }
+
 
 // Modifier: `modal-fill-in`
 // -------------------------
 
 .modal-fill-in {
+  background-color: transparent;
 
   &.in {
     background-color: $modal-fill-in-bg;
+  }
+
+  .modal-content {
+    background-color: transparent;
+  }
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
   }
 }
 
@@ -127,12 +147,10 @@ $modal-danger-bg           : $brand-danger !default;
 // ========================================================================
 
 .modal {
-
   // Modifier: `modal-just-me`
   // -------------------------
 
   &.modal-just-me {
-
     .modal-backdrop {
       background-color: $inverse;
     }
@@ -142,3 +160,7 @@ $modal-danger-bg           : $brand-danger !default;
     }
   }
 }
+
+
+
+

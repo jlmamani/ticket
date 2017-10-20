@@ -9,8 +9,8 @@
 */
 
 .cm-s-hopscotch.CodeMirror {
-  background: #322931;
   color: #d5d3d5;
+  background: #322931;
 }
 .cm-s-hopscotch div.CodeMirror-selected {
   background: #433b42 !important;
@@ -56,8 +56,8 @@
   color: #fd8b19;
 }
 .cm-s-hopscotch span.cm-error {
-  background: #dd464c;
   color: #989498;
+  background: #dd464c;
 }
 .cm-s-hopscotch span.cm-bracket {
   color: #d5d3d5;
@@ -70,8 +70,8 @@
 }
 
 .cm-s-hopscotch .CodeMirror-matchingbracket {
-  text-decoration: underline;
   color: white !important;
+  text-decoration: underline;
 }
 .cm-s-hopscotch .CodeMirror-activeline-background {
   background: #302020;

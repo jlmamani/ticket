@@ -57,15 +57,15 @@
 .jsgrid-header-sort:before {
   float: left;
   @include make-icon();
-  font-family: '#{$wb-font-family}';
+  font-family: $zmdi-font-name;
 }
 
 .jsgrid-header-sort-asc:before {
-  content: '#{$wb-var-triangle-up}';
+  content: '#{$zmdi-var-caret-up}';
 }
 
 .jsgrid-header-sort-desc:before {
-  content: '#{$wb-var-triangle-down}';
+  content: '#{$zmdi-var-caret-down}';
 }
 
 .jsgrid-grid-body {
@@ -139,15 +139,15 @@
 }
 
 .jsgrid .jsgrid-button {
-  width: 16px;
-  height: 22px;
+  // width: 16px;
+  // height: 22px;
   border: none;
   cursor: pointer;
   font-size: 16px;
   padding: 0;
 
   @include make-icon();
-  font-family: '#{$wb-font-family}';
+  font-family: $zmdi-font-name;
   background: transparent;
 }
 
@@ -157,52 +157,52 @@
 
 .jsgrid-cancel-button {
   &:before {
-    content: '#{$wb-var-close}';
+    content: '#{$zmdi-var-close}';
   }
 }
 .jsgrid-clear-filter-button {
   &:before {
-    content: '#{$wb-var-zoom-out}';
+    content: '#{$zmdi-var-zoom-out}';
   }
 }
 .jsgrid-delete-button {
   &:before {
-    content: '#{$wb-var-trash}';
+    content: '#{$zmdi-var-delete}';
   }
 }
 .jsgrid-edit-button {
   &:before {
-    content: '#{$wb-var-pencil}';
+    content: '#{$zmdi-var-edit}';
   }
 }
 .jsgrid-cancel-edit-button {
   &:before {
-    content: '#{$wb-var-close}';
+    content: '#{$zmdi-var-close}';
   }
 }
 .jsgrid-insert-mode-button {
   &:before {
-    content: '#{$wb-var-plus}';
+    content: '#{$zmdi-var-plus}';
   }
 }
 .jsgrid-insert-button {
   &:before {
-    content: '#{$wb-var-plus}';
+    content: '#{$zmdi-var-plus}';
   }
 }
 .jsgrid-search-mode-button {
   &:before {
-    content: '#{$wb-var-search}';
+    content: '#{$zmdi-var-search}';
   }
 }
 .jsgrid-search-button {
   &:before {
-    content: '#{$wb-var-search}';
+    content: '#{$zmdi-var-search}';
   }
 }
 .jsgrid-update-button {
   &:before {
-    content: '#{$wb-var-check}';
+    content: '#{$zmdi-var-check}';
   }
 }
 

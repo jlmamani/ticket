@@ -1,6 +1,3 @@
-// Wrapper and base class
-//
-
 // Dark links against a light background
 .navbar-light {
   .navbar-brand {
@@ -58,5 +55,9 @@
         color: $navbar-inverse-active-color;
       }
     }
+  }
+
+  .navbar-toggler {
+    background-image: $navbar-inverse-toggler-bg;
   }
 }

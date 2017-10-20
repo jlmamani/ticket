@@ -6,18 +6,21 @@ Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .hljs {
   display: block;
-  overflow-x: auto;
   padding: .5em;
-  background: #000;
+  overflow-x: auto;
   color: #f8f8f8;
+  background: #000;
 }
 
-.hljs-comment, .hljs-quote {
-  color: #aeaeae;
+.hljs-comment,
+.hljs-quote {
   font-style: italic;
+  color: #aeaeae;
 }
 
-.hljs-keyword, .hljs-selector-tag, .hljs-type {
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
   color: #e28964;
 }
 
@@ -29,23 +32,32 @@ Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
   color: #daefa3;
 }
 
-.hljs-regexp, .hljs-link {
+.hljs-regexp,
+.hljs-link {
   color: #e9c062;
 }
 
-.hljs-title, .hljs-section, .hljs-tag, .hljs-name {
+.hljs-title,
+.hljs-section,
+.hljs-tag,
+.hljs-name {
   color: #89bdff;
 }
 
-.hljs-class .hljs-title, .hljs-doctag {
+.hljs-class .hljs-title,
+.hljs-doctag {
   text-decoration: underline;
 }
 
-.hljs-symbol, .hljs-bullet, .hljs-number {
+.hljs-symbol,
+.hljs-bullet,
+.hljs-number {
   color: #3387cc;
 }
 
-.hljs-params, .hljs-variable, .hljs-template-variable {
+.hljs-params,
+.hljs-variable,
+.hljs-template-variable {
   color: #3e87e3;
 }
 
@@ -58,19 +70,19 @@ Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
 }
 
 .hljs-formula {
-  background-color: #0e2231;
-  color: #f8f8f8;
   font-style: italic;
+  color: #f8f8f8;
+  background-color: #0e2231;
 }
 
 .hljs-addition {
-  background-color: #253b22;
   color: #f8f8f8;
+  background-color: #253b22;
 }
 
 .hljs-deletion {
-  background-color: #420e09;
   color: #f8f8f8;
+  background-color: #420e09;
 }
 
 .hljs-selector-class {

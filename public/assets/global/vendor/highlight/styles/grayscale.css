@@ -6,43 +6,53 @@ grayscale style (c) MY Sun <simonmysun@gmail.com>
 
 .hljs {
   display: block;
-  overflow-x: auto;
   padding: .5em;
+  overflow-x: auto;
   color: #333;
   background: #fff;
 }
 
-.hljs-comment, .hljs-quote {
-  color: #777;
+.hljs-comment,
+.hljs-quote {
   font-style: italic;
-}
-
-.hljs-keyword, .hljs-selector-tag, .hljs-subst {
-  color: #333;
-  font-weight: bold;
-}
-
-.hljs-number, .hljs-literal {
   color: #777;
 }
 
-.hljs-string, .hljs-doctag, .hljs-formula {
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  font-weight: bold;
+  color: #333;
+}
+
+.hljs-number,
+.hljs-literal {
+  color: #777;
+}
+
+.hljs-string,
+.hljs-doctag,
+.hljs-formula {
   color: #333;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJ0lEQVQIW2O8e/fufwYGBgZBQUEQxcCIIfDu3Tuwivfv30NUoAsAALHpFMMLqZlPAAAAAElFTkSuQmCC) repeat;
 }
 
-.hljs-title, .hljs-section, .hljs-selector-id {
-  color: #000;
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
   font-weight: bold;
+  color: #000;
 }
 
 .hljs-subst {
   font-weight: normal;
 }
 
-.hljs-class .hljs-title, .hljs-type, .hljs-name {
-  color: #333;
+.hljs-class .hljs-title,
+.hljs-type,
+.hljs-name {
   font-weight: bold;
+  color: #333;
 }
 
 .hljs-tag {
@@ -54,19 +64,22 @@ grayscale style (c) MY Sun <simonmysun@gmail.com>
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAN37979r6yszIgujiIAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJhohQDexSef15DBCwAAAABJRU5ErkJggg==) repeat;
 }
 
-.hljs-symbol, .hljs-bullet, .hljs-link {
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
   color: #000;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQIW2NkQAO7d+/+z4gsBhJwdXVlhAvCBECKwIIwAbhKZBUwBQA6hBpm5efZsgAAAABJRU5ErkJggg==) repeat;
 }
 
-.hljs-built_in, .hljs-builtin-name {
+.hljs-built_in,
+.hljs-builtin-name {
   color: #000;
   text-decoration: underline;
 }
 
 .hljs-meta {
-  color: #999;
   font-weight: bold;
+  color: #999;
 }
 
 .hljs-deletion {

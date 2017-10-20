@@ -75,8 +75,7 @@ $color-selector-z-index:                $zindex-base !default;
 
     label {
       position: relative;
-      margin-bottom: 0.4rem;
-      font-family: $wb-font-family;
+      font-family: $zmdi-font-name;
       font-style: normal;
       font-weight: normal;
       font-variant: normal;
@@ -92,7 +91,7 @@ $color-selector-z-index:                $zindex-base !default;
       font-size: 16px;
       line-height: 1;
       color: $color-selector-checked-label-color;
-      content: $wb-var-check;
+      content: $zmdi-var-check;
     }
 
     &.color-selector-disabled {

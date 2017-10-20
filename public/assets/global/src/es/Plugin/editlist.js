@@ -109,7 +109,6 @@ $.fn[pluginName].noConflict = () => {
   return editlist._jQueryInterface;
 };
 
-
 class Editlist extends Plugin {
   getName() {
     return pluginName;

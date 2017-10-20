@@ -12,10 +12,10 @@ class Treeview extends Plugin {
   static getDefaults() {
     return {
       injectStyle: false,
-      expandIcon: 'icon wb-plus',
-      collapseIcon: 'icon wb-minus',
+      expandIcon: 'icon md-plus',
+      collapseIcon: 'icon md-minus',
       emptyIcon: 'icon',
-      nodeIcon: 'icon wb-folder',
+      nodeIcon: 'icon md-folder',
       showBorder: false,
       // color: undefined, // "#000000",
       // backColor: undefined, // "#FFFFFF",

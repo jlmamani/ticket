@@ -16,6 +16,7 @@
   // ---------------------
   var galleryNum = $('.imgs-gallery').length;
   for (var i = 0; i < galleryNum; i++) {
+
     $($('.imgs-gallery')[i]).magnificPopup({
       delegate: 'a',
       type: 'image',
@@ -33,7 +34,7 @@
         }
       }
     });
-  };
+  }
 
   //bind input focus
   $('.wall-comment-reply .form-control').on('focus', function(event) {
@@ -51,4 +52,5 @@
 
     event.stopPropagation();
   });
+
 })(document, window, jQuery);

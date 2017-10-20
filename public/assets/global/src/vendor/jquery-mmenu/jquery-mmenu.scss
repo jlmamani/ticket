@@ -1,7 +1,8 @@
 @import "vars";
 
-$site-menubar-section-title-color:  $gray-dark !default;
-$site-menubar-footer-height:        76px !default;
+$site-menubar-section-title-color:  $gray-dark;
+
+$site-menubar-footer-height:        65px;
 
 .mm {
   &-hidden {
@@ -69,14 +70,14 @@ $site-menubar-footer-height:        76px !default;
 
 
     .mm-prev {
-      font-family: '#{$wb-font-family}';
+      font-family: $zmdi-font-name;
       @include make-icon();
 
       position: absolute;
       left: 20px;
 
       &:before {
-        content: '#{$wb-var-chevron-left-mini}';
+        content: '#{$zmdi-var-chevron-left}';
       }
     }
 

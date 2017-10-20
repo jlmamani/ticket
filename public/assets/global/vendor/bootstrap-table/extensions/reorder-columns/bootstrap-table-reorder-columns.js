@@ -144,7 +144,6 @@
                 for (var i = 0; i < ths.length; i++ ) {
                     columnIndex = $.fn.bootstrapTable.utils.getFieldIndex(that.columns, ths[i]);
                     if (columnIndex !== -1) {
-                        that.columns[columnIndex].fieldIndex = i;
                         columns.push(that.columns[columnIndex]);
                         that.columns.splice(columnIndex, 1);
                     }
@@ -170,9 +169,6 @@
 
                 that.header.fields = ths;
                 that.header.formatters = formatters;
-                that.initHeader();
-                that.initToolbar();
-                that.initBody();
                 that.resetView();
                 that.trigger('reorder-column', ths);
             }

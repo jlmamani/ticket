@@ -24,8 +24,8 @@ NOTE_2:	Color names provided in comments were derived using "Name that Color" on
 .hljs {
   /* Common set of rules required by highlight.js (don'r remove!) */
   display: block;
-  overflow-x: auto;
   padding: .5em;
+  overflow-x: auto;
   background: #ffffdf; /* Half and Half (approx.) */
   /* --- Uncomment to add PureBASIC native IDE styled font!
 	font-family: Consolas;
@@ -33,26 +33,39 @@ NOTE_2:	Color names provided in comments were derived using "Name that Color" on
 }
 
 .hljs, /* --- used for PureBASIC base color --- */
-.hljs-type, /* --- used for PureBASIC Procedures return type --- */
+.hljs-type,  /* --- used for PureBASIC Procedures return type --- */
 .hljs-function, /* --- used for wrapping PureBASIC Procedures definitions --- */
-.hljs-name, .hljs-number, .hljs-attr, .hljs-params, .hljs-subst {
+.hljs-name,
+.hljs-number,
+.hljs-attr,
+.hljs-params,
+.hljs-subst {
   color: #000; /* Black */
 }
 
 .hljs-comment, /* --- used for PureBASIC Comments --- */
-.hljs-regexp, .hljs-section, .hljs-selector-pseudo, .hljs-addition {
+.hljs-regexp,
+.hljs-section,
+.hljs-selector-pseudo,
+.hljs-addition {
   color: #0aa; /* Persian Green (approx.) */
 }
 
 .hljs-title, /* --- used for PureBASIC Procedures Names --- */
-.hljs-tag, .hljs-variable, .hljs-code {
+.hljs-tag,
+.hljs-variable,
+.hljs-code {
   color: #066; /* Blue Stone (approx.) */
 }
 
 .hljs-keyword, /* --- used for PureBASIC Keywords --- */
-.hljs-class, .hljs-meta-keyword, .hljs-selector-class, .hljs-built_in, .hljs-builtin-name {
-  color: #066; /* Blue Stone (approx.) */
+.hljs-class,
+.hljs-meta-keyword,
+.hljs-selector-class,
+.hljs-built_in,
+.hljs-builtin-name {
   font-weight: bold;
+  color: #066; /* Blue Stone (approx.) */
 }
 
 .hljs-string, /* --- used for PureBASIC Strings --- */
@@ -61,16 +74,21 @@ NOTE_2:	Color names provided in comments were derived using "Name that Color" on
 }
 
 .hljs-symbol, /* --- used for PureBASIC Constants --- */
-.hljs-link, .hljs-deletion, .hljs-attribute {
+.hljs-link,
+.hljs-deletion,
+.hljs-attribute {
   color: #924b72; /* Cannon Pink (approx.) */
 }
 
-.hljs-meta, .hljs-literal, .hljs-selector-id {
-  color: #924b72; /* Cannon Pink (approx.) */
+.hljs-meta,
+.hljs-literal,
+.hljs-selector-id {
   font-weight: bold;
+  color: #924b72; /* Cannon Pink (approx.) */
 }
 
-.hljs-strong, .hljs-name {
+.hljs-strong,
+.hljs-name {
   font-weight: bold;
 }
 

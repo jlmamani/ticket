@@ -24,7 +24,6 @@
 
 // Variables
 // ========================================================================
-
 $pearl-line-bg:               $gray-lightest !default;
 
 $pearl-color:                 $inverse !default;
@@ -32,7 +31,6 @@ $pearl-bg:                    $gray-light !default;
 $pearl-border-size:           2px !default;
 $pearl-border-color:          $pearl-bg !default;
 
-$pearl-current-scale:         1.3 !default;
 $pearl-current-color:         $brand-primary !default;
 $pearl-current-bg:            $inverse !default;
 $pearl-current-line-bg:       $brand-primary !default;
@@ -53,12 +51,9 @@ $pearl-disabled-bg:           $pearl-bg !default;
 $pearl-disabled-line-bg:      $pearl-line-bg !default;
 $pearl-disabled-border-color: $pearl-disabled-bg !default;
 
-
 // Component: pearls
 // ========================================================================
-
 .pearl {
-
   &:before,
   &:after {
     background-color: $pearl-line-bg;
@@ -94,7 +89,6 @@ $pearl-disabled-border-color: $pearl-disabled-bg !default;
   }
 
   &.disabled {
-
     &:before,
     &:after {
       background-color: $pearl-disabled-line-bg;
@@ -136,3 +130,8 @@ $pearl-disabled-border-color: $pearl-disabled-bg !default;
     }
   }
 }
+
+
+
+
+

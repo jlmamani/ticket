@@ -1,5 +1,5 @@
 /*!
- * Isotope PACKAGED v3.0.2
+ * Isotope PACKAGED v3.0.1
  *
  * Licensed GPLv3 for open source use
  * or Isotope Commercial License for commercial use
@@ -10,19 +10,20 @@
 
 /**
  * Bridget makes jQuery widgets
- * v2.0.1
+ * v2.0.0
  * MIT license
  */
 
 /* jshint browser: true, strict: true, undef: true, unused: true */
 
 ( function( window, factory ) {
-  // universal module definition
-  /*jshint strict: false */ /* globals define, module, require */
+  'use strict';
+  /* globals define: false, module: false, require: false */
+
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'jquery-bridget/jquery-bridget',[ 'jquery' ], function( jQuery ) {
-      return factory( window, jQuery );
+      factory( window, jQuery );
     });
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS
@@ -527,7 +528,7 @@ return getSize;
 }));
 
 /**
- * Fizzy UI utils v2.0.3
+ * Fizzy UI utils v2.0.2
  * MIT license
  */
 
@@ -700,8 +701,7 @@ utils.debounceMethod = function( _class, methodName, threshold ) {
 utils.docReady = function( callback ) {
   var readyState = document.readyState;
   if ( readyState == 'complete' || readyState == 'interactive' ) {
-    // do async to allow for other scripts to run. metafizzy/flickity#441
-    setTimeout( callback );
+    callback();
   } else {
     document.addEventListener( 'DOMContentLoaded', callback );
   }
@@ -749,7 +749,7 @@ utils.htmlInit = function( WidgetClass, namespace ) {
       }
       // initialize
       var instance = new WidgetClass( elem, options );
-      // make available via $().data('namespace')
+      // make available via $().data('layoutname')
       if ( jQuery ) {
         jQuery.data( elem, namespace, instance );
       }
@@ -2495,7 +2495,7 @@ return Item;
 }));
 
 /*!
- * Masonry v4.1.1
+ * Masonry v4.1.0
  * Cascading grid layout library
  * http://masonry.desandro.com
  * MIT License
@@ -2900,7 +2900,7 @@ return Vertical;
 }));
 
 /*!
- * Isotope v3.0.2
+ * Isotope v3.0.1
  *
  * Licensed GPLv3 for open source use
  * or Isotope Commercial License for commercial use

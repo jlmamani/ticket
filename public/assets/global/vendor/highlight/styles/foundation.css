@@ -8,13 +8,16 @@ Date: 2013-04-02
 
 .hljs {
   display: block;
-  overflow-x: auto;
   padding: .5em;
-  background: #eee;
+  overflow-x: auto;
   color: black;
+  background: #eee;
 }
 
-.hljs-link, .hljs-emphasis, .hljs-attribute, .hljs-addition {
+.hljs-link,
+.hljs-emphasis,
+.hljs-attribute,
+.hljs-addition {
   color: #070;
 }
 
@@ -22,7 +25,9 @@ Date: 2013-04-02
   font-style: italic;
 }
 
-.hljs-strong, .hljs-string, .hljs-deletion {
+.hljs-strong,
+.hljs-string,
+.hljs-deletion {
   color: #d14;
 }
 
@@ -30,20 +35,24 @@ Date: 2013-04-02
   font-weight: bold;
 }
 
-.hljs-quote, .hljs-comment {
-  color: #998;
+.hljs-quote,
+.hljs-comment {
   font-style: italic;
+  color: #998;
 }
 
-.hljs-section, .hljs-title {
+.hljs-section,
+.hljs-title {
   color: #900;
 }
 
-.hljs-class .hljs-title, .hljs-type {
+.hljs-class .hljs-title,
+.hljs-type {
   color: #458;
 }
 
-.hljs-variable, .hljs-template-variable {
+.hljs-variable,
+.hljs-template-variable {
   color: #369;
 }
 
@@ -55,19 +64,26 @@ Date: 2013-04-02
   color: #34b;
 }
 
-.hljs-code, .hljs-number, .hljs-literal, .hljs-keyword, .hljs-selector-tag {
+.hljs-code,
+.hljs-number,
+.hljs-literal,
+.hljs-keyword,
+.hljs-selector-tag {
   color: #099;
 }
 
 .hljs-regexp {
-  background-color: #fff0ff;
   color: #808;
+  background-color: #fff0ff;
 }
 
 .hljs-symbol {
   color: #990073;
 }
 
-.hljs-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class {
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
   color: #070;
 }

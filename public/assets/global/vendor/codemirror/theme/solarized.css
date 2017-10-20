@@ -61,18 +61,19 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
 
 .cm-s-solarized {
   line-height: 1.45em;
+
   color-profile: sRGB;
   rendering-intent: auto;
 }
 .cm-s-solarized.cm-s-dark {
   color: #839496;
-  background-color: #002b36;
   text-shadow: #002b36 0 1px;
+  background-color: #002b36;
 }
 .cm-s-solarized.cm-s-light {
-  background-color: #fdf6e3;
   color: #657b83;
   text-shadow: #eee8d5 0 1px;
+  background-color: #fdf6e3;
 }
 
 .cm-s-solarized .CodeMirror-widget {
@@ -117,8 +118,8 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
 }
 
 .cm-s-solarized .cm-comment {
-  color: #586e75;
   font-style: italic;
+  color: #586e75;
 }
 
 .cm-s-solarized .cm-string {
@@ -153,9 +154,9 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
   color: #2aa198;
 }
 .cm-s-solarized .cm-hr {
+  display: block;
   color: transparent;
   border-top: 1px solid #586e75;
-  display: block;
 }
 .cm-s-solarized .cm-link {
   color: #93a1a1;
@@ -167,14 +168,16 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
 .cm-s-solarized .cm-em {
   color: #999;
   text-decoration: underline;
+
   -webkit-text-decoration-style: dotted;
-  -moz-text-decoration-style: dotted;
-  text-decoration-style: dotted;
+     -moz-text-decoration-style: dotted;
+          text-decoration-style: dotted;
 }
 .cm-s-solarized .cm-strong {
   color: #eee;
 }
-.cm-s-solarized .cm-error, .cm-s-solarized .cm-invalidchar {
+.cm-s-solarized .cm-error,
+.cm-s-solarized .cm-invalidchar {
   color: #586e75;
   border-bottom: 1px dotted #dc322f;
 }
@@ -212,7 +215,7 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
 /* Little shadow on the view-port of the buffer view */
 .cm-s-solarized.CodeMirror {
   -webkit-box-shadow: inset 7px 0 12px -6px #000;
-  box-shadow: inset 7px 0 12px -6px #000;
+          box-shadow: inset 7px 0 12px -6px #000;
 }
 
 /* Remove gutter border */

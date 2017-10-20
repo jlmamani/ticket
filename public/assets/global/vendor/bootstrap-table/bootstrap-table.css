@@ -4,7 +4,7 @@
 
     border-collapse: collapse !important; 
 
-    border-bottom: 1px solid #e4eaec;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .bootstrap-table .table:not(.table-condensed),
@@ -34,7 +34,7 @@
 
     clear: both;
 
-    border: 1px solid #e4eaec;
+    border: 1px solid #e0e0e0;
 }
 
 .fixed-table-container.table-no-bordered
@@ -53,12 +53,12 @@
 
 .fixed-table-header
 {
-    border-bottom: 1px solid #e4eaec;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .fixed-table-footer
 {
-    border-top: 1px solid #e4eaec;
+    border-top: 1px solid #e0e0e0;
 }
 
 .fixed-table-body
@@ -80,7 +80,7 @@
     margin: 0;
     padding: 0;
 
-    border-left: 1px solid #e4eaec;
+    border-left: 1px solid #e0e0e0;
 }
 
 .fixed-table-container thead th:focus
@@ -139,7 +139,7 @@
 
 .fixed-table-container tbody td
 {
-    border-left: 1px solid #e4eaec;
+    border-left: 1px solid #e0e0e0;
 }
 
 .fixed-table-container tbody tr:first-child td
@@ -163,7 +163,7 @@
 /* the same color with .active */
 .fixed-table-container tbody .selected td
 {
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 
 .fixed-table-container .bs-checkbox
@@ -224,8 +224,8 @@
     cursor: default;
 
     color: #fff;
-    border-color: #62a8ea; 
-    background-color: #62a8ea;
+    border-color: #3f51b5; 
+    background-color: #3f51b5;
 }
 .fixed-table-pagination .pagination li.disabled > a,
 .fixed-table-pagination .pagination li.disabled > a:focus,
@@ -233,8 +233,8 @@
 {
     cursor: not-allowed;
 
-    color: #ccd5db;
-    border-color: #e4eaec; 
+    color: #bdbdbd;
+    border-color: #e0e0e0; 
     background-color: transparent;
 }
 
@@ -251,16 +251,16 @@
 
     text-decoration: none;
 
-    color: #76838f;
-    border: 1px solid #e4eaec; 
+    color: #757575;
+    border: 1px solid #e0e0e0; 
     background-color: transparent;
 }
 .fixed-table-pagination .pagination a:focus,
 .fixed-table-pagination .pagination a:hover
 {
-    color: #89bceb;
-    border-color: #e4eaec; 
-    background-color: #f3f7f9;
+    color: #3f51b5;
+    border-color: #e0e0e0; 
+    background-color: #eee;
 }
 
 .fixed-table-pagination .pagination-info
@@ -410,7 +410,7 @@
 {
     vertical-align: bottom;
 
-    border-bottom: 1px solid #e4eaec;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 /* support bootstrap 3 */
@@ -471,14 +471,14 @@ div.fixed-table-scroll-outer
 
     display: block;
 
-    padding: .572rem 1.072rem;
+    padding: .429rem .929rem;
 
     -webkit-transition: background-color .25s;
          -o-transition: background-color .25s;
             transition: background-color .25s; 
     white-space: nowrap;
 
-    color: #76838f;
+    color: #757575;
     border-radius: .215rem;
 }
 .bootstrap-table .dropdown-menu > li > a:hover,
@@ -486,8 +486,8 @@ div.fixed-table-scroll-outer
 {
     text-decoration: none;
 
-    color: #76838f;
-    background-color: #f3f7f9;
+    color: #757575;
+    background-color: #eee;
 }
 
 .bootstrap-table .dropdown-menu > .active > a,
@@ -496,16 +496,16 @@ div.fixed-table-scroll-outer
 {
     text-decoration: none;
 
-    color: #76838f;
+    color: #757575;
     outline: 0;
-    background-color: #f3f7f9;
+    background-color: #eee;
 }
 
 .bootstrap-table .dropdown-menu > .disabled > a,
 .bootstrap-table .dropdown-menu > .disabled > a:hover,
 .bootstrap-table .dropdown-menu > .disabled > a:focus
 {
-    color: #ccd5db;
+    color: #bdbdbd;
 }
 
 .bootstrap-table .dropdown-menu > .disabled > a:hover,

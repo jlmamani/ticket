@@ -1,37 +1,37 @@
 .tablesaw-sortable,
 .tablesaw-sortable thead,
-.tablesaw-sortable thead tr, 
+.tablesaw-sortable thead tr,
 .tablesaw-sortable thead tr th {
-	position: relative;
+  position: relative;
 }
 .tablesaw-sortable thead tr th {
-	vertical-align: top;
+  vertical-align: top;
 }
 .tablesaw-sortable th.tablesaw-sortable-head.tablesaw-sortable-head {
-	padding: 0;
+  padding: 0;
 }
 .tablesaw-sortable th.tablesaw-sortable-head button {
-	padding-top: .9em;
-	padding-bottom: .7em;
-	padding-left: .6em;
-	padding-right: .6em;
+  padding-top: .9em;
+  padding-bottom: .7em;
+  padding-left: .6em;
+  padding-right: .6em;
 }
 .tablesaw-sortable .tablesaw-sortable-head button {
-	min-width: 100%;
-	color: inherit;
-	background: transparent;
-	border: 0;
-	padding: 0;
-	text-align: left;
-	font: inherit;
-	text-transform: inherit;
+  min-width: 100%;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  font: inherit;
+  text-transform: inherit;
 }
 .tablesaw-sortable-arrow:after {
-	display: inline-block;
-	width: 10px;
-	height: 14px;
-	content: " ";
-	margin-left: .3125em;
+  display: inline-block;
+  width: 10px;
+  height: 14px;
+  content: " ";
+  margin-left: .3125em;
 }
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-ascending .tablesaw-sortable-arrow:after,
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-descending .tablesaw-sortable-arrow:after {
@@ -43,7 +43,7 @@
   right: .5em;
 
   display: inline-block;
-  font-family: $wb-font-family;
+  font-family: $zmdi-font-name;
   font-feature-settings: normal;
   font-kerning: auto;
   font-language-override: normal;
@@ -58,11 +58,11 @@
   text-rendering: auto;
 }
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-ascending .tablesaw-sortable-arrow:after {
-  content: $wb-var-triangle-up;
+  content: $zmdi-var-caret-up;
 }
 
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-descending .tablesaw-sortable-arrow:after {
-  content: $wb-var-triangle-down;
+  content: $zmdi-var-caret-down;
 }
 
 .tablesaw-sortable .not-applicable:after {

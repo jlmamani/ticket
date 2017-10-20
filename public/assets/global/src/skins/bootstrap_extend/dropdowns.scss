@@ -48,6 +48,10 @@ $dropdown-danger-link-active-bg:     $brand-danger !default;
 $dropdown-dark-link-active-color:    $inverse !default;
 $dropdown-dark-link-active-bg:       $brand-dark !default;
 
+$dropdownm-menu-animation-name:      slide-left !default;
+$dropdownm-menu-animation-duration:  .5s !default;
+$dropdownm-menu-animation-delay:     0.02s !default;
+
 // Dropdown menu
 // ========================================================================
 
@@ -63,14 +67,13 @@ $dropdown-dark-link-active-bg:       $brand-dark !default;
   }
 }
 
-
 .dropup,
 .navbar-fixed-bottom .dropdown {
   // Different positioning for bottom up menu
   .dropdown-menu {
-
+    
+    &.dropdown-menu-bullet,
     &.bullet {
-
       &:before {
         border-top-color: $dropdown-border-color;
       }
@@ -82,12 +85,22 @@ $dropdown-dark-link-active-bg:       $brand-dark !default;
   }
 }
 
+// Modifier: `dropdown-submenu`
+// -------------------------
+
+.dropdown-menu > .dropdown-submenu {
+  .dropdown-item {
+   
+    &:after {
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+    }
+  }
+}
 
 // Dropdown Menu With Media
 // ========================================================================
 $dropdown-menu-media-border:                             $dropdown-border !default;
-
-
 $dropdown-menu-media-header-bg:                          $inverse !default;
 
 $dropdown-menu-media-footer-color:                       $gray !default;
@@ -97,10 +110,23 @@ $dropdown-menu-media-footer-btn-hover-color:             $link-hover-color !defa
 
 
 .dropdown-menu-media {
-
   .dropdown-menu-header {
     background-color: $dropdown-menu-media-header-bg;
     border-bottom: 1px solid $dropdown-menu-media-border;
+  }
+
+  .list-group-item {
+    border: none;
+
+    .media {
+      border-top: 1px solid $dropdown-menu-media-border;
+    }
+
+    &:first-child {
+      .media {
+        border-top: none;
+      }
+    }
   }
 
   > .dropdown-menu-footer {
@@ -111,14 +137,15 @@ $dropdown-menu-media-footer-btn-hover-color:             $link-hover-color !defa
       color: $dropdown-menu-media-footer-color !important;
 
       &:hover {
+        background-color: transparent !important;
         color: $dropdown-menu-media-footer-hover-color !important;
       }
     }
 
     > .dropdown-menu-footer-btn {
-
       &:hover {
         color: $dropdown-menu-media-footer-btn-hover-color !important;
+        background-color: transparent !important;
       }
     }
   }

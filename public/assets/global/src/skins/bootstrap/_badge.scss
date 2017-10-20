@@ -7,7 +7,7 @@
   color: $badge-color;
 }
 
-// scss-lint:disable QualifyingElement
+
 // Add hover effects, but only for links
 a.badge {
   @include hover-focus {

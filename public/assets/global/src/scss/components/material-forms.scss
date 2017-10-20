@@ -176,12 +176,19 @@ $form-material-disabled-placeholder-color:      $gray-light !default;
     height: auto;
   }
 
-  .form-control-label {
+  &.form-group .form-control-label {
     font-weight: $font-weight-bold;
   }
 
   &.form-group .form-control-label {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include media-breakpoint-up(md) {
+      .form-horizontal & {
+        padding-top: 7px;
+      }
+    }
   }
 
   .floating-label {
@@ -312,7 +319,7 @@ $form-material-disabled-placeholder-color:      $gray-light !default;
 
   .input-group {
     .form-control-wrap {
-      flex: 1 1 auto;//fish170301
+      flex: 1 1 auto;//fish00301
       .form-control {
         float: none;
       }

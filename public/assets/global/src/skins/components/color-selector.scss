@@ -20,9 +20,6 @@ $color-selector-bg:                     $brand-primary !default;
 $color-selector-checked-label-color:    $inverse !default;
 $color-selector-disabled-bg:            $disabled-color-base !default;
 
-// z-index
-$color-selector-z-index:                $zindex-base !default;
-
 // Component: color-selector
 // ========================================================================
 
@@ -30,6 +27,10 @@ $color-selector-z-index:                $zindex-base !default;
 
   > li {
     background-color: $color-selector-bg;
+
+    &:before {
+      border: 1px solid rgba(0, 0, 0, .1);
+    }
 
     input[type="radio"]:checked + label:after {
       color: $color-selector-checked-label-color;

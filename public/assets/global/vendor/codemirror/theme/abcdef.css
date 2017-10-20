@@ -1,6 +1,6 @@
 .cm-s-abcdef.CodeMirror {
-  background: #0f0f0f;
   color: #defdef;
+  background: #0f0f0f;
 }
 .cm-s-abcdef div.CodeMirror-selected {
   background: #515151;
@@ -32,8 +32,8 @@
 }
 
 .cm-s-abcdef span.cm-keyword {
-  color: darkgoldenrod;
   font-weight: bold;
+  color: darkgoldenrod;
 }
 .cm-s-abcdef span.cm-atom {
   color: #77f;
@@ -60,8 +60,8 @@
   color: #ff0;
 }
 .cm-s-abcdef span.cm-comment {
-  color: #7a7b7c;
   font-style: italic;
+  color: #7a7b7c;
 }
 .cm-s-abcdef span.cm-string {
   color: #2b4;
@@ -88,8 +88,8 @@
   color: #f00;
 }
 .cm-s-abcdef span.cm-header {
-  color: aquamarine;
   font-weight: bold;
+  color: aquamarine;
 }
 .cm-s-abcdef span.cm-link {
   color: blueviolet;

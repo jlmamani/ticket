@@ -18,7 +18,7 @@ $multi-select-disabled-bg: $disabled-color-base;
   // width: 400px;
   &:before {
     display: inline-block;
-    font-family: $wb-font-family;
+    font-family: $zmdi-font-name;
     font-size: inherit;
     font-style: normal;
     font-weight: normal;
@@ -26,7 +26,7 @@ $multi-select-disabled-bg: $disabled-color-base;
     text-rendering: auto;
     top: 68px;
     left: 3.5%;
-    content: $wb-var-loop;
+    content: $zmdi-var-refresh-alt;
     transform: translate(0, 0);
   }
 }
@@ -94,7 +94,7 @@ $multi-select-disabled-bg: $disabled-color-base;
 .ms-container .ms-selectable li.ms-elem-selectable,
 .ms-container .ms-selection li.ms-elem-selection {
   // border-bottom: 1px $ms-border solid;
-  padding: 5px 10px 5px 20px;
+  padding: 3px 10px 3px 20px;
 }
 
 .ms-container .ms-selectable li.ms-hover,

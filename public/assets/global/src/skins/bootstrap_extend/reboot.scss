@@ -1,4 +1,4 @@
-// Name:            Reboot
+// Name:            Scaffolding
 // ========================================================================
 
 $link-text-action-color:       $gray !default;
@@ -10,9 +10,6 @@ $link-like-action-hover-color: $color-red-600 !default;
 // Links
 // ========================================================================
 a {
-  &.text-body {
-    color: $body-color;
-  }
   &.text-action {
     color: $link-text-action-color;
 

@@ -1,18 +1,7 @@
 //
 // Base styles
 //
-
 .btn {
-  
-  &,
-  &:active,
-  &.active {
-    &:focus,
-    &.focus {
-      @include tab-focus();
-    }
-  }
-
   &:active,
   &.active {
     @include box-shadow($btn-active-box-shadow);
@@ -73,7 +62,6 @@
 
   @include hover-focus {
     color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
   }
   &:disabled {
     @include hover-focus {

@@ -14,12 +14,11 @@ $md-control-color:               $gray-lighter;
 $md-control-active-color:        $gray-dark;
 
 $md-btn-divider-color:           $gray-lighter;
+$md-preview-bg:                  #fff;
 
 //                               z-index
 $md-fullscreen-z-index:          $zindex-fullscreen;
 $md-fullscreen-controls-z-index: $zindex-overlay;
-
-$md-preview-bg:                  #fff;
 
 // Bootstrap-Markdown.less
 // =============================================================
@@ -212,6 +211,7 @@ $md-preview-bg:                  #fff;
   .btn-group {
     position: relative;
     margin-left: 20px;
+    box-shadow: none;
 
     &:first-child {
       margin-left: 0;
@@ -232,7 +232,6 @@ $md-preview-bg:                  #fff;
         background: $md-btn-divider-color;
     }
   }
-
   .btn-group .btn-default {
     color: $md-btn-color;
     border: none;
@@ -258,13 +257,12 @@ $md-preview-bg:                  #fff;
     }
   }
 }
-
 .md-footer {
   .icon-ok {
-    font-family: '#{$wb-font-family}';
+    font-family: $zmdi-font-name;
 
     &:before {
-      content: '#{$wb-var-check}';
+      content: '#{$zmdi-var-check}';
     }
   }
 }

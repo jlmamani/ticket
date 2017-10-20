@@ -49,14 +49,9 @@
     return /\bstring\b/.test(cm.getTokenTypeAt(Pos(pos.line, 0))) && !/^[\'\"`]/.test(line)
   }
 
-  function getMode(cm, pos) {
-    var mode = cm.getMode()
-    return mode.useInnerComments === false || !mode.innerMode ? mode : cm.getModeAt(pos)
-  }
-
   CodeMirror.defineExtension("lineComment", function(from, to, options) {
     if (!options) options = noOptions;
-    var self = this, mode = getMode(self, from);
+    var self = this, mode = self.getModeAt(from);
     var firstLine = self.getLine(from.line);
     if (firstLine == null || probablyInsideString(self, from, firstLine)) return;
 
@@ -100,7 +95,7 @@
 
   CodeMirror.defineExtension("blockComment", function(from, to, options) {
     if (!options) options = noOptions;
-    var self = this, mode = getMode(self, from);
+    var self = this, mode = self.getModeAt(from);
     var startString = options.blockCommentStart || mode.blockCommentStart;
     var endString = options.blockCommentEnd || mode.blockCommentEnd;
     if (!startString || !endString) {
@@ -134,7 +129,7 @@
 
   CodeMirror.defineExtension("uncomment", function(from, to, options) {
     if (!options) options = noOptions;
-    var self = this, mode = getMode(self, from);
+    var self = this, mode = self.getModeAt(from);
     var end = Math.min(to.ch != 0 || to.line == from.line ? to.line : to.line - 1, self.lastLine()), start = Math.min(from.line, end);
 
     // Try finding line comments

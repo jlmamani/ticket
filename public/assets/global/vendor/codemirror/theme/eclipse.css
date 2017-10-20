@@ -2,8 +2,8 @@
   color: #ff1717;
 }
 .cm-s-eclipse span.cm-keyword {
-  line-height: 1em;
   font-weight: bold;
+  line-height: 1em;
   color: #7f0055;
 }
 .cm-s-eclipse span.cm-atom {
@@ -65,6 +65,6 @@
   background: #e8f2ff;
 }
 .cm-s-eclipse .CodeMirror-matchingbracket {
-  outline: 1px solid grey;
   color: black !important;
+  outline: 1px solid grey;
 }

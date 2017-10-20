@@ -1,17 +1,10 @@
 @extends('app')
  
 @section('content')
-<div class="container">
- <div class="row">
- <div class="col-md-10 col-md-offset-1">
- <div class="panel panel-default">
- <div class="panel-heading">Home</div>
- 
- <div class="panel-body">
- You are using bootstrap
- </div>
- </div>
- </div>
- </div>
+<div class="page">
+    <div class="page-content">
+      <h2>Blank</h2>
+      <p>Page content goes here</p>
+    </div>
 </div>
 @endsection

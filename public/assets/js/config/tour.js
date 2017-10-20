@@ -5,7 +5,6 @@
  */
 (function(Config) {
   "use strict";
-
   Config.set('tour', {
     steps: [{
       element: "#toggleMenubar",
@@ -19,10 +18,11 @@
       position: 'left',
       intro: "Quick Conversations <p class='content'>This is a sidebar dialog box for user conversations list, you can even create a quick conversation with other users</p>"
     }],
-    skipLabel: "<i class='wb-close'></i>",
-    doneLabel: "<i class='wb-close'></i>",
-    nextLabel: "Next <i class='wb-chevron-right-mini'></i>",
-    prevLabel: "<i class='wb-chevron-left-mini'></i>Prev",
+    skipLabel: "<i class='md-close'></i>",
+    doneLabel: "<i class='md-close'></i>",
+    nextLabel: "Next <i class='md-chevron-right'></i>",
+    prevLabel: "<i class='md-chevron-left'></i>Prev",
     showBullets: false
   });
+
 })(Config);

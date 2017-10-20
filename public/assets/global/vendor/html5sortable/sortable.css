@@ -11,8 +11,8 @@
     height: 40px;
     margin-top: 1px;
 
-    border: 1px dashed #e4eaec; 
-    background-color: #f3f7f9;
+    border: 1px dashed #e0e0e0; 
+    background-color: #eee;
 }
 
 .sortable.list-group-gap .sortable-placeholder,

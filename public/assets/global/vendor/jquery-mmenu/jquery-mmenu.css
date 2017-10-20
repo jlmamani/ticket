@@ -23,8 +23,8 @@
     overflow: hidden; 
 
     height: 100%;
-    height: -webkit-calc(100% - 76px);
-    height:         calc(100% - 76px);
+    height: -webkit-calc(100% - 65px);
+    height:         calc(100% - 65px);
 }
 
 .mm-panel
@@ -71,12 +71,12 @@
 {
     line-height: 46px;
 
-    color: #76838f;
+    color: #757575;
 }
 
 .mm-navbar .mm-prev
 {
-    font-family: 'Web Icons';
+    font-family: 'Material-Design-Iconic-Font';
     font-weight: normal;
     font-style: normal;
 
@@ -98,7 +98,7 @@
 }
 .mm-navbar .mm-prev:before
 {
-    content: '';
+    content: '';
 }
 
 .mm-navbar .mm-title
@@ -146,14 +146,14 @@
 
     width: 100%;
     height: 2.573rem;
-    padding: .429rem 1rem;
+    padding: .429rem 1.072rem;
 
     -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
          -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
             transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; 
 
-    color: #76838f;
-    border: 1px solid #e4eaec;
+    color: #757575;
+    border: 1px solid #e0e0e0;
     border-radius: .215rem;
     background-color: #fff;
     background-image: none;
@@ -163,7 +163,7 @@
 .mm-search input.focus,
 .mm-search input:focus
 {
-    border-color: #62a8ea;
+    border-color: #3f51b5;
     -webkit-box-shadow: none;
             box-shadow: none;
 }

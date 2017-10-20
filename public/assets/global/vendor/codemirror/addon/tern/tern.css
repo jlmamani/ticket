@@ -1,23 +1,23 @@
 .CodeMirror-Tern-completion {
-  padding-left: 22px;
   position: relative;
+  padding-left: 22px;
   line-height: 1.5;
 }
 .CodeMirror-Tern-completion:before {
   position: absolute;
-  left: 2px;
   bottom: 2px;
-  border-radius: 50%;
+  left: 2px;
+  width: 15px;
+  height: 15px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 12px;
   font-weight: bold;
-  height: 15px;
-  width: 15px;
   line-height: 16px;
-  text-align: center;
   color: white;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  text-align: center;
+  border-radius: 50%;
 }
 .CodeMirror-Tern-completion-unknown:before {
   content: "?";
@@ -53,24 +53,22 @@
 }
 
 .CodeMirror-Tern-tooltip {
-  border: 1px solid silver;
-  border-radius: 3px;
-  color: #444;
-  padding: 2px 5px;
-  font-size: 90%;
-  font-family: monospace;
-  background-color: white;
-  white-space: pre-wrap;
-  max-width: 40em;
   position: absolute;
   z-index: 10;
+  max-width: 40em;
+  padding: 2px 5px;
+  font-family: monospace;
+  font-size: 90%;
+  color: #444;
+  white-space: pre-wrap;
+  background-color: white;
+  border: 1px solid silver;
+  border-radius: 3px;
   -webkit-box-shadow: 2px 3px 5px rgba(0,0,0,.2);
-  box-shadow: 2px 3px 5px rgba(0,0,0,.2);
-  transition: opacity 1s;
-  -moz-transition: opacity 1s;
+          box-shadow: 2px 3px 5px rgba(0,0,0,.2);
   -webkit-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  -ms-transition: opacity 1s;
+       -o-transition: opacity 1s;
+          transition: opacity 1s;
 }
 
 .CodeMirror-Tern-hint-doc {

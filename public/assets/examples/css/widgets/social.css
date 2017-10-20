@@ -1,7 +1,7 @@
 .card {
-  margin-bottom: 30px;
   height: -webkit-calc(100% - 30px);
-  height: calc(100% - 30px);
+  height:         calc(100% - 30px);
+  margin-bottom: 30px;
 }
 
 .card-footer .nav-tabs {

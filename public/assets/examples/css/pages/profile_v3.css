@@ -12,7 +12,7 @@
 }
 
 .wall-attrs .success {
-  color: #46be8a;
+  color: #43a047;
 }
 
 .wall-attrs .attrs-meta {
@@ -34,12 +34,13 @@
 
 .wall-comment .comment-operation {
   position: absolute;
-  right: 0;
   top: -10px;
+  right: 0;
   display: none;
 }
 
-.wall-comment:hover .comment-operation, .wall-comment:focus .comment-operation {
+.wall-comment:hover .comment-operation,
+.wall-comment:focus .comment-operation {
   display: block;
 }
 
@@ -54,8 +55,8 @@
 
 .wall-person-info {
   position: relative;
-  padding-left: 190px;
   padding-bottom: 45px;
+  padding-left: 190px;
 }
 
 .wall-person-info .person-avatar {
@@ -83,14 +84,14 @@
 
 .wall-posting .form-control {
   border: none;
-  border-bottom: 1px solid #e4eaec;
+  border-bottom: 1px solid #e0e0e0;
   border-radius: 0;
 }
 
 .wall-recent-comments .comments-view {
-  border-top: 1px solid #e4eaec;
   padding: 10px 0;
   text-align: center;
+  border-top: 1px solid #e0e0e0;
 }
 
 @media (min-width: 1200px) {

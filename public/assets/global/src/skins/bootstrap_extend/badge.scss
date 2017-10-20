@@ -26,20 +26,12 @@
 
 $badge-bg:                    $bg-color-base !default;
 
-$badge-pill-padding:          3px 6px !default;
-$badge-pill-up-margin:        0 -0.8em !default;
 $badge-pill-active-color:     $gray-darker !default;
 $badge-pill-active-bg:        $brand-default !default;
 
 $badge-default-color:         $text-color !default;
 // $badge-default-font-size:     $font-size-base !default;
 
-$badge-lg-font-size:          16px !default;
-
-$badge-sm-font-size:          10px !default;
-$badge-sm-padding:            .1em .5em .1em !default;
-
-$badge-round-border-radius:   1em !default;
 
 $badge-default-hover-color:   $gray !default;
 $badge-default-hover-bg:      $brand-default-hover !default;
@@ -65,7 +57,7 @@ $badge-dark-hover-bg:         $brand-dark-hover !default;
     color: $badge-bg;
     background-color: transparent;
     border-color: $badge-bg;
-  }  
+  }
 }
 
 
@@ -74,63 +66,6 @@ $badge-dark-hover-bg:         $brand-dark-hover !default;
 
 .badge-outline {
   border: 1px solid transparent;
-}
-
-// Modifier: `badge-round`
-// -------------------------
-
-.badge-round {
-  border-radius: $badge-round-border-radius;
-}
-
-// Modifier: `badge-pill`
-// -------------------------
-.badge-pill {
-  padding: $badge-pill-padding;
-  
-  // Empty badges collapse automatically (not available in IE8)
-  &:empty {
-    display: none;
-  }
-
-  &.up {
-    position: relative;
-    top: -10px;
-    margin: $badge-pill-up-margin;
-    border-radius: 15px;
-  }
-  
-  // Quick fix for badge-pill in buttons
-  .btn & {
-    top: 0;
-  }
-
-  .btn-xs &,
-  .btn-group-xs > .btn & {
-    top: 0;
-    padding: 1px 5px;
-  }
-
-  // Hover state, but only for links
-  a & {
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      cursor: pointer;
-    }
-  }
-
-  .list-group-item > & {
-    float: right;
-  }
-
-  .list-group-item > & + & {
-    margin-right: 5px;
-  }
-
-  .nav-pills > li > a > & {
-    margin-left: 3px;
-  }
 }
 
 // Color Modifier
@@ -196,24 +131,4 @@ $badge-dark-hover-bg:         $brand-dark-hover !default;
 
 .badge-dark {
   @include badge-styles-variant($badge-dark-bg, $badge-dark-hover-bg);
-  @include badge-variant($badge-dark-bg);
 }
-
-// Size Modifier
-// ========================================================================
-
-// Modifier: `badge-lg`
-// -------------------------
-
-.badge-lg {
-  font-size: $badge-lg-font-size;
-}
-
-// Modifier: `badge-sm`
-// -------------------------
-
-.badge-sm {
-  padding: $badge-sm-padding;
-  font-size: $badge-sm-font-size;
-}
-

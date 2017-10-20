@@ -8,9 +8,11 @@
 
   var Site = window.Site;
 
+
   $(document).ready(function($) {
     Site.run();
   });
+
 
   // Example Popup Zoom Gallery
   // --------------------------
@@ -38,6 +40,7 @@
     }
   });
 
+
   // Example Popup Gallery
   // ---------------------
   $('#exampleGallery').magnificPopup({
@@ -58,6 +61,7 @@
     }
   });
 
+
   // Example Popup With Css Animation
   // --------------------------------
   $('.popup-with-css-anim').magnificPopup({
@@ -74,6 +78,7 @@
     midClick: true
   });
 
+
   // Example Popup With Video Rr Map
   // -------------------------------
   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
@@ -85,6 +90,7 @@
 
     fixedContentPos: false
   });
+
 
   // Example Popup With Video Rr Map
   // -------------------------------
@@ -106,6 +112,7 @@
     }
   });
 
+
   // Example Ajax Popup
   // ------------------
   $('#examplePopupAjaxAlignTop').magnificPopup({
@@ -117,6 +124,7 @@
   $('#examplePopupAjax').magnificPopup({
     type: 'ajax'
   });
+
 
   // Example Popup Modal
   // -------------------
@@ -130,6 +138,7 @@
     e.preventDefault();
     $.magnificPopup.close();
   });
+
 
   // Example Error Handling
   // ----------------------

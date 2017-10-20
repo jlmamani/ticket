@@ -5,9 +5,7 @@
  */
 (function(document, window, $) {
   'use strict';
-
   var Site = window.Site;
-
   $(document).ready(function($) {
     Site.run();
   });
@@ -22,6 +20,9 @@
         disabled: 'disabled'
       },
       icon: null,
+      err: {
+        clazz: 'text-help'
+      },
       fields: {
         username: {
           validators: {
@@ -113,9 +114,6 @@
           }
         }
       },
-      err: {
-        clazz: 'text-help'
-      },
       row: {
         invalid: 'has-danger'
       }
@@ -128,6 +126,9 @@
     $('#exampleConstraintsForm, #exampleConstraintsFormTypes').formValidation({
       framework: "bootstrap4",
       icon: null,
+      err: {
+        clazz: 'text-help'
+      },
       fields: {
         type_email: {
           validators: {
@@ -195,12 +196,6 @@
             }
           }
         }
-      },
-      err: {
-        clazz: 'text-help'
-      },
-      row: {
-        invalid: 'has-danger'
       }
     });
   })();
@@ -215,6 +210,12 @@
         disabled: 'disabled'
       },
       icon: null,
+      err: {
+        clazz: 'text-help'
+      },
+      row: {
+        invalid: 'has-danger'
+      },
       fields: {
         standard_fullName: {
           validators: {
@@ -244,12 +245,6 @@
             }
           }
         }
-      },
-      err: {
-        clazz: 'text-help'
-      },
-      row: {
-        invalid: 'has-danger'
       }
     });
   })();
@@ -266,6 +261,12 @@
         disabled: 'disabled'
       },
       icon: null,
+      err: {
+        clazz: 'text-help'
+      },
+      row: {
+        invalid: 'has-danger'
+      },
       fields: {
         summary_fullName: {
           validators: {
@@ -295,12 +296,6 @@
             }
           }
         }
-      },
-      err: {
-        clazz: 'text-help'
-      },
-      row: {
-        invalid: 'has-danger'
       }
     })
 

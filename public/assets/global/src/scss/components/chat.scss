@@ -13,7 +13,6 @@ $chat-content-padding:    8px 15px !default;
 
 $chat-left-content-bg:    darken($bg-color-base, 6%) !default;
 $chat-left-content-color: $text-color !default;
-$chat-time-color:         rgba(255, 255, 255, 0.6) !default;
 $chat-left-time-color:    $prompt-color !default;
 
 
@@ -60,6 +59,10 @@ $chat-left-time-color:    $prompt-color !default;
   background-color: $chat-content-bg;
   border-radius: $border-radius-large;
 
+  p {
+    margin-bottom: 0.5rem;
+  }
+
   &:before {
     position: absolute;
     top: 10px;
@@ -71,10 +74,6 @@ $chat-left-time-color:    $prompt-color !default;
     border-left-color: $chat-content-bg;
   }
 
-  p {
-    margin-bottom: 0.5rem;
-  }
-
   & > p:last-child {
     margin-bottom: 0;
   }
@@ -84,11 +83,6 @@ $chat-left-time-color:    $prompt-color !default;
   }
 }
 
-.chat-time {
-  display: block;
-  margin-top: 8px;
-  color: $chat-time-color;
-}
 
 // Modifier: `chat-left`
 // ========================================================================
@@ -119,9 +113,5 @@ $chat-left-time-color:    $prompt-color !default;
 
   .chat-content + .chat-content:before {
     border-color: transparent;
-  }
-
-  .chat-time {
-    color: $chat-left-time-color;
   }
 }

@@ -33,7 +33,7 @@ $zindex-layers: (
 $step:                    0 !default;
 @function zindex($layer,$step) {
   @if not map-has-key($zindex-layers,$layer) {
-  	@warn "No layer found for '#{$layer}' in $zindex-layers map. Property omitted.";
+    @warn "No layer found for '#{$layer}' in $zindex-layers map. Property omitted.";
   }
   @return map-get($zindex-layers, $layer) + $step;
 }
