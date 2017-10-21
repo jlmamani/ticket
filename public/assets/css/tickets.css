@@ -1,0 +1,47 @@
+.contenedor{
+	box-shadow: 1px 1px 10px #999;
+	height: 400px;
+	max-height: 400px;
+	
+}
+.evento{
+	height: 270px; 
+	background-size: cover; 
+	background-repeat: no-repeat; 
+	background-position: center;
+}
+.desc{
+	font-size: 1.2rem;
+}
+.datos{
+	bottom: 0px;
+	position: absolute;
+}
+.menu{
+	position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.mod_p {
+  max-width: 80%;
+  background-color: #f1f4f5 !important;
+  margin: 40px auto;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+.mod_c{
+	background-color: #f1f4f5 !important;
+}
+.mod_b{
+	padding-top: 0px;
+}
+.mod_form{
+	background-color: #fff !important;
+	padding: 1% 3% 1% 3%;
+	box-shadow: 1px 1px 10px #999;
+}
+.form-material{
+	padding-left: 3%;
+	padding-right: 3%;
+}

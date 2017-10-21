@@ -21,10 +21,15 @@
   <link href="{{ asset('assets/global/vendor/slidepanel/slidePanel.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/global/vendor/flag-icon-css/flag-icon.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/global/vendor/waves/waves.css') }}" rel="stylesheet">
+  
+  @stack('styles')
+
   <!-- Fonts -->
   <link href="{{ asset('assets/global/fonts/material-design/material-design.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/global/fonts/brand-icons/brand-icons.min.css') }}" rel="stylesheet">
   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+  <link href="{{ asset('assets/css/tickets.css') }}" rel="stylesheet">
+
   <!--[if lt IE 9]>
     <script src="../../../global/vendor/html5shiv/html5shiv.min.js"></script>
     <![endif]-->
@@ -289,8 +294,21 @@
       <div>
         <div>
           <ul class="site-menu" data-plugin="menu">
-            <li class="site-menu-category">General</li>
-            <li class="site-menu-category">Usuarios</li>
+            <li class="site-menu-item active">
+              <a class="animsition-link" href="#">
+                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                <span class="site-menu-title">DASHBOARD</span>
+              </a>
+            </li>
+            <li class="site-menu-item active">
+              <a class="animsition-link" href="#">
+                <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+                <span class="site-menu-title">EVENTOS</span>
+              </a>
+            </li>
+            <!--
+            <li class="site-menu-category">DASHBOARD</li>
+            <li class="site-menu-category">EVENTOS</li>
             <li class="site-menu-item active">
               <a class="animsition-link" href="#">
                 <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
@@ -342,6 +360,7 @@
                 <span class="site-menu-title">Videos Administrar</span>
               </a>
             </li>
+          -->
           </ul>
         </div>
       </div>
@@ -361,7 +380,9 @@
     </div>
     -->
   </div>
+
   @yield('content')
+
   <footer class="site-footer">
     <div class="site-footer-legal">© 2017 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
     <div class="site-footer-right">
@@ -384,6 +405,7 @@
   <script src="{{asset('assets/global/vendor/intro-js/intro.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/vendor/screenfull/screenfull.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/vendor/slidepanel/jquery-slidePanel.js')}}" type="text/javascript"></script>
+  
 <!-- Scripts -->
   <script src="{{asset('assets/global/js/State.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/js/Component.js')}}" type="text/javascript"></script>
@@ -405,6 +427,9 @@
   <script src="{{asset('assets/global/js/Plugin/asscrollable.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/js/Plugin/slidepanel.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/global/js/Plugin/switchery.js')}}" type="text/javascript"></script>
+
+  @stack('scripts')
+
   <script>
   (function(document, window, $) {
     'use strict';
@@ -414,5 +439,6 @@
     });
   })(document, window, jQuery);
   </script>
+
 </body>
 </html>  
